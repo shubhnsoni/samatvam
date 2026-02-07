@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Plan — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/client.css">
+</head>
+<body>
+
+  <button class="cl-sidebar-toggle" id="sidebarToggle"><span></span></button>
+  <div class="cl-sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="cl-layout">
+    <aside class="cl-sidebar">
+      <a href="../index.html" class="cl-sidebar__brand">Samatvam Living</a>
+      <nav class="cl-sidebar__nav">
+        <a href="index.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
+        <a href="focus.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>My Focus</a>
+        <a href="plan.html" class="cl-sidebar__link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>My Plan</a>
+        <a href="courses.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>My Courses</a>
+        <a href="resources.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Resources</a>
+        <a href="progress.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Progress</a>
+        <a href="support.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Support</a>
+      </nav>
+      <div class="cl-sidebar__footer"><a href="#" class="cl-sidebar__signout">Sign Out</a></div>
+    </aside>
+
+    <main class="cl-main">
+      <div class="cl-header">
+        <div>
+          <h1 class="cl-header__title">My Plan</h1>
+          <p class="cl-header__subtitle">Your personalized Samatvam journey</p>
+        </div>
+        <span class="cl-badge cl-badge--restore">Restore Phase</span>
+      </div>
+
+      <!-- Phase 1: Restore (Current) -->
+      <div class="cl-card cl-card--accent-left">
+        <div class="cl-card__row cl-card__row--top">
+          <div>
+            <p class="cl-card__label cl-card__label--accent">Phase 1 · Current</p>
+            <h3 class="cl-card__title">Restore</h3>
+          </div>
+          <span class="cl-badge cl-badge--active">Active</span>
+        </div>
+        <p class="cl-card__text" style="margin-bottom: 20px;">Get your body out of emergency mode. We're focusing on nervous system regulation, sleep quality, and stress recovery.</p>
+
+        <div class="cl-timeline">
+          <div class="cl-timeline-item">
+            <span class="cl-timeline-icon cl-timeline-icon--done">✓</span>
+            <div class="cl-timeline-content">
+              <p class="cl-timeline-name">Sleep time consistency</p>
+              <p class="cl-timeline-meta">Week 1 · Completed</p>
+            </div>
+          </div>
+          <div class="cl-timeline-item">
+            <span class="cl-timeline-icon cl-timeline-icon--done">✓</span>
+            <div class="cl-timeline-content">
+              <p class="cl-timeline-name">Morning light exposure</p>
+              <p class="cl-timeline-meta">Week 2 · Completed</p>
+            </div>
+          </div>
+          <div class="cl-timeline-item cl-timeline-item--active">
+            <span class="cl-timeline-icon cl-timeline-icon--active">→</span>
+            <div class="cl-timeline-content">
+              <p class="cl-timeline-name">Evening wind-down ritual</p>
+              <p class="cl-timeline-meta cl-timeline-meta--active">Week 3 · In Progress</p>
+            </div>
+          </div>
+          <div class="cl-timeline-item cl-timeline-item--upcoming">
+            <span class="cl-timeline-icon cl-timeline-icon--upcoming">○</span>
+            <div class="cl-timeline-content">
+              <p class="cl-timeline-name">Breathing protocol</p>
+              <p class="cl-timeline-meta">Week 4 · Upcoming</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cl-coach-note">
+          <p class="cl-coach-note__label">Coach Notes</p>
+          <p class="cl-coach-note__text">"Priya is responding well to the sleep protocols. HRV data suggests nervous system is beginning to downregulate. Continue current pace — no need to rush." — Deepti, Feb 5</p>
+        </div>
+      </div>
+
+      <!-- Phase 2: Nourish (Upcoming) -->
+      <div class="cl-card cl-card--green-left cl-card--muted">
+        <div class="cl-card__row cl-card__row--top">
+          <div>
+            <p class="cl-card__label cl-card__label--green">Phase 2 · Upcoming</p>
+            <h3 class="cl-card__title">Nourish</h3>
+          </div>
+          <span class="cl-badge cl-badge--nourish">Weeks 5–8</span>
+        </div>
+        <p class="cl-card__text">Fuel stability, not restriction. Once your nervous system stabilizes, we'll introduce nutrition changes that support metabolic health.</p>
+        <div class="cl-timeline" style="margin-top: 16px;">
+          <div class="cl-timeline-item cl-timeline-item--upcoming">
+            <span class="cl-timeline-icon cl-timeline-icon--upcoming">○</span>
+            <div class="cl-timeline-content"><p class="cl-timeline-name">Blood sugar stabilization</p></div>
+          </div>
+          <div class="cl-timeline-item cl-timeline-item--upcoming">
+            <span class="cl-timeline-icon cl-timeline-icon--upcoming">○</span>
+            <div class="cl-timeline-content"><p class="cl-timeline-name">Hydration protocol</p></div>
+          </div>
+          <div class="cl-timeline-item cl-timeline-item--upcoming">
+            <span class="cl-timeline-icon cl-timeline-icon--upcoming">○</span>
+            <div class="cl-timeline-content"><p class="cl-timeline-name">Meal timing optimization</p></div>
+          </div>
+          <div class="cl-timeline-item cl-timeline-item--upcoming">
+            <span class="cl-timeline-icon cl-timeline-icon--upcoming">○</span>
+            <div class="cl-timeline-content"><p class="cl-timeline-name">Anti-inflammatory nutrition</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 3: Move (Upcoming) -->
+      <div class="cl-card cl-card--charcoal-left cl-card--very-muted">
+        <div class="cl-card__row cl-card__row--top">
+          <div>
+            <p class="cl-card__label">Phase 3 · Upcoming</p>
+            <h3 class="cl-card__title">Move</h3>
+          </div>
+          <span class="cl-badge cl-badge--move">Weeks 9–12</span>
+        </div>
+        <p class="cl-card__text">Strength that supports your future. Movement introduced at the right intensity for your capacity.</p>
+        <div class="cl-timeline" style="margin-top: 16px;">
+          <div class="cl-timeline-item cl-timeline-item--upcoming">
+            <span class="cl-timeline-icon cl-timeline-icon--upcoming">○</span>
+            <div class="cl-timeline-content"><p class="cl-timeline-name">Daily walking habit</p></div>
+          </div>
+          <div class="cl-timeline-item cl-timeline-item--upcoming">
+            <span class="cl-timeline-icon cl-timeline-icon--upcoming">○</span>
+            <div class="cl-timeline-content"><p class="cl-timeline-name">Functional stretching</p></div>
+          </div>
+          <div class="cl-timeline-item cl-timeline-item--upcoming">
+            <span class="cl-timeline-icon cl-timeline-icon--upcoming">○</span>
+            <div class="cl-timeline-content"><p class="cl-timeline-name">Strength foundations</p></div>
+          </div>
+          <div class="cl-timeline-item cl-timeline-item--upcoming">
+            <span class="cl-timeline-icon cl-timeline-icon--upcoming">○</span>
+            <div class="cl-timeline-content"><p class="cl-timeline-name">Personal movement minimum</p></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/cms-data.js"></script>
+  <script src="../js/client.js"></script>
+</body>
+</html>

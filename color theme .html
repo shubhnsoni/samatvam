@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Samatvam Living | A Narrative Approach to Wellness</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6B8E6F", // Muted Sage Green from screenshot
+                        "background-light": "#F7F4F0", // Ivory Silk
+                        "background-dark": "#1A1C19",
+                        "accent-dark": "#242824",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        'full': '9999px',
+                    },
+                },
+            },
+        };
+    </script>
+<style>.grainy-bg {
+    position: relative
+    }
+.grainy-bg::after {
+    content: "";
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCcOebq4vU8q6IRqIZFCTCNv3_7Hw-LD-Bm-DmRJaf8cCzaEsAvin2dY9LDqZ2_3trbzYGQsrX2CRiHug7-yzPs3j_Hs_F2VxmLAQBs33Y27NZpALdiSvk7sRUbtFYSDx0r_9FqPQXPt8-xo6xLYhH9RXQUWCVRv_ikZVTjTfplVhWCHM35TA-VyzPTsNRaV4_mblinBlBCI0vfhcP_ibppuUCFnXuWdyIJaX5xs6jzuaA2ZO5hDVCgnQJ_CzOrQkZmcfAoXuXaeA8);
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 50
+    }
+.fade-in-section {
+    opacity: 0;
+    transform: translatey(20px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out
+    }
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translatey(0)
+    }
+.bubble-float {
+    animation: float 6s ease-in-out infinite
+    }
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+        } 50% {
+        transform: translateY(-10px);
+        } 100% {
+        transform: translateY(0px);
+        }
+    }
+.scroll-indicator-line {
+    height: 60px;
+    width: 1px;
+    background: linear-gradient(to bottom, #6B8E6F, transparent);
+    margin: 0 auto
+    }.narrative-container {
+    height: 200vh
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans antialiased grainy-bg transition-colors duration-700">
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-6 mix-blend-difference">
+<div class="text-xl font-display tracking-widest text-white">SAMATVAM</div>
+<div class="hidden md:flex gap-8 text-xs tracking-widest font-medium uppercase text-white/80">
+<a class="hover:text-white transition-colors" href="#">About</a>
+<a class="hover:text-white transition-colors" href="#">Programs</a>
+<a class="hover:text-white transition-colors" href="#">Journal</a>
+<a class="hover:text-white transition-colors border-b border-white/20 pb-1" href="#">Contact</a>
+</div>
+</nav>
+<section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20">
+<div class="max-w-2xl mx-auto space-y-12 fade-in-section is-visible">
+<span class="text-[10px] tracking-[0.3em] uppercase opacity-60 font-medium">If you are here, you already know.</span>
+<h1 class="text-5xl md:text-7xl font-display leading-tight italic">
+                Eat clean. <br/>
+<span class="not-italic">Move more.</span> <br/>
+                Sleep better.
+            </h1>
+<p class="text-lg opacity-70 font-light leading-relaxed max-w-lg mx-auto italic">
+                The standard prescriptions are clear, yet the results remain elusive.
+            </p>
+<div class="pt-12 space-y-4">
+<div class="bubble-float bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-slate-200/50 dark:border-white/10 px-8 py-4 rounded-full inline-block shadow-sm">
+<p class="text-sm font-light">"I'm doing everything right..."</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40">
+<span class="text-[10px] tracking-widest uppercase">Scroll to unfold</span>
+<div class="scroll-indicator-line"></div>
+</div>
+</section>
+<section class="relative min-h-screen flex flex-col items-center justify-center px-4 bg-slate-100/50 dark:bg-accent-dark transition-colors duration-1000">
+<div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8 fade-in-section" id="friction-text">
+<h2 class="text-4xl md:text-5xl font-display italic leading-snug">
+                    What am I <br/>
+<span class="not-italic text-primary">missing?</span>
+</h2>
+<p class="text-lg font-light opacity-80 leading-relaxed">
+                    Modern life is faster than your recovery. You're exhausted even after 8 hours of sleep. Brain fog makes it hard to focus. You crave sugar in the afternoon.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-8 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-all">Explore Services</button>
+<button class="border border-slate-300 dark:border-white/20 px-8 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-all">Our Story</button>
+</div>
+</div>
+<div class="relative h-[400px] flex flex-col justify-center gap-6">
+<div class="absolute top-0 right-0 md:-right-12 bubble-float bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl max-w-[240px] transform -rotate-2 border border-slate-100 dark:border-white/5">
+<p class="text-sm italic opacity-70">"Your doctor says you're 'fine' but you know something's off."</p>
+</div>
+<div class="absolute bottom-12 left-0 md:-left-12 bubble-float bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl max-w-[240px] transform rotate-3 border border-slate-100 dark:border-white/5" style="animation-delay: 1s;">
+<p class="text-sm italic opacity-70">"Why isn't the weight moving?"</p>
+</div>
+<div class="mx-auto w-32 h-32 rounded-full border border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl animate-pulse">
+                        expand_circle_down
+                    </span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-4 text-center">
+<div class="max-w-3xl mx-auto space-y-8 fade-in-section">
+<span class="text-[10px] tracking-[0.4em] uppercase opacity-60">Our Philosophy</span>
+<h2 class="text-5xl md:text-6xl font-display">Samatvam Living Framework</h2>
+<p class="text-xl font-light opacity-80 leading-relaxed italic">
+                Your body isn't broken. You just need a system that actually works. <br/>
+                Three core practices. One balanced life.
+            </p>
+</div>
+</section>
+<section class="py-24 px-4 bg-white/30 dark:bg-white/[0.02]">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-900 p-10 rounded-3xl border border-slate-200 dark:border-white/5 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col h-full">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2 block">Most Popular</span>
+<h3 class="text-2xl font-display mb-4">One-on-One Coaching</h3>
+<p class="text-sm font-light opacity-70 mb-8 leading-relaxed">
+                        If you're tired of trying to figure it out alone, this is for you. A personalized, step-by-step plan that fits your life—not the other way around.
+                    </p>
+<div class="mt-auto space-y-3 pt-8 border-t border-slate-100 dark:border-white/5">
+<div class="flex items-center gap-3 text-sm font-light">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+                            Weekly 1:1 coaching calls
+                        </div>
+<div class="flex items-center gap-3 text-sm font-light">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+                            Personalized nutrition &amp; movement
+                        </div>
+<div class="flex items-center gap-3 text-sm font-light">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+                            24/7 messaging support
+                        </div>
+</div>
+<button class="w-full mt-10 py-4 rounded-xl border border-primary text-primary hover:bg-primary hover:text-white transition-all font-medium text-sm">Book Now</button>
+</div>
+<div class="bg-slate-900 text-white p-10 rounded-3xl shadow-2xl flex flex-col h-full transform scale-105 z-10">
+<div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-white">groups</span>
+</div>
+<h3 class="text-2xl font-display mb-4">Small Group Program</h3>
+<p class="text-sm font-light opacity-70 mb-8 leading-relaxed">
+                        For those who thrive with community. Get the same transformative framework alongside others on the same journey—at a more accessible investment.
+                    </p>
+<div class="mt-auto space-y-3 pt-8 border-t border-white/10">
+<div class="flex items-center gap-3 text-sm font-light">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+                            Weekly group coaching calls
+                        </div>
+<div class="flex items-center gap-3 text-sm font-light">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+                            Private community access
+                        </div>
+<div class="flex items-center gap-3 text-sm font-light">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+                            Peer accountability
+                        </div>
+</div>
+<button class="w-full mt-10 py-4 rounded-xl bg-primary text-white hover:bg-opacity-90 transition-all font-medium text-sm">Join Next Cohort</button>
+</div>
+<div class="bg-white dark:bg-slate-900 p-10 rounded-3xl border border-slate-200 dark:border-white/5 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col h-full">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary">business</span>
+</div>
+<h3 class="text-2xl font-display mb-4">Corporate Wellness</h3>
+<p class="text-sm font-light opacity-70 mb-8 leading-relaxed">
+                        Bring the Samatvam framework to your team. Custom programs designed to reduce burnout, boost energy, and improve performance.
+                    </p>
+<div class="mt-auto space-y-3 pt-8 border-t border-slate-100 dark:border-white/5">
+<div class="flex items-center gap-3 text-sm font-light">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+                            Workshops &amp; seminars
+                        </div>
+<div class="flex items-center gap-3 text-sm font-light">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+                            Executive coaching
+                        </div>
+<div class="flex items-center gap-3 text-sm font-light">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+                            Wellness assessments
+                        </div>
+</div>
+<button class="w-full mt-10 py-4 rounded-xl border border-slate-300 dark:border-white/20 hover:bg-slate-50 dark:hover:bg-white/5 transition-all font-medium text-sm">Enquire Today</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-4">
+<div class="max-w-5xl mx-auto bg-[#ECE9E4] dark:bg-accent-dark rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center">
+<div class="p-12 md:p-20 md:w-1/2 space-y-6">
+<span class="text-[10px] tracking-[0.3em] uppercase text-primary font-bold">Coming Soon</span>
+<h2 class="text-4xl font-display leading-tight">21 Day Habit Building Masterclass</h2>
+<p class="text-lg font-light opacity-70 leading-relaxed">
+                    Self Paced. Build Healthy Habits That Actually Stick. A comprehensive online program that guides you through the framework at your own pace.
+                </p>
+<div class="flex gap-8 text-xs font-medium uppercase tracking-widest opacity-60">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span> Self-Paced</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">list_alt</span> Daily Lessons</span>
+</div>
+<button class="bg-primary text-white px-8 py-3 rounded-full text-sm font-medium">Join the Waitlist</button>
+</div>
+<div class="md:w-1/2 h-full relative p-12 flex items-center justify-center">
+<div class="w-64 h-80 bg-white/40 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 flex flex-col items-center justify-center text-center p-8">
+<span class="text-6xl font-display text-primary mb-2">21</span>
+<span class="text-sm tracking-[0.2em] uppercase opacity-60">Days to</span>
+<span class="text-xl font-display italic">Transformation</span>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<section class="py-24 px-4 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto text-center space-y-16">
+<div class="space-y-4">
+<span class="text-[10px] tracking-[0.4em] uppercase opacity-60">Testimonials</span>
+<h2 class="text-5xl font-display">Community Love</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+<div class="space-y-6 italic font-light text-lg leading-relaxed border-l border-primary/20 pl-8">
+<p>"The Samatvam framework completely transformed my approach to self-care. The atmosphere of awareness is unmatched."</p>
+<div class="not-italic">
+<p class="text-sm font-bold">Elena R.</p>
+<p class="text-[10px] uppercase tracking-widest opacity-50">Yoga Instructor</p>
+</div>
+</div>
+<div class="space-y-6 italic font-light text-lg leading-relaxed border-l border-primary/20 pl-8">
+<p>"I was always tired. The Restore pillar changed everything for me. I finally have the energy to play with my kids again."</p>
+<div class="not-italic">
+<p class="text-sm font-bold">Michael T.</p>
+<p class="text-[10px] uppercase tracking-widest opacity-50">Software Engineer</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 px-4 text-center">
+<div class="max-w-2xl mx-auto space-y-12 fade-in-section">
+<h2 class="text-5xl md:text-6xl font-display leading-tight italic">
+                Ready to Transform <br/>
+<span class="not-italic">Your Health?</span>
+</h2>
+<p class="text-lg font-light opacity-70">
+                Book a free discovery call and let's discuss how Samatvam can help you build sustainable habits for life.
+            </p>
+<button class="bg-primary text-white px-12 py-5 rounded-full text-sm font-medium hover:scale-105 transition-transform">
+                Book Your Discovery Call
+            </button>
+</div>
+</section>
+<footer class="bg-slate-900 text-white/90 pt-20 pb-10 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="space-y-6">
+<div class="text-xl font-display tracking-widest">SAMATVAM</div>
+<p class="text-sm font-light opacity-60 leading-relaxed">
+                    A sanctuary for the mind, body, and spirit. Find your balance with us.
+                </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10" href="#"><span class="material-symbols-outlined text-sm">person</span></a>
+<a class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-[10px] uppercase tracking-[0.2em] font-bold opacity-40">Services</h4>
+<ul class="space-y-3 text-sm font-light opacity-70">
+<li><a class="hover:text-primary transition-colors" href="#">One-on-One Coaching</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Group Programs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Corporate Wellness</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">21-Day Masterclass</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-[10px] uppercase tracking-[0.2em] font-bold opacity-40">Company</h4>
+<ul class="space-y-3 text-sm font-light opacity-70">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-[10px] uppercase tracking-[0.2em] font-bold opacity-40">Newsletter</h4>
+<p class="text-xs font-light opacity-60">Subscribe for wellness tips and updates.</p>
+<form class="flex gap-2">
+<input class="bg-white/5 border-white/10 rounded-xl px-4 py-3 text-sm w-full focus:ring-primary focus:border-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary px-6 py-3 rounded-xl text-sm font-bold">Join</button>
+</form>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-10 border-t border-white/5 flex flex-col md:row justify-between items-center gap-4 text-[10px] uppercase tracking-widest opacity-40">
+<p>© 2024 Samatvam Wellness. All rights reserved.</p>
+<div class="flex gap-8">
+<a href="#">Privacy</a>
+<a href="#">Terms</a>
+<a href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+        // Dark mode toggle based on scroll (optional luxury touch)
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY;
+            const threshold = window.innerHeight * 0.8;
+            if (scrollPos > threshold) {
+                // document.documentElement.classList.add('dark');
+            } else {
+                // document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+
+</body></html>

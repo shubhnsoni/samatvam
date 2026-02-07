@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article — Samatvam Living</title>
+  <meta name="description" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar--light" id="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar-brand">
+        <svg class="navbar-leaf" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Samatvam Living
+      </a>
+      <div class="navbar-nav navbar-nav--desktop">
+        <a href="how-it-works.html">Method</a>
+        <a href="stories.html">Stories</a>
+        <a href="programs.html">Programs</a>
+        <a href="contact.html">Contact</a>
+        <a href="client/login.html" class="nav-login">Login</a>
+      </div>
+      <div class="navbar-right">
+        <a href="contact.html" class="btn btn-primary nav-cta">Book a Discovery Call</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="navbar-nav navbar-nav--mobile" id="navMenu">
+    <a href="how-it-works.html">Method</a>
+    <a href="stories.html">Stories</a>
+    <a href="programs.html">Programs</a>
+    <a href="contact.html">Contact</a>
+    <a href="client/login.html" class="nav-login">Login</a>
+  </div>
+
+  <!-- ARTICLE -->
+  <article style="padding: 120px 0 80px;">
+    <div class="container-narrow">
+      <!-- Skeleton -->
+      <div id="articleSkeleton">
+        <div class="skeleton-line w40" style="margin-bottom:12px;"></div>
+        <div class="skeleton-line w90" style="height:36px;margin-bottom:8px;"></div>
+        <div class="skeleton-line w60" style="margin-bottom:32px;"></div>
+        <div class="skeleton-img" style="height:300px;margin-bottom:32px;"></div>
+        <div class="skeleton-line w90"></div>
+        <div class="skeleton-line w80"></div>
+        <div class="skeleton-line w90"></div>
+        <div class="skeleton-line w70"></div>
+      </div>
+
+      <!-- Dynamic content -->
+      <div id="articleContent" style="display:none;">
+        <a href="blog.html" class="blog-back-link">← Back to Insights</a>
+        <span class="blog-card__cat" id="articleCat" style="margin:16px 0 8px;display:inline-block;"></span>
+        <h1 class="blog-article__title" id="articleTitle"></h1>
+        <p class="blog-article__date" id="articleDate"></p>
+        <div class="blog-article__img" id="articleImg"></div>
+        <div class="blog-article__body" id="articleBody"></div>
+      </div>
+
+      <!-- Not found -->
+      <div id="articleNotFound" style="display:none;text-align:center;padding:80px 0;">
+        <h2 style="font-family:var(--font-serif);margin-bottom:12px;">Article not found</h2>
+        <p style="color:#999;margin-bottom:24px;">This article may have been removed or the link is incorrect.</p>
+        <a href="blog.html" class="btn btn-secondary">← Back to Insights</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA -->
+  <section style="padding:60px 0;background:var(--cream-dark);text-align:center;">
+    <div class="container-narrow">
+      <p class="text-serif text-large" style="color:var(--charcoal);margin-bottom:20px;">Want personalized guidance?</p>
+      <a href="contact.html" class="btn btn-primary">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-botanical">
+      <svg width="300" height="300" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="0.3"><path d="M50 100 C 50 100 15 55 15 25 C 15 8 35 -5 50 -5 C 65 -5 85 8 85 25 C 85 55 50 100 50 100 Z"/><path d="M50 -5 L 50 100"/><path d="M50 20 L 80 5"/><path d="M50 45 L 20 30"/><path d="M50 65 L 75 55"/></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="footer-brand">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <span>Samatvam Living</span>
+          </a>
+          <p class="footer-tagline">Holistic coaching for the modern leader. Elevate your performance through sustainable wellness practices.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Sitemap</p>
+          <div class="footer-links"><a href="how-it-works.html">Method</a><a href="about.html">About</a><a href="stories.html">Stories</a><a href="programs.html">Programs</a><a href="blog.html">Insights</a><a href="contact.html">Contact</a></div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Legal</p>
+          <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Disclaimer</a></div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Contact</p>
+          <div class="footer-links"><a href="mailto:deepti@samatvam.living">deepti@samatvam.living</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Samatvam Living. All rights reserved.</p>
+        <a href="https://instagram.com/shubhsonic" target="_blank" rel="noopener" class="footer-bottom__designed">Made with love <span class="footer-bottom__dot"></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/cms-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+  (async () => {
+    const skeleton = document.getElementById('articleSkeleton');
+    const content = document.getElementById('articleContent');
+    const notFound = document.getElementById('articleNotFound');
+    if (typeof CMS === 'undefined') return;
+
+    const params = new URLSearchParams(window.location.search);
+    const postId = params.get('id');
+    if (!postId) { skeleton.style.display = 'none'; notFound.style.display = 'block'; return; }
+
+    try {
+      const post = await CMS.getById(CMS.KEYS.blogPosts, postId);
+      skeleton.style.display = 'none';
+
+      if (!post || post.status !== 'published') { notFound.style.display = 'block'; return; }
+
+      document.title = post.title + ' — Samatvam Living';
+      document.querySelector('meta[name="description"]').content = post.excerpt || '';
+
+      document.getElementById('articleCat').textContent = post.category || '';
+      document.getElementById('articleTitle').textContent = post.title;
+      document.getElementById('articleDate').textContent = new Date(post.createdAt || post.created_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+      if (post.imageUrl) {
+        document.getElementById('articleImg').innerHTML = `<img src="${post.imageUrl}" alt="${post.title}" style="width:100%;border-radius:12px;margin:24px 0 32px;">`;
+      }
+
+      // Render body — support basic markdown-like formatting
+      const body = (post.body || '').replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+      document.getElementById('articleBody').innerHTML = `<p>${body}</p>`;
+
+      content.style.display = 'block';
+    } catch (e) {
+      skeleton.style.display = 'none';
+      notFound.style.display = 'block';
+    }
+  })();
+  </script>
+</body>
+</html>

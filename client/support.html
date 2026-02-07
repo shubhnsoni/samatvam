@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/client.css">
+</head>
+<body>
+
+  <button class="cl-sidebar-toggle" id="sidebarToggle"><span></span></button>
+  <div class="cl-sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="cl-layout">
+    <aside class="cl-sidebar">
+      <a href="../index.html" class="cl-sidebar__brand">Samatvam Living</a>
+      <nav class="cl-sidebar__nav">
+        <a href="index.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
+        <a href="focus.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>My Focus</a>
+        <a href="plan.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>My Plan</a>
+        <a href="courses.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>My Courses</a>
+        <a href="resources.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Resources</a>
+        <a href="progress.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Progress</a>
+        <a href="support.html" class="cl-sidebar__link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Support</a>
+      </nav>
+      <div class="cl-sidebar__footer"><a href="#" class="cl-sidebar__signout">Sign Out</a></div>
+    </aside>
+
+    <main class="cl-main">
+      <div class="cl-header">
+        <div>
+          <h1 class="cl-header__title">Support</h1>
+          <p class="cl-header__subtitle">You're never doing this alone.</p>
+        </div>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="cl-card cl-card--whatsapp">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+          <div class="cl-whatsapp-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.252-.149-2.868.852.852-2.868-.149-.252A8 8 0 1112 20z"/></svg>
+          </div>
+          <div>
+            <h3 class="cl-card__title cl-card__title--sm" style="margin-bottom: 2px;">WhatsApp Support</h3>
+            <p class="cl-card__meta">Primary support channel</p>
+          </div>
+        </div>
+        <p class="cl-card__text" style="margin-bottom: 20px;">Your coach is available on WhatsApp for quick questions, check-ins, and support between sessions. Response time is typically within a few hours during business hours.</p>
+        <a href="#" class="btn btn-primary" style="background: #25D366; border-color: #25D366;">Open WhatsApp Chat</a>
+        <p class="cl-card__meta" style="margin-top: 12px;">Available Mon–Fri, 9am–6pm IST</p>
+      </div>
+
+      <!-- In-App Messages -->
+      <div class="cl-card">
+        <h3 class="cl-card__title cl-card__title--sm" style="margin-bottom: 6px;">Send a Message</h3>
+        <p class="cl-card__text" style="margin-bottom: 20px;">For longer questions or reflections that don't need an immediate response. Your coach will respond within 24 hours.</p>
+
+        <div class="cl-chat">
+          <div class="cl-chat__thread">
+            <div class="cl-message">
+              <div class="cl-message__avatar">D</div>
+              <div class="cl-message__bubble cl-message__bubble--coach">
+                <p class="cl-message__sender">Deepti</p>
+                <p class="cl-message__text">Hi Priya! How's the evening wind-down going? Remember, even 15 minutes of screen-free time before bed counts. No need to be perfect.</p>
+                <p class="cl-message__time">Feb 5, 2:30 PM</p>
+              </div>
+            </div>
+
+            <div class="cl-message cl-message--client">
+              <div class="cl-message__bubble cl-message__bubble--client">
+                <p class="cl-message__text">Thanks Deepti! I managed 4 nights this week. The other 3 I was on calls until late. Is that okay?</p>
+                <p class="cl-message__time">Feb 5, 4:15 PM</p>
+              </div>
+            </div>
+
+            <div class="cl-message">
+              <div class="cl-message__avatar">D</div>
+              <div class="cl-message__bubble cl-message__bubble--coach">
+                <p class="cl-message__sender">Deepti</p>
+                <p class="cl-message__text">4 out of 7 is great progress! That's more than half. The goal isn't perfection — it's building a pattern your body can rely on. Keep going exactly as you are.</p>
+                <p class="cl-message__time">Feb 5, 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cl-chat__input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button class="btn btn-primary" id="chatSend">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="cl-card">
+        <h3 class="cl-card__title cl-card__title--sm" style="margin-bottom: 20px;">Common Questions</h3>
+        <div class="cl-faq">
+          <div class="cl-faq__item open">
+            <div class="cl-faq__question">
+              How quickly will my coach respond?
+              <svg class="cl-faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="cl-faq__answer">WhatsApp: within a few hours during business hours. In-app messages: within 24 hours.</div>
+          </div>
+          <div class="cl-faq__item">
+            <div class="cl-faq__question">
+              What if I'm struggling with a habit?
+              <svg class="cl-faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="cl-faq__answer">Reach out anytime. Struggling is normal and expected. Your coach can help adjust the approach.</div>
+          </div>
+          <div class="cl-faq__item">
+            <div class="cl-faq__question">
+              Can I reschedule a session?
+              <svg class="cl-faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="cl-faq__answer">Yes, with 24 hours notice. Just message your coach on WhatsApp.</div>
+          </div>
+          <div class="cl-faq__item">
+            <div class="cl-faq__question">
+              Is this a crisis support line?
+              <svg class="cl-faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="cl-faq__answer">No. If you're experiencing a mental health crisis, please contact a professional helpline. We can provide referrals if needed.</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/cms-data.js"></script>
+  <script src="../js/client.js"></script>
+</body>
+</html>

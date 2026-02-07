@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/client.css">
+</head>
+<body>
+
+  <button class="cl-sidebar-toggle" id="sidebarToggle"><span></span></button>
+  <div class="cl-sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="cl-layout">
+    <aside class="cl-sidebar">
+      <a href="../index.html" class="cl-sidebar__brand">Samatvam Living</a>
+      <nav class="cl-sidebar__nav">
+        <a href="index.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
+        <a href="focus.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>My Focus</a>
+        <a href="plan.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>My Plan</a>
+        <a href="courses.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>My Courses</a>
+        <a href="resources.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Resources</a>
+        <a href="progress.html" class="cl-sidebar__link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Progress</a>
+        <a href="support.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Support</a>
+      </nav>
+      <div class="cl-sidebar__footer"><a href="#" class="cl-sidebar__signout">Sign Out</a></div>
+    </aside>
+
+    <main class="cl-main">
+      <div class="cl-header">
+        <div>
+          <h1 class="cl-header__title">Progress</h1>
+          <p class="cl-header__subtitle">Awareness, not metrics. Reflection, not perfection.</p>
+        </div>
+      </div>
+
+      <!-- Write Reflection -->
+      <div class="cl-card cl-card--highlight">
+        <p class="cl-card__label">Week 3 Reflection</p>
+        <h3 class="cl-card__title">How are you feeling this week?</h3>
+        <p class="cl-card__text" style="margin-bottom: 24px;">Take a few minutes to notice — not judge. There are no right answers here.</p>
+        <form id="reflectionForm">
+          <div class="cl-form-group">
+            <label for="sleep">How has your sleep been?</label>
+            <textarea id="sleep" name="sleep" placeholder="Notice any changes in how you fall asleep, stay asleep, or wake up..."></textarea>
+          </div>
+          <div class="cl-form-group">
+            <label for="energy">How is your energy?</label>
+            <textarea id="energy" name="energy" placeholder="Any shifts in when you feel energized or depleted..."></textarea>
+          </div>
+          <div class="cl-form-group">
+            <label for="hard">What felt hard this week?</label>
+            <textarea id="hard" name="hard" placeholder="No judgment — just awareness..."></textarea>
+          </div>
+          <div class="cl-form-group">
+            <label for="good">What felt good?</label>
+            <textarea id="good" name="good" placeholder="Even small things count..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Reflection</button>
+        </form>
+      </div>
+
+      <!-- Past Reflections -->
+      <h3 class="cl-section-title" style="margin-top: 48px;">Past Reflections</h3>
+
+      <div class="cl-card">
+        <div class="cl-card__row cl-card__row--top" style="margin-bottom: 16px;">
+          <div>
+            <p class="cl-card__label">Week 2</p>
+            <p class="cl-card__meta">Focus: Morning Light Exposure</p>
+          </div>
+          <span class="cl-card__meta">Jan 31, 2026</span>
+        </div>
+        <div class="cl-reflection">
+          <p class="cl-reflection__label">Sleep</p>
+          <p class="cl-reflection__text">"Falling asleep faster. Still waking up around 3am but getting back to sleep more easily."</p>
+        </div>
+        <div class="cl-reflection">
+          <p class="cl-reflection__label">Energy</p>
+          <p class="cl-reflection__text">"The morning light thing is actually working. I feel more alert in the first hour. Afternoon crash is still there but slightly less intense."</p>
+        </div>
+        <div class="cl-coach-note" style="margin-top: 12px;">
+          <p class="cl-coach-note__label">Coach Feedback</p>
+          <p class="cl-coach-note__text">"The 3am waking is very common during nervous system recalibration. It usually resolves within 2-3 weeks. The morning alertness improvement is a great sign. Keep going." — Deepti</p>
+        </div>
+      </div>
+
+      <div class="cl-card">
+        <div class="cl-card__row cl-card__row--top" style="margin-bottom: 16px;">
+          <div>
+            <p class="cl-card__label">Week 1</p>
+            <p class="cl-card__meta">Focus: Sleep Time Consistency</p>
+          </div>
+          <span class="cl-card__meta">Jan 24, 2026</span>
+        </div>
+        <div class="cl-reflection">
+          <p class="cl-reflection__label">Sleep</p>
+          <p class="cl-reflection__text">"Managed to get to bed by 10:30 on 5 out of 7 nights. Two nights I was up until midnight with work deadlines."</p>
+        </div>
+        <div class="cl-coach-note" style="margin-top: 12px;">
+          <p class="cl-coach-note__label">Coach Feedback</p>
+          <p class="cl-coach-note__text">"5 out of 7 is excellent for week one. Don't aim for perfection — aim for consistency. The two late nights are data, not failure." — Deepti</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/cms-data.js"></script>
+  <script src="../js/client.js"></script>
+</body>
+</html>

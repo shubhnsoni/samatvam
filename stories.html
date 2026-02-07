@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories — Samatvam Living</title>
+  <meta name="description" content="Real stories from Samatvam Living clients. Quiet proof that the system works.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar--light" id="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar-brand">
+        <svg class="navbar-leaf" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Samatvam Living
+      </a>
+      <div class="navbar-nav navbar-nav--desktop">
+        <a href="how-it-works.html">Method</a>
+        <a href="stories.html">Stories</a>
+        <a href="programs.html">Programs</a>
+        <a href="blog.html">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a href="client/login.html" class="nav-login">Login</a>
+      </div>
+      <div class="navbar-right">
+        <a href="contact.html" class="btn btn-primary nav-cta">Book a Discovery Call</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="navbar-nav navbar-nav--mobile" id="navMenu">
+    <a href="how-it-works.html">Method</a>
+    <a href="stories.html">Stories</a>
+    <a href="programs.html">Programs</a>
+    <a href="blog.html">Insights</a>
+    <a href="contact.html">Contact</a>
+    <a href="client/login.html" class="nav-login">Login</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero--center">
+    <svg class="page-hero__botanical" width="260" height="260" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="0.4"><path d="M20 80 Q50 20 80 80"/><path d="M30 75 Q50 30 70 75"/><path d="M40 70 Q50 40 60 70"/><path d="M50 50 L50 95"/></svg>
+    <div class="container-narrow">
+      <p class="label" data-cms="st-hero-label">Real Results</p>
+      <h1 data-cms="st-hero-heading">Quiet proof that the <em>system</em> works.</h1>
+      <p data-cms="st-hero-sub">Real people. Real transformations. No hype — just honest words from clients who rebuilt their health.</p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-bar__inner">
+        <div class="stat-item">
+          <p class="stat-item__number" data-cms="st-stat1-number">500+</p>
+          <p class="stat-item__label" data-cms="st-stat1-label">Clients helped</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-item__number" data-cms="st-stat2-number">17 kg</p>
+          <p class="stat-item__label" data-cms="st-stat2-label">Best 3-month result</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-item__number" data-cms="st-stat3-number">12+</p>
+          <p class="stat-item__label" data-cms="st-stat3-label">Countries</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES (dynamically loaded from Supabase stories table) -->
+  <section class="stories-list">
+    <div class="container" id="storiesContainer">
+      <p class="text-center text-muted" id="storiesLoading">Loading stories...</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="page-cta">
+    <div class="container-narrow">
+      <h2 data-cms="st-cta-heading">Your story starts here</h2>
+      <p data-cms="st-cta-sub">Every journey begins with a single conversation.</p>
+      <a href="contact.html" class="btn btn-primary" data-cms="st-cta-text">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-botanical">
+      <svg width="300" height="300" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="0.3"><path d="M50 100 C 50 100 15 55 15 25 C 15 8 35 -5 50 -5 C 65 -5 85 8 85 25 C 85 55 50 100 50 100 Z"/><path d="M50 -5 L 50 100"/><path d="M50 20 L 80 5"/><path d="M50 45 L 20 30"/><path d="M50 65 L 75 55"/></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="footer-brand">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <span>Samatvam Living</span>
+          </a>
+          <p class="footer-tagline">Holistic coaching for the modern leader. Elevate your performance through sustainable wellness practices.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="mailto:deepti@samatvam.living" aria-label="Email"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Sitemap</p>
+          <div class="footer-links">
+            <a href="how-it-works.html">Method</a>
+            <a href="about.html">About</a>
+            <a href="stories.html">Stories</a>
+            <a href="programs.html">Programs</a>
+            <a href="blog.html">Insights</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Legal</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Disclaimer</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Contact</p>
+          <div class="footer-links">
+            <a href="mailto:deepti@samatvam.living">deepti@samatvam.living</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Samatvam Living. All rights reserved.</p>
+        <a href="https://instagram.com/shubhsonic" target="_blank" rel="noopener" class="footer-bottom__designed">Made with love <span class="footer-bottom__dot"></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/cms-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/page-content-loader.js"></script>
+  <script>
+    // Render story cards dynamically from the stories table
+    (async function renderStories() {
+      if (typeof CMS === 'undefined') return;
+      const container = document.getElementById('storiesContainer');
+      const loading = document.getElementById('storiesLoading');
+      try {
+        const stories = (await CMS.getAll(CMS.KEYS.stories)) || [];
+        const active = stories.filter(s => s.active !== false).sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+        if (!active.length) { loading.textContent = 'No stories yet.'; return; }
+        loading.remove();
+
+        active.forEach(s => {
+          const isFeatured = s.featured;
+          const hasBeforeAfter = s.imgBefore || s.imgAfter;
+          const hasVideo = s.videoUrl;
+
+          let imageHtml = '';
+          if (s.imgBefore && s.imgAfter) {
+            imageHtml = `<div class="story-card__image">
+              <div class="ba-slider" data-result="${s.result || ''}">
+                <div class="ba-slider__after" style="background-image:url('${s.imgAfter}')"></div>
+                <div class="ba-slider__before" style="background-image:url('${s.imgBefore}')"></div>
+                <div class="ba-slider__handle">
+                  <div class="ba-slider__line"></div>
+                  <div class="ba-slider__grip">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                  </div>
+                </div>
+                <span class="ba-slider__label ba-slider__label--before">Before</span>
+                <span class="ba-slider__label ba-slider__label--after">After</span>
+              </div>
+            </div>`;
+          } else if (s.imgBefore || s.imgAfter) {
+            const singleImg = s.imgAfter || s.imgBefore;
+            const label = s.imgAfter ? 'After' : 'Before';
+            imageHtml = `<div class="story-card__image">
+              <div class="story-card__single-img" style="position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:12px;">
+                <img src="${singleImg}" alt="${s.authorName || ''}" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+                <span class="ba-slider__label" style="position:absolute;bottom:12px;left:12px;">${label}</span>
+              </div>
+            </div>`;
+          }
+
+          let videoHtml = '';
+          if (hasVideo) {
+            videoHtml = `<div class="story-video-thumb" data-video-url="${s.videoUrl}">
+              <div class="story-video-play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <span>Watch ${s.authorName || 'their'}'s story</span>
+            </div>`;
+          }
+
+          const cardClass = isFeatured ? 'story-card story-card--featured fade-in' : 'story-card fade-in';
+          const card = document.createElement('div');
+          card.className = cardClass;
+          card.innerHTML = `
+            ${imageHtml}
+            <div class="story-card__content">
+              <div class="story-card__header">
+                <span class="story-badge">${s.badge || ''}</span>
+                <span class="story-result">${s.result || ''}</span>
+              </div>
+              <blockquote class="story-quote">"${(s.quote || '').replace(/^"|"$/g, '')}"</blockquote>
+              <div class="story-highlights">
+                <div class="story-hl story-hl--before"><span>Before:</span> ${s.beforeText || ''}</div>
+                <div class="story-hl story-hl--after"><span>After:</span> ${s.afterText || ''}</div>
+              </div>
+              ${videoHtml}
+              <div class="story-footer">
+                <p class="story-author">${s.authorName || ''}</p>
+                <p class="story-role">${s.authorRole || ''}</p>
+              </div>
+            </div>`;
+          container.appendChild(card);
+        });
+        // Make dynamically added fade-in elements visible
+        container.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+
+        // Initialize before/after sliders on dynamically created cards
+        container.querySelectorAll('.ba-slider').forEach(slider => {
+          const before = slider.querySelector('.ba-slider__before');
+          const handle = slider.querySelector('.ba-slider__handle');
+          if (!before || !handle) return;
+          let dragging = false;
+
+          function setPos(x) {
+            const rect = slider.getBoundingClientRect();
+            let pct = ((x - rect.left) / rect.width) * 100;
+            pct = Math.max(5, Math.min(95, pct));
+            before.style.width = pct + '%';
+            handle.style.left = pct + '%';
+          }
+
+          slider.addEventListener('mousedown', (e) => { dragging = true; setPos(e.clientX); });
+          window.addEventListener('mousemove', (e) => { if (dragging) { e.preventDefault(); setPos(e.clientX); } });
+          window.addEventListener('mouseup', () => { dragging = false; });
+          slider.addEventListener('touchstart', (e) => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+          window.addEventListener('touchmove', (e) => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
+          window.addEventListener('touchend', () => { dragging = false; });
+        });
+      } catch (e) {
+        console.warn('Stories load error:', e.message);
+        loading.textContent = 'Could not load stories.';
+      }
+      // Video click handlers
+      container.addEventListener('click', (e) => {
+        const thumb = e.target.closest('.story-video-thumb');
+        if (!thumb) return;
+        const url = thumb.dataset.videoUrl;
+        if (!url) return;
+        const isLocal = url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.mov');
+        const modal = document.createElement('div');
+        modal.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;padding:24px;';
+        if (isLocal) {
+          modal.innerHTML = '<video src="' + url + '" controls autoplay style="max-width:90vw;max-height:85vh;border-radius:8px;"></video>';
+        } else {
+          modal.innerHTML = '<iframe src="' + url + '?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="width:90vw;height:80vh;border:none;border-radius:8px;"></iframe>';
+        }
+        modal.addEventListener('click', (ev) => { if (ev.target === modal) { modal.remove(); document.body.style.overflow = ''; } });
+        document.body.style.overflow = 'hidden';
+        document.body.appendChild(modal);
+      });
+    })();
+  </script>
+</body>
+</html>

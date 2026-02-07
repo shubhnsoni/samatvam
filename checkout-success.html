@@ -1,0 +1,75 @@
+<!-- Built by @shubhsonic -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <style>
+    .success-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; background: var(--cream); }
+    .success-card { max-width: 520px; width: 100%; background: #fff; border-radius: 16px; padding: 48px 40px; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+    .success-icon { width: 64px; height: 64px; border-radius: 50%; background: #e8f5e9; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+    .success-icon svg { color: #4A5D4E; }
+    .success-card h1 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 12px; color: var(--charcoal); }
+    .success-card .subtitle { color: var(--charcoal-light); font-size: 1rem; line-height: 1.6; margin-bottom: 8px; }
+    .success-program { font-weight: 600; color: var(--green); font-size: 1.1rem; margin: 16px 0 24px; }
+    .success-card .info { font-size: 0.9rem; color: #888; line-height: 1.6; margin-bottom: 32px; }
+    .success-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .success-actions .btn { min-width: 160px; }
+  </style>
+</head>
+<body>
+  <div class="success-page">
+    <div class="success-card">
+      <div class="success-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h1>Payment Successful</h1>
+      <p class="subtitle">Thank you for enrolling with Samatvam Living.</p>
+      <p class="success-program" id="programName"></p>
+      <p class="info">You'll receive a confirmation email shortly with next steps. Our team will reach out within 24 hours to get you started.</p>
+      <div class="success-actions">
+        <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        <a href="client/login.html" class="btn btn-primary">Go to Client Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/cms-data.js"></script>
+  <script src="js/email.js"></script>
+  <script>
+    // Parse URL params to show program name
+    const params = new URLSearchParams(window.location.search);
+    const program = params.get('program');
+    const el = document.getElementById('programName');
+    if (program && el) {
+      el.textContent = decodeURIComponent(program);
+    }
+
+    // Send email notifications for Stripe payments (redirect-based)
+    (async () => {
+      if (typeof SamatvamEmail === 'undefined' || !program) return;
+      const sessionId = params.get('session_id');
+      // Only send once — check sessionStorage to avoid duplicate emails on refresh
+      const sentKey = 'email_sent_' + (sessionId || program);
+      if (sessionStorage.getItem(sentKey)) return;
+      sessionStorage.setItem(sentKey, '1');
+
+      await SamatvamEmail.init();
+      const programTitle = decodeURIComponent(program);
+      SamatvamEmail.sendPaymentConfirmation({ programTitle: programTitle, amount: '', currency: '', paymentId: sessionId || '' });
+      SamatvamEmail.sendAdminNotification({ subject: 'New Payment: ' + programTitle, type: 'payment', fromName: '', fromEmail: '', details: 'Program: ' + programTitle + '\nProvider: Stripe\nSession: ' + (sessionId || '') });
+      // Subscribe to Mailchimp (non-blocking)
+      const clientEmail = params.get('email');
+      if (clientEmail) SamatvamEmail.subscribeToMailchimp({ email: decodeURIComponent(clientEmail) });
+    })();
+  </script>
+</body>
+</html>

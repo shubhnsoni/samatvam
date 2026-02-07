@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses CMS — Admin — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/client.css">
+</head>
+<body>
+
+  <button class="admin-sidebar-toggle" id="adminSidebarToggle"><span></span></button>
+  <div class="admin-sidebar-overlay" id="adminSidebarOverlay"></div>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <a href="../index.html" class="admin-sidebar-brand">Samatvam Living</a>
+      <p class="admin-sidebar-label">Admin Panel</p>
+      <div class="admin-nav-section"><p class="admin-nav-section-title">Overview</p><nav class="admin-nav"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Dashboard</a><a href="clients.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Clients</a></nav></div>
+      <div class="admin-nav-section"><p class="admin-nav-section-title">Content (CMS)</p><nav class="admin-nav"><a href="cms-programs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>Programs</a><a href="cms-courses.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>Courses</a><a href="cms-testimonials.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Testimonials</a><a href="cms-stories.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Stories</a><a href="cms-founders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Founders</a><a href="cms-resources.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>Resources</a><a href="cms-focus.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>Weekly Focus</a><a href="cms-blog.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Blog / Insights</a><a href="cms-pages.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Page Content</a></nav></div>
+      <div class="admin-nav-section"><p class="admin-nav-section-title">System</p><nav class="admin-nav"><a href="payments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Payments</a><a href="cms-contacts.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Inquiries</a><a href="settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 010 4h-.09c-.658.003-1.25.396-1.51 1z"/></svg>Settings</a></nav></div>
+      <div class="admin-sidebar-footer"><div class="admin-user-info"><div class="admin-user-avatar">A</div><div><p class="admin-user-name">Admin</p><p class="admin-user-role">Administrator</p></div></div><a href="#" class="admin-signout">Sign Out</a></div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-header">
+        <div><h1>Courses</h1><p>Manage video courses and lessons for the client portal</p></div>
+        <div class="admin-header__actions">
+          <button class="btn btn-primary" id="addCourseBtn">+ New Course</button>
+        </div>
+      </div>
+
+      <!-- Course Form -->
+      <div class="admin-card admin-form" id="courseForm" style="display:none;">
+        <h3>New Course</h3>
+        <div class="admin-form-grid">
+          <div class="form-group"><label>Title</label><input type="text" name="title" placeholder="e.g. Sleep & Nervous System"></div>
+          <div class="form-group"><label>Phase</label><select name="phase"><option value="restore">Restore</option><option value="nourish">Nourish</option><option value="move">Move</option></select></div>
+        </div>
+        <div class="form-group"><label>Description</label><textarea name="description" rows="3" placeholder="Course description..."></textarea></div>
+        <div style="display:flex;gap:12px;margin-top:16px;">
+          <button class="btn btn-primary">Save Course</button>
+          <button class="btn btn-secondary">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Lesson Form -->
+      <div class="admin-card admin-form" id="lessonFormWrap" style="display:none;">
+        <h3>New Lesson</h3>
+        <div class="admin-form-grid">
+          <div class="form-group"><label>Title</label><input type="text" name="lesTitle" placeholder="Lesson title"></div>
+          <div class="form-group"><label>URL</label><input type="text" name="lesVideoUrl" placeholder="https://... (video, PDF, or external link)"></div>
+        </div>
+        <div class="admin-form-grid" style="grid-template-columns:1fr 1fr 1fr;">
+          <div class="form-group"><label>Type</label><select name="lesType"><option value="video">Video</option><option value="reading">Reading</option><option value="resource">Linked Resource</option></select></div>
+          <div class="form-group"><label>Duration</label><input type="text" name="lesDuration" placeholder="e.g. 12 min"></div>
+          <div class="form-group"><label>Linked Resource</label><select name="lesResourceId"><option value="">— None —</option></select></div>
+        </div>
+        <div class="admin-form-grid">
+          <div class="form-group"><label>Description</label><textarea name="lesDescription" rows="2" placeholder="Lesson description..."></textarea></div>
+          <div class="form-group"><label>Coach Tip (optional)</label><textarea name="lesCoachTip" rows="2" placeholder="Coach tip for this lesson..."></textarea></div>
+        </div>
+        <div class="form-group"><label>Reading Content (for reading type)</label><textarea name="lesContent" rows="4" placeholder="Full text content for reading lessons..."></textarea></div>
+        <div style="display:flex;gap:12px;margin-top:16px;">
+          <button class="btn btn-primary">Save Lesson</button>
+          <button class="btn btn-secondary">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Phase Tabs -->
+      <div class="admin-tabs" id="courseTabs">
+        <button class="admin-tab active" data-phase="all">All Courses</button>
+        <button class="admin-tab" data-phase="restore">Restore</button>
+        <button class="admin-tab" data-phase="nourish">Nourish</button>
+        <button class="admin-tab" data-phase="move">Move</button>
+      </div>
+
+      <!-- Courses List -->
+      <div id="coursesList"></div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/cms-data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <div class="admin-login-page">
+    <div class="admin-login-card">
+      <p class="navbar-brand" style="display:block;margin-bottom:32px;">Samatvam Living</p>
+      <h1>Admin Panel</h1>
+      <p class="subtitle">Sign in to manage your platform.</p>
+
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="admin@samatvam.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </form>
+
+      <p style="margin-top:24px;font-size:0.8rem;color:var(--text-muted);">
+        <a href="../index.html" style="color:var(--green);">← Back to website</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/cms-data.js"></script>
+  <script>
+    // Check if already logged in
+    (async () => {
+      const session = await CMS.getSession();
+      if (session) {
+        const role = await CMS.getUserRole();
+        if (role === 'admin') { window.location.href = 'index.html'; return; }
+      }
+    })();
+
+    document.getElementById('adminLoginForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Signing in...';
+      btn.disabled = true;
+
+      const { data, error } = await CMS.signIn(email, password);
+      if (error) {
+        btn.textContent = 'Sign In';
+        btn.disabled = false;
+        alert('Login failed: ' + error.message);
+        return;
+      }
+
+      // Verify admin role
+      const role = await CMS.getUserRole();
+      if (role !== 'admin') {
+        await CMS.signOut();
+        btn.textContent = 'Sign In';
+        btn.disabled = false;
+        alert('Access denied. This account does not have admin privileges.');
+        return;
+      }
+
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

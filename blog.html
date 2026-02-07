@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights — Samatvam Living</title>
+  <meta name="description" content="Evidence-based articles on sleep, nervous system health, nutrition, and sustainable wellness from Samatvam Living.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar--light" id="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar-brand">
+        <svg class="navbar-leaf" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Samatvam Living
+      </a>
+      <div class="navbar-nav navbar-nav--desktop">
+        <a href="how-it-works.html">Method</a>
+        <a href="stories.html">Stories</a>
+        <a href="programs.html">Programs</a>
+        <a href="contact.html">Contact</a>
+        <a href="client/login.html" class="nav-login">Login</a>
+      </div>
+      <div class="navbar-right">
+        <a href="contact.html" class="btn btn-primary nav-cta">Book a Discovery Call</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="navbar-nav navbar-nav--mobile" id="navMenu">
+    <a href="how-it-works.html">Method</a>
+    <a href="stories.html">Stories</a>
+    <a href="programs.html">Programs</a>
+    <a href="contact.html">Contact</a>
+    <a href="client/login.html" class="nav-login">Login</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero--center">
+    <svg class="page-hero__botanical" width="250" height="250" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="0.4"><circle cx="50" cy="50" r="35"/><path d="M50 15 L50 85"/><path d="M15 50 L85 50"/><path d="M26 26 L74 74"/><path d="M74 26 L26 74"/></svg>
+    <div class="container-narrow">
+      <p class="label">Insights</p>
+      <h1>Science-backed ideas for <em>real life.</em></h1>
+      <p>Short reads on sleep, stress, nutrition, and building habits that actually stick.</p>
+    </div>
+  </section>
+
+  <!-- CATEGORY FILTERS -->
+  <section style="padding: 40px 0 0;">
+    <div class="container">
+      <div id="blogFilters" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+        <button class="blog-filter active" data-cat="all">All</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section style="padding: 40px 0 80px;">
+    <div class="container">
+      <!-- Skeleton loader -->
+      <div id="blogSkeleton" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;">
+        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-line w60"></div><div class="skeleton-line w90"></div><div class="skeleton-line w40"></div></div>
+        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-line w60"></div><div class="skeleton-line w90"></div><div class="skeleton-line w40"></div></div>
+        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-line w60"></div><div class="skeleton-line w90"></div><div class="skeleton-line w40"></div></div>
+      </div>
+      <div id="blogGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;"></div>
+      <p id="blogEmpty" style="display:none;text-align:center;padding:60px 0;color:#999;font-size:1.05rem;">No articles published yet. Check back soon.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-botanical">
+      <svg width="300" height="300" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="0.3"><path d="M50 100 C 50 100 15 55 15 25 C 15 8 35 -5 50 -5 C 65 -5 85 8 85 25 C 85 55 50 100 50 100 Z"/><path d="M50 -5 L 50 100"/><path d="M50 20 L 80 5"/><path d="M50 45 L 20 30"/><path d="M50 65 L 75 55"/></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="footer-brand">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <span>Samatvam Living</span>
+          </a>
+          <p class="footer-tagline">Holistic coaching for the modern leader. Elevate your performance through sustainable wellness practices.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="mailto:deepti@samatvam.living" aria-label="Email"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Sitemap</p>
+          <div class="footer-links"><a href="how-it-works.html">Method</a><a href="about.html">About</a><a href="stories.html">Stories</a><a href="programs.html">Programs</a><a href="blog.html">Insights</a><a href="contact.html">Contact</a></div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Legal</p>
+          <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Disclaimer</a></div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Contact</p>
+          <div class="footer-links"><a href="mailto:deepti@samatvam.living">deepti@samatvam.living</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Samatvam Living. All rights reserved.</p>
+        <a href="https://instagram.com/shubhsonic" target="_blank" rel="noopener" class="footer-bottom__designed">Made with love <span class="footer-bottom__dot"></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/cms-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+  (async () => {
+    const grid = document.getElementById('blogGrid');
+    const skeleton = document.getElementById('blogSkeleton');
+    const emptyEl = document.getElementById('blogEmpty');
+    const filtersEl = document.getElementById('blogFilters');
+    if (!grid || typeof CMS === 'undefined') return;
+
+    let allPosts = [];
+    try {
+      allPosts = (await CMS.getAll(CMS.KEYS.blogPosts)) || [];
+      allPosts = allPosts.filter(p => p.status === 'published');
+      allPosts.sort((a, b) => new Date(b.createdAt || b.created_at || 0) - new Date(a.createdAt || a.created_at || 0));
+    } catch (e) { console.warn('Blog load error:', e.message); }
+
+    skeleton.style.display = 'none';
+
+    if (!allPosts.length) { emptyEl.style.display = 'block'; return; }
+
+    // Build category filters
+    const cats = [...new Set(allPosts.map(p => p.category).filter(Boolean))];
+    cats.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = 'blog-filter';
+      btn.dataset.cat = cat;
+      btn.textContent = cat;
+      filtersEl.appendChild(btn);
+    });
+
+    function esc(str) { const d = document.createElement('div'); d.textContent = str; return d.innerHTML; }
+
+    function renderPosts(filter) {
+      const posts = filter === 'all' ? allPosts : allPosts.filter(p => p.category === filter);
+      if (!posts.length) { grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#999;padding:40px;">No articles in this category.</p>'; return; }
+      grid.innerHTML = posts.map(p => {
+        const date = new Date(p.createdAt || p.created_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        const img = p.imageUrl ? `<div class="blog-card__img" style="background-image:url('${esc(p.imageUrl)}')"></div>` : `<div class="blog-card__img blog-card__img--placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/></svg></div>`;
+        return `<a href="blog-post.html?id=${p.id}" class="blog-card">
+          ${img}
+          <div class="blog-card__body">
+            <span class="blog-card__cat">${esc(p.category || '')}</span>
+            <h3 class="blog-card__title">${esc(p.title)}</h3>
+            <p class="blog-card__excerpt">${esc(p.excerpt || '')}</p>
+            <span class="blog-card__date">${date}</span>
+          </div>
+        </a>`;
+      }).join('');
+    }
+
+    renderPosts('all');
+
+    filtersEl.addEventListener('click', (e) => {
+      if (!e.target.classList.contains('blog-filter')) return;
+      filtersEl.querySelectorAll('.blog-filter').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      renderPosts(e.target.dataset.cat);
+    });
+  })();
+  </script>
+</body>
+</html>

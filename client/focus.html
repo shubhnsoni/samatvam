@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Focus — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/client.css">
+</head>
+<body>
+
+  <button class="cl-sidebar-toggle" id="sidebarToggle"><span></span></button>
+  <div class="cl-sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="cl-layout">
+    <aside class="cl-sidebar">
+      <a href="../index.html" class="cl-sidebar__brand">Samatvam Living</a>
+      <nav class="cl-sidebar__nav">
+        <a href="index.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
+        <a href="focus.html" class="cl-sidebar__link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>My Focus</a>
+        <a href="plan.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>My Plan</a>
+        <a href="courses.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>My Courses</a>
+        <a href="resources.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Resources</a>
+        <a href="progress.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Progress</a>
+        <a href="support.html" class="cl-sidebar__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Support</a>
+      </nav>
+      <div class="cl-sidebar__footer"><a href="#" class="cl-sidebar__signout">Sign Out</a></div>
+    </aside>
+
+    <main class="cl-main">
+      <div class="cl-header">
+        <div>
+          <h1 class="cl-header__title">My Focus</h1>
+          <p class="cl-header__subtitle">One habit at a time. That's all you need.</p>
+        </div>
+        <span class="cl-badge cl-badge--restore">Restore Phase</span>
+      </div>
+
+      <!-- Current Focus -->
+      <div class="cl-card cl-card--highlight" style="padding: 40px;">
+        <p class="cl-card__label">Week 3 Focus</p>
+        <h2 class="cl-card__title cl-card__title--lg">Evening Wind-Down Ritual</h2>
+        <p class="cl-card__text" style="max-width: 600px; margin-bottom: 28px;">Create a 30-minute buffer between your last screen and sleep. Signal to your nervous system that the day is done and it's safe to rest.</p>
+
+        <div class="cl-info-block">
+          <h4 class="cl-info-block__title">Why this matters</h4>
+          <p class="cl-card__text">Your nervous system doesn't have an off switch — it has a dimmer. Screen light and mental stimulation keep the dimmer turned up. A wind-down ritual gradually turns it down, allowing your body to transition into recovery mode naturally.</p>
+        </div>
+
+        <div class="cl-info-block">
+          <h4 class="cl-info-block__title">What "good enough" looks like</h4>
+          <div class="cl-checklist">
+            <div class="cl-checklist__item"><span class="cl-checklist__icon">✓</span> Screens off 30 minutes before bed (most nights)</div>
+            <div class="cl-checklist__item"><span class="cl-checklist__icon">✓</span> Dim the lights in your living space</div>
+            <div class="cl-checklist__item"><span class="cl-checklist__icon">✓</span> Do something calming: read, stretch, breathe</div>
+            <div class="cl-checklist__item"><span class="cl-checklist__icon">✓</span> If you miss a night, just try again tomorrow</div>
+          </div>
+        </div>
+
+        <div class="cl-info-block">
+          <h4 class="cl-info-block__title">Coach tip</h4>
+          <p class="cl-card__text" style="font-style: italic;">"Don't try to build the perfect routine. Just start with one thing: put your phone in another room. Everything else will follow." — Deepti</p>
+        </div>
+      </div>
+
+      <!-- Previous Focuses -->
+      <h3 class="cl-section-title" style="margin-top: 40px;">Previous Focuses</h3>
+      <div class="cl-grid cl-grid--2">
+        <div class="cl-card cl-card--muted">
+          <p class="cl-card__label">Week 2</p>
+          <h4 class="cl-card__title cl-card__title--sm">Morning Light Exposure</h4>
+          <p class="cl-card__text">Get 10 minutes of natural light within 30 minutes of waking.</p>
+          <p class="cl-card__meta" style="color: var(--green);">✓ Completed</p>
+        </div>
+        <div class="cl-card cl-card--muted">
+          <p class="cl-card__label">Week 1</p>
+          <h4 class="cl-card__title cl-card__title--sm">Sleep Time Consistency</h4>
+          <p class="cl-card__text">Go to bed within the same 30-minute window each night.</p>
+          <p class="cl-card__meta" style="color: var(--green);">✓ Completed</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/cms-data.js"></script>
+  <script src="../js/client.js"></script>
+</body>
+</html>

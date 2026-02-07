@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Samatvam Living</title>
+  <meta name="description" content="Book a discovery call with Samatvam Living. No pressure, no pitch — just clarity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar--light" id="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar-brand">
+        <svg class="navbar-leaf" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Samatvam Living
+      </a>
+      <div class="navbar-nav navbar-nav--desktop">
+        <a href="how-it-works.html">Method</a>
+        <a href="stories.html">Stories</a>
+        <a href="programs.html">Programs</a>
+        <a href="blog.html">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a href="client/login.html" class="nav-login">Login</a>
+      </div>
+      <div class="navbar-right">
+        <a href="contact.html" class="btn btn-primary nav-cta">Book a Discovery Call</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="navbar-nav navbar-nav--mobile" id="navMenu">
+    <a href="how-it-works.html">Method</a>
+    <a href="stories.html">Stories</a>
+    <a href="programs.html">Programs</a>
+    <a href="blog.html">Insights</a>
+    <a href="contact.html">Contact</a>
+    <a href="client/login.html" class="nav-login">Login</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero--center">
+    <svg class="page-hero__botanical" width="220" height="220" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="0.4"><path d="M50 5 L50 95"/><path d="M50 25 C65 20 75 10 80 5"/><path d="M50 25 C35 20 25 10 20 5"/><path d="M50 50 C65 45 80 35 90 25"/><path d="M50 50 C35 45 20 35 10 25"/><path d="M50 70 C60 67 70 60 78 50"/><path d="M50 70 C40 67 30 60 22 50"/></svg>
+    <div class="container-narrow">
+      <p class="label">Let’s Talk</p>
+      <h1>Book a <em>Discovery</em> Call</h1>
+      <p>No pressure, no pitch. Just a conversation to understand where you are and whether Samatvam is the right fit.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT LAYOUT -->
+  <section style="padding: 0 0 56px;">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Left: Info -->
+        <div class="contact-info fade-in">
+          <h2>What happens next?</h2>
+          <p>A discovery call is a 20-minute conversation where we listen, understand your situation, and help you decide if — and how — Samatvam can support you.</p>
+
+          <div class="contact-steps">
+            <div class="contact-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>You fill out the form</h4>
+                <p>Tell us a little about yourself and what you're experiencing. This helps us prepare for our conversation.</p>
+              </div>
+            </div>
+            <div class="contact-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>We schedule a call</h4>
+                <p>Within 24 hours, you'll receive a link to book a time that works for you.</p>
+              </div>
+            </div>
+            <div class="contact-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>We talk — honestly</h4>
+                <p>No sales script. We'll share what we think could help and you decide if it feels right.</p>
+              </div>
+            </div>
+            <div class="contact-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>You choose your pace</h4>
+                <p>If we're a good fit, we'll recommend a program. If not, we'll point you in the right direction.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border);">
+            <p class="text-small text-muted">Prefer to reach out directly?</p>
+            <p style="margin-top: 8px;"><a href="mailto:deepti@samatvam.living" style="color: var(--green); font-weight: 500;">deepti@samatvam.living</a></p>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrapper fade-in fade-in-delay-2">
+          <h3>Tell us about yourself</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (Optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 ...">
+            </div>
+            <div class="form-group">
+              <label for="interest">What interests you?</label>
+              <select id="interest" name="interest">
+                <option value="">Select a program...</option>
+                <option value="coaching">One-on-One Coaching</option>
+                <option value="cohort">Small Group Cohort</option>
+                <option value="corporate">Corporate Workshop</option>
+                <option value="masterclass">14-Day Habit Masterclass</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">What's going on?</label>
+              <textarea id="message" name="message" placeholder="Tell us briefly what you're experiencing and what you're hoping to change..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send & Book a Call</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REASSURANCE -->
+  <section style="padding: 80px 0; background-color: var(--cream-dark); text-align: center;">
+    <div class="container-narrow">
+      <p class="text-serif text-large" style="color: var(--charcoal);">"The hardest part is reaching out. Everything after that gets easier."</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-botanical">
+      <svg width="300" height="300" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="0.3"><path d="M50 100 C 50 100 15 55 15 25 C 15 8 35 -5 50 -5 C 65 -5 85 8 85 25 C 85 55 50 100 50 100 Z"/><path d="M50 -5 L 50 100"/><path d="M50 20 L 80 5"/><path d="M50 45 L 20 30"/><path d="M50 65 L 75 55"/></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="footer-brand">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <span>Samatvam Living</span>
+          </a>
+          <p class="footer-tagline">Holistic coaching for the modern leader. Elevate your performance through sustainable wellness practices.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="mailto:deepti@samatvam.living" aria-label="Email"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Sitemap</p>
+          <div class="footer-links">
+            <a href="how-it-works.html">Method</a>
+            <a href="about.html">About</a>
+            <a href="stories.html">Stories</a>
+            <a href="programs.html">Programs</a>
+            <a href="blog.html">Insights</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Legal</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Disclaimer</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Contact</p>
+          <div class="footer-links">
+            <a href="mailto:deepti@samatvam.living">deepti@samatvam.living</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Samatvam Living. All rights reserved.</p>
+        <a href="https://instagram.com/shubhsonic" target="_blank" rel="noopener" class="footer-bottom__designed">Made with love <span class="footer-bottom__dot"></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/cms-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/email.js"></script>
+  <script>
+    document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Validate
+      if (typeof gValidate === 'function') {
+        const valid = gValidate(this, {
+          name: { required: true, message: 'Please enter your name' },
+          email: { required: true, email: true },
+          message: { required: true, minLength: 10, message: 'Please tell us a bit about what you need' }
+        });
+        if (!valid) return;
+      }
+
+      const btn = this.querySelector('button[type="submit"]');
+      const origText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        interest: document.getElementById('interest').value,
+        message: document.getElementById('message').value
+      };
+
+      // Save to DB
+      const result = await CMS.submitContactForm(formData);
+
+      // Send email via EmailJS (non-blocking — DB save is the source of truth)
+      if (typeof SamatvamEmail !== 'undefined') {
+        await SamatvamEmail.init();
+        // Send contact email (to admin with user details)
+        SamatvamEmail.sendContactEmail(formData);
+        // Send admin notification
+        SamatvamEmail.sendAdminNotification({
+          subject: 'New Inquiry from ' + (formData.name || 'Website'),
+          type: 'inquiry',
+          fromName: formData.name,
+          fromEmail: formData.email,
+          details: 'Interest: ' + (formData.interest || 'N/A') + '\nPhone: ' + (formData.phone || 'N/A') + '\n\n' + (formData.message || '')
+        });
+        // Subscribe to Mailchimp (non-blocking)
+        SamatvamEmail.subscribeToMailchimp({ email: formData.email, name: formData.name });
+      }
+
+      if (result.success) {
+        btn.textContent = 'Sent!';
+        btn.style.background = 'var(--green)';
+        this.reset();
+        if (typeof gToast === 'function') gToast('Message sent! We\'ll be in touch soon.', 'success');
+        setTimeout(() => { btn.textContent = origText; btn.disabled = false; btn.style.background = ''; }, 3000);
+      } else {
+        btn.textContent = origText;
+        btn.disabled = false;
+        if (typeof gToast === 'function') gToast('Something went wrong. Please try emailing us directly.', 'error');
+        else alert('Something went wrong. Please try emailing us directly.');
+      }
+    });
+  </script>
+</body>
+</html>

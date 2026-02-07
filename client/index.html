@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/client.css">
+</head>
+<body>
+
+  <button class="cl-sidebar-toggle" id="sidebarToggle"><span></span></button>
+  <div class="cl-sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="cl-layout">
+    <aside class="cl-sidebar">
+      <a href="../index.html" class="cl-sidebar__brand">Samatvam Living</a>
+      <nav class="cl-sidebar__nav">
+        <a href="index.html" class="cl-sidebar__link active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
+        </a>
+        <a href="focus.html" class="cl-sidebar__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          My Focus
+        </a>
+        <a href="plan.html" class="cl-sidebar__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          My Plan
+        </a>
+        <a href="courses.html" class="cl-sidebar__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          My Courses
+        </a>
+        <a href="resources.html" class="cl-sidebar__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          Resources
+        </a>
+        <a href="progress.html" class="cl-sidebar__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Progress
+        </a>
+        <a href="support.html" class="cl-sidebar__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          Support
+        </a>
+      </nav>
+      <div class="cl-sidebar__footer">
+        <a href="#" class="cl-sidebar__signout">Sign Out</a>
+      </div>
+    </aside>
+
+    <main class="cl-main">
+      <div class="cl-header">
+        <div>
+          <h1 class="cl-header__title">Good morning, Priya</h1>
+          <p class="cl-header__subtitle">Week 3 of your journey</p>
+        </div>
+        <span class="cl-badge cl-badge--restore">Restore Phase</span>
+      </div>
+
+      <!-- Weekly Focus -->
+      <div class="cl-card cl-card--highlight">
+        <p class="cl-card__label">This Week's Focus</p>
+        <h3 class="cl-card__title cl-card__title--lg">Evening Wind-Down Ritual</h3>
+        <p class="cl-card__text">Create a 30-minute buffer between your last screen and sleep. This week, we're building the habit of signaling safety to your nervous system before bed.</p>
+        <a href="focus.html" class="cl-card__link">View Details →</a>
+      </div>
+
+      <!-- Quick Cards -->
+      <div class="cl-grid cl-grid--3">
+        <div class="cl-card">
+          <p class="cl-card__label">Your Phase</p>
+          <h3 class="cl-card__title">Restore</h3>
+          <p class="cl-card__text">We're focusing on nervous system regulation, sleep, and stress recovery before anything else.</p>
+        </div>
+        <div class="cl-card">
+          <p class="cl-card__label">Coach Note</p>
+          <h3 class="cl-card__title cl-card__title--sm">From Deepti</h3>
+          <p class="cl-card__text">"Great progress on the morning light exposure. This week, let's add the evening wind-down. Remember — good enough is enough."</p>
+          <p class="cl-card__meta">Updated 2 days ago</p>
+        </div>
+        <div class="cl-card">
+          <p class="cl-card__label">This Week</p>
+          <h3 class="cl-card__title cl-card__title--sm">Reflection Due</h3>
+          <p class="cl-card__text">Take 5 minutes to reflect on how your sleep has changed this week. No pressure — just awareness.</p>
+          <a href="progress.html" class="cl-card__link">Write Reflection →</a>
+        </div>
+      </div>
+
+      <!-- Continue Learning -->
+      <div class="cl-card">
+        <div class="cl-card__row" style="margin-bottom: 16px;">
+          <h3 class="cl-card__title" style="margin-bottom: 0;">Continue Learning</h3>
+          <a href="courses.html" class="cl-resource-list__action">All Courses →</a>
+        </div>
+        <div id="continueLearning"></div>
+      </div>
+
+      <!-- Recent Resources -->
+      <div class="cl-card">
+        <div class="cl-card__row" style="margin-bottom: 16px;">
+          <h3 class="cl-card__title" style="margin-bottom: 0;">Recent Resources</h3>
+          <a href="resources.html" class="cl-resource-list__action">View All →</a>
+        </div>
+        <div class="cl-resource-list">
+          <div class="cl-resource-list__item">
+            <div>
+              <p class="cl-resource-list__name">Evening Wind-Down Guide</p>
+              <p class="cl-resource-list__meta">PDF · Restore Phase</p>
+            </div>
+            <span class="cl-resource-list__action">View</span>
+          </div>
+          <div class="cl-resource-list__item">
+            <div>
+              <p class="cl-resource-list__name">NSDR Protocol (20 min)</p>
+              <p class="cl-resource-list__meta">Video · Restore Phase</p>
+            </div>
+            <span class="cl-resource-list__action">Watch</span>
+          </div>
+          <div class="cl-resource-list__item">
+            <div>
+              <p class="cl-resource-list__name">Sleep Architecture Worksheet</p>
+              <p class="cl-resource-list__meta">Worksheet · Restore Phase</p>
+            </div>
+            <span class="cl-resource-list__action">Download</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/cms-data.js"></script>
+  <script src="../js/client.js"></script>
+</body>
+</html>

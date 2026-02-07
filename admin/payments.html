@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments — Admin — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <button class="admin-sidebar-toggle" id="adminSidebarToggle"><span></span></button>
+  <div class="admin-sidebar-overlay" id="adminSidebarOverlay"></div>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <a href="../index.html" class="admin-sidebar-brand">Samatvam Living</a>
+      <p class="admin-sidebar-label">Admin Panel</p>
+      <div class="admin-nav-section"><p class="admin-nav-section-title">Overview</p><nav class="admin-nav"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Dashboard</a><a href="clients.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Clients</a></nav></div>
+      <div class="admin-nav-section"><p class="admin-nav-section-title">Content (CMS)</p><nav class="admin-nav"><a href="cms-programs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>Programs</a><a href="cms-courses.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>Courses</a><a href="cms-testimonials.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Testimonials</a><a href="cms-stories.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Stories</a><a href="cms-founders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Founders</a><a href="cms-resources.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>Resources</a><a href="cms-focus.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>Weekly Focus</a><a href="cms-blog.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Blog / Insights</a><a href="cms-pages.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>Pages</a></nav></div>
+      <div class="admin-nav-section"><p class="admin-nav-section-title">System</p><nav class="admin-nav"><a href="payments.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Payments</a><a href="cms-contacts.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Inquiries</a><a href="settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 010 4h-.09c-.658.003-1.25.396-1.51 1z"/></svg>Settings</a></nav></div>
+      <div class="admin-sidebar-footer"><div class="admin-user-info"><div class="admin-user-avatar">A</div><div><p class="admin-user-name">Admin</p><p class="admin-user-role">Administrator</p></div></div><a href="#" class="admin-signout">Sign Out</a></div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-header">
+        <div><h1>Payments</h1><p>View and manage all payment transactions</p></div>
+      </div>
+
+      <!-- Stats -->
+      <div class="admin-stats" id="paymentStats">
+        <div class="admin-stat-card"><p class="admin-stat-number" id="statTotal">—</p><p class="admin-stat-label">Total Payments</p></div>
+        <div class="admin-stat-card"><p class="admin-stat-number" id="statCompleted">—</p><p class="admin-stat-label">Completed</p></div>
+        <div class="admin-stat-card"><p class="admin-stat-number" id="statPending">—</p><p class="admin-stat-label">Pending</p></div>
+        <div class="admin-stat-card"><p class="admin-stat-number" id="statRevenue">—</p><p class="admin-stat-label">Total Revenue</p></div>
+      </div>
+
+      <!-- Filters -->
+      <div class="admin-card" style="padding:16px 20px;">
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+          <label style="font-weight:500;font-size:0.85rem;">Filter:</label>
+          <button class="btn btn-secondary btn-sm payment-filter active" data-filter="all">All</button>
+          <button class="btn btn-secondary btn-sm payment-filter" data-filter="completed">Completed</button>
+          <button class="btn btn-secondary btn-sm payment-filter" data-filter="pending">Pending</button>
+          <button class="btn btn-secondary btn-sm payment-filter" data-filter="failed">Failed</button>
+          <button class="btn btn-secondary btn-sm payment-filter" data-filter="refunded">Refunded</button>
+        </div>
+      </div>
+
+      <!-- Payments Table -->
+      <div class="admin-card">
+        <div class="admin-table-wrapper">
+          <table class="admin-table" id="paymentsTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Program</th>
+                <th>Amount</th>
+                <th>Provider</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="paymentsBody">
+              <tr><td colspan="6" class="text-center text-muted" style="padding:32px;">Loading payments...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-small text-muted" id="paymentsEmpty" style="display:none;text-align:center;padding:32px;">No payments found.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/cms-data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+  <script>
+    // Payments page logic
+    (async () => {
+      if (typeof CMS === 'undefined') return;
+
+      const tbody = document.getElementById('paymentsBody');
+      const emptyEl = document.getElementById('paymentsEmpty');
+      let allPayments = [];
+      let currentFilter = 'all';
+
+      try {
+        allPayments = (await CMS.getAll(CMS.KEYS.payments)) || [];
+        allPayments.sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+      } catch (e) {
+        tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted">Could not load payments.</td></tr>';
+        return;
+      }
+
+      // Stats
+      const completed = allPayments.filter(p => p.status === 'completed');
+      const pending = allPayments.filter(p => p.status === 'pending');
+      document.getElementById('statTotal').textContent = allPayments.length;
+      document.getElementById('statCompleted').textContent = completed.length;
+      document.getElementById('statPending').textContent = pending.length;
+
+      const totalRevenue = completed.reduce((sum, p) => sum + (p.amount || 0), 0);
+      // Format as USD (cents → dollars)
+      document.getElementById('statRevenue').textContent = '$' + (totalRevenue / 100).toLocaleString('en-US', { minimumFractionDigits: 0 });
+
+      function renderPayments(filter) {
+        const filtered = filter === 'all' ? allPayments : allPayments.filter(p => p.status === filter);
+        if (!filtered.length) {
+          tbody.innerHTML = '';
+          emptyEl.style.display = 'block';
+          return;
+        }
+        emptyEl.style.display = 'none';
+
+        tbody.innerHTML = filtered.map(p => {
+          const date = p.createdAt ? new Date(p.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—';
+          const amount = p.currency === 'inr'
+            ? '₹' + ((p.amount || 0) / 100).toLocaleString('en-IN')
+            : '$' + ((p.amount || 0) / 100).toLocaleString('en-US');
+          const statusClass = p.status === 'completed' ? 'status-active' : p.status === 'pending' ? 'status-paused' : 'status-completed';
+          const statusText = (p.status || 'pending').charAt(0).toUpperCase() + (p.status || 'pending').slice(1);
+          return `<tr>
+            <td>${date}</td>
+            <td>${p.clientEmail || p.clientName || '—'}</td>
+            <td>${p.programTitle || '—'}</td>
+            <td><strong>${amount}</strong></td>
+            <td style="text-transform:capitalize;">${p.provider || '—'}</td>
+            <td><span class="status-badge ${statusClass}">${statusText}</span></td>
+          </tr>`;
+        }).join('');
+      }
+
+      renderPayments('all');
+
+      // Filter buttons
+      document.querySelectorAll('.payment-filter').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.payment-filter').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.dataset.filter;
+          renderPayments(currentFilter);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

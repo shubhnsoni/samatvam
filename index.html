@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samatvam Living — Restore. Nourish. Move.</title>
+  <meta name="description" content="Samatvam Living builds frameworks that make healthy habits easier to execute in real life. Restore. Nourish. Move.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== SCROLL PROGRESS BAR ========== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar-brand">
+        <svg class="navbar-leaf" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Samatvam Living
+      </a>
+      <div class="navbar-nav navbar-nav--desktop">
+        <a href="how-it-works.html">Method</a>
+        <a href="about.html">About</a>
+        <a href="stories.html">Stories</a>
+        <a href="programs.html">Programs</a>
+        <a href="blog.html">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a href="client/login.html" class="nav-login">Login</a>
+      </div>
+      <div class="navbar-right">
+        <a href="contact.html" class="btn btn-primary nav-cta">Book a Discovery Call</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="navbar-nav navbar-nav--mobile" id="navMenu">
+    <a href="how-it-works.html">Method</a>
+    <a href="about.html">About</a>
+    <a href="stories.html">Stories</a>
+    <a href="programs.html">Programs</a>
+    <a href="blog.html">Insights</a>
+    <a href="contact.html">Contact</a>
+    <a href="client/login.html" class="nav-login">Login</a>
+  </div>
+
+  <!-- ========== SECTION 1: HERO — CLEAN CREAM BG ========== -->
+  <section class="hero" id="hero">
+    <!-- Floating Botanicals -->
+    <div class="hero-botanical hero-botanical--1">
+      <svg width="150" height="150" viewBox="0 0 100 100" fill="none" stroke="currentColor"><path d="M50 100 C 50 100 20 60 20 30 C 20 10 40 0 50 0 C 60 0 80 10 80 30 C 80 60 50 100 50 100 Z" stroke-width="0.8"/><path d="M50 0 L 50 100" stroke-width="0.5"/><path d="M50 30 L 80 10" stroke-width="0.5"/><path d="M50 60 L 20 40" stroke-width="0.5"/></svg>
+    </div>
+    <div class="hero-botanical hero-botanical--2">
+      <svg width="200" height="200" viewBox="0 0 100 100" fill="none" stroke="currentColor"><path d="M10 50 Q 50 10 90 50" stroke-width="0.5"/><path d="M50 10 L 50 90" stroke-width="0.5"/><circle cx="50" cy="50" r="30" stroke-width="0.5"/></svg>
+    </div>
+    <div class="hero-botanical hero-botanical--3">
+      <svg width="80" height="80" viewBox="0 0 50 50" fill="none" stroke="currentColor"><path d="M25 0 L 30 20 L 50 25 L 30 30 L 25 50 L 20 30 L 0 25 L 20 20 Z" stroke-width="0.5"/></svg>
+    </div>
+
+    <!-- Problem Bubbles -->
+    <div class="hero-bubble hero-bubble--1" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 5.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+      <span>Chronic fatigue</span>
+    </div>
+    <div class="hero-bubble hero-bubble--2" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <span>Poor sleep</span>
+    </div>
+    <div class="hero-bubble hero-bubble--3" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5-2 4-2 4 2 4 2M9 9h.01M15 9h.01"/></svg>
+      <span>Stress & burnout</span>
+    </div>
+    <div class="hero-bubble hero-bubble--4" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      <span>Gut issues</span>
+    </div>
+    <div class="hero-bubble hero-bubble--5" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span>Weight gain</span>
+    </div>
+    <div class="hero-bubble hero-bubble--6" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      <span>Brain fog</span>
+    </div>
+    <div class="hero-bubble hero-bubble--7" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      <span>Low energy</span>
+    </div>
+    <div class="hero-bubble hero-bubble--8" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 14a1 1 0 1 1 1-1 1 1 0 0 1-1 1zm1-5H11V7h2z"/></svg>
+      <span>Anxiety</span>
+    </div>
+    <div class="hero-bubble hero-bubble--9" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+      <span>No motivation</span>
+    </div>
+    <div class="hero-bubble hero-bubble--10" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5-2 4-2 4 2 4 2M9 9h.01M15 9h.01"/></svg>
+      <span>Joint pain</span>
+    </div>
+    <div class="hero-bubble hero-bubble--11" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      <span>Mood swings</span>
+    </div>
+    <div class="hero-bubble hero-bubble--12" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Weak immunity</span>
+    </div>
+    <div class="hero-bubble hero-bubble--13" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+      <span>Sugar cravings</span>
+    </div>
+    <div class="hero-bubble hero-bubble--14" data-bubble>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <span>Insomnia</span>
+    </div>
+
+    <div class="hero-inner">
+      <h1 class="hero-headlines">
+        <span class="hero-line" data-line="1">
+          <em>Eat clean.</em>
+          <svg class="hero-squiggle hero-squiggle--accent" viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M5,15 Q50,5 100,15 T195,15" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <span class="hero-line" data-line="2">
+          Move more.
+          <svg class="hero-squiggle hero-squiggle--sage" viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M5,12 Q30,4 60,14 T120,10 T195,14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <span class="hero-line" data-line="3">
+          Sleep better.
+          <svg class="hero-squiggle hero-squiggle--green" viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M5,14 Q40,6 80,14 T160,10 T195,13" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+      </h1>
+      <div class="hero-body">
+        <p class="hero-sub" data-cms="hp-hero-sub">It sounds simple. And it is — if you have the right systems to support it.</p>
+        <p class="hero-desc" data-cms="hp-hero-desc">At Samatvam Living, we focus on building frameworks that make healthy habits easier to execute in real life — not harder.</p>
+        <a href="contact.html" class="btn btn-primary hero-cta" data-cms="hp-hero-cta">Book a Discovery Call</a>
+        <div class="hero-scroll-hint hero-scroll-hint--mobile">
+          <span class="hero-scroll-text">Scroll to explore</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint hero-scroll-hint--desktop">
+      <span class="hero-scroll-text">Scroll to explore</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: CATEGORY MARQUEE ========== -->
+  <div class="category-bar">
+    <div class="category-bar__fade category-bar__fade--left"></div>
+    <div class="category-bar__fade category-bar__fade--right"></div>
+    <div class="category-bar__track">
+      <div class="category-bar__list">
+        <span class="category-bar__item">EAT CLEAN</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">MOVE MORE</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">SLEEP BETTER</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">STRESS BALANCE</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">MIND WELLNESS</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">BODY RESET</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">DEEP SLEEP</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">CORE HEALTH</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">EAT CLEAN</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">MOVE MORE</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">SLEEP BETTER</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">STRESS BALANCE</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">MIND WELLNESS</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">BODY RESET</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">DEEP SLEEP</span><span class="category-bar__sep">✦</span>
+        <span class="category-bar__item">CORE HEALTH</span><span class="category-bar__sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SECTION 3: FRAMEWORK — PILLAR CARDS ========== -->
+  <section class="framework" id="framework">
+    <!-- Subtle grid pattern -->
+    <div class="framework-grid-pattern"></div>
+
+    <div class="container">
+      <div class="framework-intro text-center">
+        <div class="framework-intro__label">
+          <span class="framework-intro__line"></span>
+          <span class="label" data-cms="hp-framework-label">The Samatvam Living Framework</span>
+          <span class="framework-intro__line"></span>
+        </div>
+        <p class="framework-intro__text" data-cms="hp-framework-body">Modern life keeps you moving faster than your body and mind can recover. <em>Samatvam Living</em> helps you step out of autopilot and rebuild your health through 3 core practices.</p>
+      </div>
+
+      <div class="pillar-grid">
+        <div class="pillar-card" data-pillar="restore">
+          <div class="pillar-card__border"></div>
+          <span class="pillar-card__ghost">01</span>
+          <div class="pillar-card__icon">
+            <div class="pillar-card__pulse"></div>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </div>
+          <h3 class="pillar-card__title">RESTORE</h3>
+          <p class="pillar-card__desc" data-cms="hp-pillar-restore-desc">Fix your sleep. Manage your stress response. Get your body out of "emergency mode". This is what most programs skip, and why they fail.</p>
+        </div>
+
+        <div class="pillar-card" data-pillar="nourish">
+          <div class="pillar-card__border"></div>
+          <span class="pillar-card__ghost">02</span>
+          <div class="pillar-card__icon">
+            <div class="pillar-card__pulse"></div>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3 class="pillar-card__title">NOURISH</h3>
+          <p class="pillar-card__desc" data-cms="hp-pillar-nourish-desc">Eat in a way that supports stable energy, fewer cravings, and hormonal balance. Real food, real life, without restriction or obsession.</p>
+        </div>
+
+        <div class="pillar-card" data-pillar="move">
+          <div class="pillar-card__border"></div>
+          <span class="pillar-card__ghost">03</span>
+          <div class="pillar-card__icon">
+            <div class="pillar-card__pulse"></div>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="pillar-card__title">MOVE</h3>
+          <p class="pillar-card__desc" data-cms="hp-pillar-move-desc">Build strength that supports your body now and carries you confidently into your 60s, 70s, and beyond.</p>
+        </div>
+      </div>
+
+      <div class="framework-closing text-center">
+        <p class="framework-closing__text">
+          <span class="framework-closing__line"></span>
+          Three pillars. One balanced life.
+          <span class="framework-closing__line"></span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: FOUNDERS ========== -->
+  <section class="founders" id="about">
+    <div class="container">
+      <div class="founders-intro text-center">
+        <span class="label" data-cms="hp-founders-label">About The Founders</span>
+        <h2 class="founders-intro__title" data-cms="hp-founders-title">We're Deepti and Hritwik</h2>
+        <p class="founders-intro__sub" data-cms="hp-founders-sub">Two people who rebuilt our health from rock bottom and now help others do the same.</p>
+      </div>
+
+      <!-- Deepti -->
+      <div class="founder-row">
+        <div class="founder-row__image">
+          <div class="founder-row__img-wrap">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" alt="Deepti" class="founder-row__img" data-cms-img="hp-deepti-img">
+          </div>
+          <div class="founder-row__img-border"></div>
+        </div>
+        <div class="founder-row__content">
+          <div class="founder-row__quote-mark">"</div>
+          <h3 class="founder-row__name" data-cms="hp-deepti-name">Deepti's Story</h3>
+          <div class="founder-row__text">
+            <p class="founder-row__dropcap" data-cms="hp-deepti-bio1">At 34, I couldn't walk up two flights of stairs without losing my breath. I was a high-performing corporate leader who looked fine on the outside, but inside, I was falling apart.</p>
+            <p data-cms="hp-deepti-bio2">After 20 years in the corporate world, I left to rebuild my health and help others who were exactly where I'd been: exhausted, gaining weight, and stuck.</p>
+            <p data-cms="hp-deepti-bio3">Today at 42, I run half marathons, can do headstands, and have the energy to live the life I always wanted.</p>
+          </div>
+          <div class="founder-row__certs">
+            <p data-cms="hp-deepti-creds">NASM Certified Nutrition Coach | Certified Yoga Teacher (Sivananda Ashram)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hritwik -->
+      <div class="founder-row founder-row--reverse">
+        <div class="founder-row__image">
+          <div class="founder-row__img-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Hritwik" class="founder-row__img" data-cms-img="hp-hritwik-img">
+          </div>
+          <div class="founder-row__img-border founder-row__img-border--left"></div>
+        </div>
+        <div class="founder-row__content">
+          <div class="founder-row__quote-mark">"</div>
+          <h3 class="founder-row__name" data-cms="hp-hritwik-name">Hritwik's Story</h3>
+          <div class="founder-row__text">
+            <p class="founder-row__dropcap" data-cms="hp-hritwik-bio1">For years, I struggled with psoriasis, IBS, and anxiety: conditions that left me searching for answers conventional medicine couldn't provide. I became my own experiment, diving deep into nutrition science and holistic wellness.</p>
+            <p data-cms="hp-hritwik-bio2">I wasn't trying to become a coach. I was trying to heal myself. It worked. Since then, I've helped over 500 people improve their health, lose weight, and break free from cycles that never solved the root problem.</p>
+          </div>
+          <div class="founder-row__certs">
+            <p data-cms="hp-hritwik-creds">Precision Nutrition Level 1 Coach | Yoga Siromani (YVFA)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission CTA -->
+      <div class="founders-mission">
+        <div class="founders-mission__inner">
+          <div class="founders-mission__label">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <span>Our Mission</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </div>
+          <h3 class="founders-mission__title" data-cms="hp-mission-title">Together, we built <em>Samatvam Living</em></h3>
+          <p class="founders-mission__text" data-cms="hp-mission-text">A practical, science-backed approach for high-performing professionals who need their health to support their life goals — without turning it into another project.</p>
+          <p class="founders-mission__sub" data-cms="hp-mission-sub">We work with real people living real lives, helping them build sustainable health that fits their actual circumstances.</p>
+          <a href="contact.html" class="btn btn-secondary founders-mission__btn">Book a Discovery Call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5: PROGRAMS ========== -->
+  <section class="offerings" id="programs">
+    <div class="container">
+      <div class="offerings-intro text-center">
+        <span class="label" data-cms="hp-offerings-label">Choose the support that fits your life</span>
+        <h2 data-cms="hp-offerings-title">Offerings</h2>
+      </div>
+
+      <div class="offerings-grid">
+        <div class="offering-card offering-card--highlight">
+          <div class="offering-card__top-line"></div>
+          <div class="offering-card__header">
+            <span class="offering-badge badge-open">OPEN</span>
+            <span class="offering-popular">Popular</span>
+          </div>
+          <h3 class="offering-title" data-cms="hp-off1-title">One-on-One Coaching</h3>
+          <p class="offering-subtitle" data-cms="hp-off1-subtitle">Personalized. Practical. Built for real life.</p>
+          <p class="offering-desc" data-cms="hp-off1-desc">You've tried the meal plans, workout programs, and apps. The problem wasn't the plan — it was your body fighting against you.</p>
+          <div class="offering-invest">
+            <span class="label">Investment</span>
+            <p class="offering-price" data-cms="hp-off1-price">$900 / ₹75,000</p>
+          </div>
+          <div class="offering-details" id="offeringDetails0">
+            <ul class="offering-details__list">
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Fully personalized Nourish, Move, Restore system</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Weekly 1:1 calls (60 mins)</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily accountability via WhatsApp</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Real-time adjustments when life gets messy</li>
+            </ul>
+            <div class="offering-details__duration"><span class="label">Duration</span><p>12 weeks</p></div>
+          </div>
+          <button class="offering-toggle" data-target="offeringDetails0">Learn More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <a href="contact.html" class="btn btn-green offering-cta-btn">Book a Discovery Call</a>
+        </div>
+
+        <div class="offering-card">
+          <div class="offering-card__top-line"></div>
+          <div class="offering-card__header">
+            <span class="offering-badge badge-open">OPEN</span>
+          </div>
+          <h3 class="offering-title" data-cms="hp-off2-title">Small Group Cohort</h3>
+          <p class="offering-subtitle" data-cms="hp-off2-subtitle">Community. Accountability. Systems that stick.</p>
+          <p class="offering-desc" data-cms="hp-off2-desc">The same framework as 1:1 coaching, but with a small group of 3–5 peers who share your challenges.</p>
+          <div class="offering-invest">
+            <span class="label">Investment</span>
+            <p class="offering-price" data-cms="hp-off2-price">$400 / ₹35,000</p>
+          </div>
+          <div class="offering-details" id="offeringDetails1">
+            <ul class="offering-details__list">
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Weekly group calls (90 mins)</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Personalized guidance within the group</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Community support & accountability</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Group chat access for questions & wins</li>
+            </ul>
+            <div class="offering-details__duration"><span class="label">Duration</span><p>12 weeks</p></div>
+          </div>
+          <button class="offering-toggle" data-target="offeringDetails1">Learn More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <a href="contact.html" class="btn btn-primary offering-cta-btn">Book a Discovery Call</a>
+        </div>
+
+        <div class="offering-card">
+          <div class="offering-card__top-line"></div>
+          <div class="offering-card__header">
+            <span class="offering-badge badge-inquire">INQUIRE</span>
+          </div>
+          <h3 class="offering-title" data-cms="hp-off3-title">Corporate Workshops</h3>
+          <p class="offering-subtitle" data-cms="hp-off3-subtitle">Performance Without Burnout</p>
+          <p class="offering-desc" data-cms="hp-off3-desc">Evidence-based science applied to workplace performance. Help your team sustain performance without burning out.</p>
+          <div class="offering-invest">
+            <span class="label">Investment</span>
+            <p class="offering-price" data-cms="hp-off3-price">Custom pricing</p>
+          </div>
+          <div class="offering-details" id="offeringDetails2">
+            <ul class="offering-details__list">
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 90-minute interactive session</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Customizable to your team's challenges</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Optional 3-part series</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Post-workshop support materials</li>
+            </ul>
+            <div class="offering-details__duration"><span class="label">Duration</span><p>90 mins / Custom</p></div>
+          </div>
+          <button class="offering-toggle" data-target="offeringDetails2">Learn More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <a href="contact.html" class="btn btn-primary offering-cta-btn">Book a Discovery Call</a>
+        </div>
+
+        <div class="offering-card">
+          <div class="offering-card__top-line"></div>
+          <div class="offering-card__header">
+            <span class="offering-badge badge-waitlist">WAITLIST</span>
+          </div>
+          <h3 class="offering-title" data-cms="hp-off4-title">14-Day Habit Masterclass</h3>
+          <p class="offering-subtitle" data-cms="hp-off4-subtitle">Self-Paced. Build Habits That Stick.</p>
+          <p class="offering-desc" data-cms="hp-off4-desc">Build one sustainable health habit at a time using our proven framework. Self-paced and accessible.</p>
+          <div class="offering-invest">
+            <span class="label">Investment</span>
+            <p class="offering-price" data-cms="hp-off4-price">Coming soon</p>
+          </div>
+          <div class="offering-details" id="offeringDetails3">
+            <ul class="offering-details__list">
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Pre-recorded video lessons</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Comprehensive workbook</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> WhatsApp community support</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 90 day access to all materials</li>
+            </ul>
+            <div class="offering-details__duration"><span class="label">Duration</span><p>Self-paced</p></div>
+          </div>
+          <button class="offering-toggle" data-target="offeringDetails3">Learn More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <a href="contact.html" class="btn btn-primary offering-cta-btn">Join Waitlist</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 6: TESTIMONIALS — CAROUSEL ========== -->
+  <section class="testimonials" id="testimonials">
+    <!-- Decorative botanicals -->
+    <div class="testimonials__deco testimonials__deco--left">
+      <svg width="60" height="200" viewBox="0 0 60 200" fill="none" stroke="currentColor"><path d="M30 0 C 30 0 10 40 10 70 C 10 90 25 100 30 100 C 35 100 50 90 50 70 C 50 40 30 0 30 0 Z" stroke-width="0.8"/><path d="M30 100 L 30 200" stroke-width="0.5"/><path d="M30 130 C 30 130 15 120 10 110" stroke-width="0.5"/><path d="M30 160 C 30 160 45 150 50 140" stroke-width="0.5"/></svg>
+    </div>
+    <div class="testimonials__deco testimonials__deco--right">
+      <svg width="80" height="160" viewBox="0 0 80 160" fill="none" stroke="currentColor"><circle cx="40" cy="40" r="30" stroke-width="0.5"/><path d="M40 70 L 40 160" stroke-width="0.5"/><path d="M40 90 L 20 80" stroke-width="0.5"/><path d="M40 110 L 60 100" stroke-width="0.5"/><path d="M40 130 L 25 125" stroke-width="0.5"/></svg>
+    </div>
+
+    <!-- Happy result pills -->
+    <div class="testi-pill testi-pill--1" data-testi-pill>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      <span>More energy</span>
+    </div>
+    <div class="testi-pill testi-pill--2" data-testi-pill>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span>Better sleep</span>
+    </div>
+    <div class="testi-pill testi-pill--3" data-testi-pill>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <span>Clear mind</span>
+    </div>
+    <div class="testi-pill testi-pill--4" data-testi-pill>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      <span>No cravings</span>
+    </div>
+    <div class="testi-pill testi-pill--5" data-testi-pill>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Strong immunity</span>
+    </div>
+    <div class="testi-pill testi-pill--6" data-testi-pill>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span>Feeling great</span>
+    </div>
+
+    <div class="container">
+      <div class="text-center" style="margin-bottom:48px;">
+        <span class="label" data-cms="hp-testi-label">Testimonials</span>
+        <h2 style="margin-top:16px;" data-cms="hp-testi-title">Stories of Transformation</h2>
+      </div>
+
+      <div class="testimonial-carousel" id="testimonialCarousel">
+        <div class="testimonial-carousel__quote-mark">"</div>
+        <div class="testimonial-carousel__card">
+          <!-- Left: Before/After Slider + Video -->
+          <div class="testimonial-carousel__media">
+            <div class="ba-slider" id="baSlider">
+              <div class="ba-slider__before">
+                <img src="" alt="Before" id="baBeforeImg">
+                <span class="ba-slider__label ba-slider__label--before">Before</span>
+              </div>
+              <div class="ba-slider__after" id="baAfter">
+                <img src="" alt="After" id="baAfterImg">
+                <span class="ba-slider__label ba-slider__label--after">After</span>
+              </div>
+              <div class="ba-slider__handle" id="baHandle">
+                <div class="ba-slider__handle-line"></div>
+                <div class="ba-slider__handle-grip">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8l4 4-4 4"/><path d="M6 8l-4 4 4 4"/></svg>
+                </div>
+                <div class="ba-slider__handle-line"></div>
+              </div>
+            </div>
+            <button class="testimonial-carousel__video-btn" id="testimonialVideoBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Watch Story</span>
+            </button>
+          </div>
+          <!-- Right: Quote + Author -->
+          <div class="testimonial-carousel__content">
+            <div class="testimonial-carousel__stars">★★★★★</div>
+            <blockquote class="testimonial-carousel__quote" id="testimonialQuote"></blockquote>
+            <div class="testimonial-carousel__author">
+              <p class="testimonial-carousel__name" id="testimonialName"></p>
+              <p class="testimonial-carousel__role" id="testimonialRole"></p>
+            </div>
+            <div class="testimonial-carousel__result" id="testimonialResult"></div>
+          </div>
+        </div>
+
+        <div class="testimonial-carousel__nav">
+          <div class="testimonial-carousel__dots" id="testimonialDots"></div>
+          <div class="testimonial-carousel__arrows">
+            <button class="testimonial-carousel__arrow" id="testimonialPrev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+            <button class="testimonial-carousel__arrow" id="testimonialNext"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Modal -->
+      <div class="video-modal" id="videoModal">
+        <div class="video-modal__backdrop" id="videoModalBackdrop"></div>
+        <div class="video-modal__content">
+          <button class="video-modal__close" id="videoModalClose">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+          <div class="video-modal__player" id="videoModalPlayer"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 7: FINAL CTA ========== -->
+  <section class="final-cta" id="finalCta">
+    <div class="container-narrow text-center">
+      <h2 class="final-cta__title">Ready to <em>transform?<svg class="cta-squiggle" viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M5,14 Q40,4 80,14 T160,10 T195,13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></em></h2>
+      <p class="final-cta__sub" data-cms="hp-cta-sub">Your journey to optimal health and performance starts with a single conversation. Let's define your path forward.</p>
+      <div class="final-cta__actions">
+        <a href="contact.html" class="btn final-cta__btn">Book Your Discovery Call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="mailto:deepti@samatvam.living" class="final-cta__email" data-cms="hp-cta-email">Questions? Email us at deepti@samatvam.living</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__botanical">
+      <svg width="300" height="300" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="0.3"><path d="M50 100 C 50 100 15 55 15 25 C 15 8 35 -5 50 -5 C 65 -5 85 8 85 25 C 85 55 50 100 50 100 Z"/><path d="M50 -5 L 50 100"/><path d="M50 20 L 80 5"/><path d="M50 45 L 20 30"/><path d="M50 65 L 75 55"/></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="footer-brand">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.5 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <span>Samatvam Living</span>
+          </a>
+          <p class="footer-tagline">Holistic coaching for the modern leader. Elevate your performance through sustainable wellness practices.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="mailto:deepti@samatvam.living" aria-label="Email"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Sitemap</p>
+          <div class="footer-links">
+            <a href="how-it-works.html">Method</a>
+            <a href="about.html">About</a>
+            <a href="stories.html">Stories</a>
+            <a href="programs.html">Programs</a>
+            <a href="blog.html">Insights</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Legal</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Disclaimer</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Contact</p>
+          <div class="footer-links">
+            <a href="mailto:deepti@samatvam.living">deepti@samatvam.living</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Samatvam Living. All rights reserved.</p>
+        <a href="admin/login.html" style="opacity:0.35;font-size:0.65rem;color:inherit;text-decoration:none;letter-spacing:0.05em;">Admin</a>
+        <a href="https://instagram.com/shubhsonic" target="_blank" rel="noopener" class="footer-bottom__designed">Made with love <span class="footer-bottom__dot"></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/cms-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/page-content-loader.js"></script>
+  <script src="js/email.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

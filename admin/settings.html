@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — Admin — Samatvam Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <button class="admin-sidebar-toggle" id="adminSidebarToggle"><span></span></button>
+  <div class="admin-sidebar-overlay" id="adminSidebarOverlay"></div>
+
+  <div class="admin-layout" id="settingsPage">
+    <aside class="admin-sidebar">
+      <a href="../index.html" class="admin-sidebar-brand">Samatvam Living</a>
+      <p class="admin-sidebar-label">Admin Panel</p>
+      <div class="admin-nav-section"><p class="admin-nav-section-title">Overview</p><nav class="admin-nav"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Dashboard</a><a href="clients.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Clients</a></nav></div>
+      <div class="admin-nav-section"><p class="admin-nav-section-title">Content (CMS)</p><nav class="admin-nav"><a href="cms-programs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>Programs</a><a href="cms-courses.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>Courses</a><a href="cms-testimonials.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Testimonials</a><a href="cms-stories.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Stories</a><a href="cms-founders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Founders</a><a href="cms-resources.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>Resources</a><a href="cms-focus.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>Weekly Focus</a><a href="cms-blog.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Blog / Insights</a><a href="cms-pages.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Page Content</a></nav></div>
+      <div class="admin-nav-section"><p class="admin-nav-section-title">System</p><nav class="admin-nav"><a href="payments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Payments</a><a href="cms-contacts.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Inquiries</a><a href="settings.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 010 4h-.09c-.658.003-1.25.396-1.51 1z"/></svg>Settings</a></nav></div>
+      <div class="admin-sidebar-footer"><div class="admin-user-info"><div class="admin-user-avatar">A</div><div><p class="admin-user-name">Admin</p><p class="admin-user-role">Administrator</p></div></div><a href="#" class="admin-signout">Sign Out</a></div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-header">
+        <div><h1>Settings</h1><p>Platform configuration and role management</p></div>
+      </div>
+
+      <!-- Program Availability -->
+      <div class="admin-card">
+        <h3>Program Availability</h3>
+        <p class="text-small text-muted" style="margin-bottom:20px;">Toggle programs on/off on the public site. Disabled programs won't appear on the Programs page.</p>
+        <div class="toggle-wrapper">
+          <div class="toggle-label"><h4>One-on-One Coaching</h4><p>Currently: Waitlist</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-coaching"><span class="toggle-slider"></span></label>
+        </div>
+        <div class="toggle-wrapper">
+          <div class="toggle-label"><h4>Small Group Cohort</h4><p>Currently: Open</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-cohort"><span class="toggle-slider"></span></label>
+        </div>
+        <div class="toggle-wrapper">
+          <div class="toggle-label"><h4>Corporate Workshops</h4><p>Currently: Inquire</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-corporate"><span class="toggle-slider"></span></label>
+        </div>
+        <div class="toggle-wrapper" style="border-bottom:none;">
+          <div class="toggle-label"><h4>14-Day Habit Masterclass</h4><p>Currently: Open</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-masterclass"><span class="toggle-slider"></span></label>
+        </div>
+      </div>
+
+      <!-- Payments & Checkout -->
+      <div class="admin-card" id="paymentSettingsCard">
+        <h3>Payments & Checkout</h3>
+        <p class="text-small text-muted" style="margin-bottom:20px;">Enable online checkout for programs. When OFF, all CTAs link to the contact page as usual.</p>
+        <div class="toggle-wrapper">
+          <div class="toggle-label"><h4>Enable Checkout</h4><p>Show "Enroll Now" buttons with payment flow on program pages</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-checkout"><span class="toggle-slider"></span></label>
+        </div>
+        <div id="paymentConfigFields" style="display:none;margin-top:20px;border-top:1px solid var(--border);padding-top:20px;">
+          <div class="form-group" style="margin-bottom:16px;">
+            <label>Payment Provider</label>
+            <select id="pay-provider" style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:0.9rem;">
+              <option value="stripe">Stripe (Checkout redirect)</option>
+              <option value="razorpay">Razorpay (Modal)</option>
+            </select>
+          </div>
+          <div id="stripeFields">
+            <p style="font-weight:600;font-size:0.85rem;margin-bottom:12px;color:var(--charcoal);">Stripe Configuration</p>
+            <div class="admin-form-grid">
+              <div class="form-group"><label>Publishable Key</label><input type="text" id="pay-stripePublishable" placeholder="pk_live_..."></div>
+              <div class="form-group"><label>Secret Key</label><input type="password" id="pay-stripeSecret" placeholder="sk_live_..."></div>
+            </div>
+          </div>
+          <div id="razorpayFields" style="display:none;">
+            <p style="font-weight:600;font-size:0.85rem;margin-bottom:12px;color:var(--charcoal);">Razorpay Configuration</p>
+            <div class="admin-form-grid">
+              <div class="form-group"><label>Key ID</label><input type="text" id="pay-razorpayKeyId" placeholder="rzp_live_..."></div>
+              <div class="form-group"><label>Key Secret</label><input type="password" id="pay-razorpayKeySecret" placeholder="Your key secret"></div>
+            </div>
+          </div>
+          <div class="form-actions" style="margin-top:16px;"><button class="btn btn-primary" id="savePaymentSettingsBtn">Save Payment Settings</button></div>
+        </div>
+      </div>
+
+      <!-- Email Notifications (EmailJS) -->
+      <div class="admin-card" id="emailSettingsCard">
+        <h3>Email Notifications</h3>
+        <p class="text-small text-muted" style="margin-bottom:20px;">Configure EmailJS to send emails for contact form submissions, payment confirmations, and admin alerts. <a href="https://www.emailjs.com/" target="_blank" rel="noopener" style="color:var(--green);">Get your free EmailJS account →</a></p>
+        <div class="toggle-wrapper">
+          <div class="toggle-label"><h4>Enable Email Notifications</h4><p>Send emails on contact form submissions, payments, and admin alerts</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-emailNotifications"><span class="toggle-slider"></span></label>
+        </div>
+        <div id="emailConfigFields" style="display:none;margin-top:20px;border-top:1px solid var(--border);padding-top:20px;">
+          <div class="form-group"><label>Admin Email (receives notifications)</label><input type="email" id="email-adminEmail" placeholder="hello@samatvam.com"></div>
+          <div class="admin-form-grid">
+            <div class="form-group"><label>EmailJS Public Key</label><input type="text" id="email-publicKey" placeholder="Your EmailJS public key"></div>
+            <div class="form-group"><label>EmailJS Service ID</label><input type="text" id="email-serviceId" placeholder="service_..."></div>
+          </div>
+          <p style="font-weight:600;font-size:0.85rem;margin:16px 0 12px;color:var(--charcoal);">Template IDs</p>
+          <div class="admin-form-grid">
+            <div class="form-group"><label>Contact Form Template</label><input type="text" id="email-contactTemplate" placeholder="template_..."></div>
+            <div class="form-group"><label>Payment Confirmation Template</label><input type="text" id="email-paymentTemplate" placeholder="template_..."></div>
+          </div>
+          <div class="form-group"><label>Admin Notification Template</label><input type="text" id="email-adminTemplate" placeholder="template_..."></div>
+          <div class="form-actions" style="margin-top:16px;"><button class="btn btn-primary" id="saveEmailSettingsBtn">Save Email Settings</button></div>
+        </div>
+      </div>
+
+      <!-- Mailchimp Integration -->
+      <div class="admin-card" id="mailchimpSettingsCard">
+        <h3>Mailchimp Integration</h3>
+        <p class="text-small text-muted" style="margin-bottom:20px;">Auto-subscribe contacts and clients to your Mailchimp audience. Get your form action URL from Mailchimp → Audience → Signup forms → Embedded forms.</p>
+        <div class="toggle-wrapper">
+          <div class="toggle-label"><h4>Enable Mailchimp</h4><p>Subscribe new contacts and paying clients to your email list</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-mailchimp"><span class="toggle-slider"></span></label>
+        </div>
+        <div id="mailchimpConfigFields" style="display:none;margin-top:20px;border-top:1px solid var(--border);padding-top:20px;">
+          <div class="form-group"><label>Form Action URL</label><input type="text" id="mc-formAction" placeholder="https://xxx.us1.list-manage.com/subscribe/post?u=...&id=..."></div>
+          <div class="admin-form-grid">
+            <div class="form-group"><label>u (user ID)</label><input type="text" id="mc-u" placeholder="Mailchimp u parameter"></div>
+            <div class="form-group"><label>id (audience ID)</label><input type="text" id="mc-id" placeholder="Mailchimp id parameter"></div>
+          </div>
+          <p class="text-small text-muted" style="margin-top:8px;">Find these values in your Mailchimp embedded form code. The form action URL contains both <code>u</code> and <code>id</code> parameters.</p>
+          <div class="form-actions" style="margin-top:16px;"><button class="btn btn-primary" id="saveMailchimpBtn">Save Mailchimp Settings</button></div>
+        </div>
+      </div>
+
+      <!-- Feature Toggles -->
+      <div class="admin-card">
+        <h3>Feature Toggles</h3>
+        <p class="text-small text-muted" style="margin-bottom:20px;">Enable or disable optional features across the platform.</p>
+        <div class="toggle-wrapper">
+          <div class="toggle-label"><h4>Blog / Insights Page</h4><p>Show the Journal/Insights link in public navigation</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-blog"><span class="toggle-slider"></span></label>
+        </div>
+        <div class="toggle-wrapper">
+          <div class="toggle-label"><h4>Client Self-Registration</h4><p>Allow new clients to create accounts without admin invitation</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-selfReg"><span class="toggle-slider"></span></label>
+        </div>
+        <div class="toggle-wrapper" style="border-bottom:none;">
+          <div class="toggle-label"><h4>In-App Messaging</h4><p>Enable async messaging between clients and coaches</p></div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-messaging"><span class="toggle-slider"></span></label>
+        </div>
+      </div>
+
+      <!-- Role Management -->
+      <div class="admin-card" id="teamRolesCard">
+        <h3>Team & Roles</h3>
+        <p class="text-small text-muted" style="margin-bottom:20px;">Manage who has access to the admin panel.</p>
+        <div class="admin-table-wrapper">
+          <table class="admin-table">
+            <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th></th></tr></thead>
+            <tbody id="adminListBody">
+              <tr><td colspan="5" class="text-muted text-center" style="padding:20px;">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:20px;border-top:1px solid var(--border);padding-top:20px;">
+          <p style="font-weight:600;font-size:0.85rem;margin-bottom:12px;">Add New Admin</p>
+          <div class="admin-form-grid">
+            <div class="form-group"><label>Email</label><input type="email" id="newAdminEmail" placeholder="email@example.com"></div>
+            <div class="form-group"><label>Full Name</label><input type="text" id="newAdminName" placeholder="Full name"></div>
+          </div>
+          <p class="text-small text-muted" style="margin-bottom:12px;">The user must already have a Supabase auth account. This will set their profile role to "admin".</p>
+          <button class="btn btn-primary" id="addAdminBtn">Add Admin</button>
+        </div>
+      </div>
+
+      <!-- Logo / Branding -->
+      <div class="admin-card" id="logoUploadSection">
+        <h3>Logo / Branding</h3>
+        <p class="text-small text-muted" style="margin-bottom:16px;">Paste a logo image URL. This will replace the default leaf icon across all pages.</p>
+        <div style="display:flex;align-items:center;gap:24px;margin-bottom:16px;">
+          <div id="logoPreview" style="width:120px;height:60px;border:1px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff;">
+            <span class="text-small text-muted">No logo</span>
+          </div>
+          <div style="flex:1;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label>Logo Image URL</label>
+              <input type="text" id="logoUrlInput" placeholder="images/logo.png">
+            </div>
+          </div>
+        </div>
+        <div class="form-actions"><button class="btn btn-primary" id="saveLogoBtn">Save Logo</button></div>
+      </div>
+
+      <!-- General Settings -->
+      <div class="admin-card">
+        <h3>General</h3>
+        <div class="admin-form">
+          <div class="form-group"><label>Site Name</label><input type="text" id="set-siteName"></div>
+          <div class="form-group"><label>Contact Email</label><input type="email" id="set-contactEmail"></div>
+          <div class="form-group"><label>WhatsApp Number</label><input type="text" id="set-whatsapp"></div>
+          <div class="form-group"><label>Footer Tagline</label><input type="text" id="set-tagline"></div>
+          <div class="form-actions"><button class="btn btn-primary" id="saveSettingsBtn">Save Settings</button></div>
+        </div>
+      </div>
+
+      <!-- Danger Zone -->
+      <div class="admin-card admin-danger-zone">
+        <h3>Danger Zone</h3>
+        <div class="toggle-wrapper" style="border-bottom:none;">
+          <div class="toggle-label">
+            <h4>Reset All CMS Data</h4>
+            <p style="color:#D32F2F;">This will clear all localStorage data. This action cannot be undone.</p>
+          </div>
+          <button class="btn btn-secondary" id="resetDataBtn">Reset Data</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/cms-data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
