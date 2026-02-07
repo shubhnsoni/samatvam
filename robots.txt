@@ -8,4 +8,39 @@ Disallow: /client/
 Disallow: /api/
 Disallow: /supabase/
 
+# Allow AI crawlers explicitly
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 Sitemap: https://samatvam.living/sitemap.xml
+
+# LLM context files
+# https://samatvam.living/llms.txt
+# https://samatvam.living/llms-full.txt

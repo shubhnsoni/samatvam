@@ -60,3 +60,9 @@ Options -Indexes
 <Files "sitemap.xml">
   Allow from all
 </Files>
+<Files "llms.txt">
+  Allow from all
+</Files>
+<Files "llms-full.txt">
+  Allow from all
+</Files>
