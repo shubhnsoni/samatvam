@@ -57,3 +57,6 @@ Options -Indexes
 <Files "robots.txt">
   Allow from all
 </Files>
+<Files "sitemap.xml">
+  Allow from all
+</Files>
