@@ -1,0 +1,11 @@
+# Samatvam Living
+User-agent: *
+Allow: /
+
+# Block admin and client portals from search engines
+Disallow: /admin/
+Disallow: /client/
+Disallow: /api/
+Disallow: /supabase/
+
+Sitemap: https://samatvam.living/sitemap.xml
