@@ -142,7 +142,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 1px;
   background: linear-gradient(90deg, var(--green) 0%, var(--green-light) 50%, var(--green) 100%);
 }
 
