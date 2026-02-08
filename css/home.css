@@ -1848,61 +1848,6 @@
   }
 }
 
-/* Short viewport height on desktop (e.g. 1080x600) */
-@media (max-height: 700px) and (min-width: 1025px) {
-  .hero {
-    padding: 10px 0 20px;
-    min-height: calc(100svh - 52px);
-  }
-
-  .hero-headlines {
-    font-size: clamp(2.2rem, 4vw, 3.4rem);
-    margin-bottom: 8px;
-    line-height: 1.05;
-  }
-
-  .hero-squiggle {
-    height: 8px;
-  }
-
-  .hero-sub {
-    font-size: 0.8rem;
-    margin-bottom: 2px;
-    line-height: 1.4;
-  }
-
-  .hero-desc {
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-
-  .hero-cta {
-    padding: 10px 24px;
-    font-size: 0.65rem;
-  }
-
-  .hero-scroll-hint--desktop {
-    bottom: 6px;
-    font-size: 0.55rem;
-  }
-
-  .hero-scroll-hint--desktop svg {
-    width: 14px;
-    height: 14px;
-  }
-
-  .hero-bubble {
-    font-size: 0.55rem;
-    padding: 4px 8px;
-  }
-
-  .hero-bubble svg {
-    width: 9px;
-    height: 9px;
-  }
-}
-
 @media (max-width: 1024px) {
   .offerings-grid {
     grid-template-columns: 1fr;
