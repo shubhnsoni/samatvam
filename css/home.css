@@ -1624,6 +1624,59 @@
 }
 
 /* --- RESPONSIVE --- */
+
+/* 14" MacBook / medium laptops (1024–1440px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .hero {
+    padding: 60px 0 30px;
+  }
+
+  .hero-headlines {
+    font-size: clamp(3rem, 6vw, 5.2rem);
+    margin-bottom: 32px;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta {
+    padding: 16px 40px;
+  }
+
+  .hero-scroll-hint--desktop {
+    bottom: 24px;
+  }
+
+  /* Push bubbles further out */
+  .hero-bubble--1 { left: 4%; }
+  .hero-bubble--7 { left: 8%; }
+  .hero-bubble--2 { left: 3%; }
+  .hero-bubble--4 { left: 6%; }
+  .hero-bubble--3 { left: 4%; }
+  .hero-bubble--11 { left: 7%; }
+  .hero-bubble--13 { left: 3%; }
+
+  .hero-bubble--5 { right: 4%; }
+  .hero-bubble--9 { right: 7%; }
+  .hero-bubble--6 { right: 3%; }
+  .hero-bubble--8 { right: 5%; }
+  .hero-bubble--10 { right: 4%; }
+  .hero-bubble--12 { right: 6%; }
+  .hero-bubble--14 { right: 3%; }
+
+  .hero-bubble {
+    font-size: 0.7rem;
+    padding: 8px 14px;
+  }
+}
+
 @media (max-width: 1024px) {
   .offerings-grid {
     grid-template-columns: repeat(2, 1fr);
