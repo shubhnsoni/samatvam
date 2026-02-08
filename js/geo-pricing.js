@@ -59,13 +59,13 @@ const GeoPricing = (function () {
   // Format price based on location
   function formatPrice(usd, inr) {
     if (_isIndia && inr) {
-      return '₹' + Number(inr).toLocaleString('en-IN');
+      return 'INR ₹' + Number(inr).toLocaleString('en-IN');
     }
     if (usd) {
-      return '$' + Number(usd).toLocaleString('en-US');
+      return 'USD $' + Number(usd).toLocaleString('en-US');
     }
     // Fallback: show both
-    if (usd && inr) return '$' + usd + ' / ₹' + Number(inr).toLocaleString('en-IN');
+    if (usd && inr) return 'USD $' + usd + ' / INR ₹' + Number(inr).toLocaleString('en-IN');
     return '';
   }
 

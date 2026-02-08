@@ -926,6 +926,7 @@
 }
 
 .offering-invest {
+  margin-top: auto;
   padding-top: 16px;
   border-top: 1px solid var(--border);
   margin-bottom: 16px;
@@ -946,6 +947,24 @@
   font-weight: 600;
   color: var(--charcoal);
   letter-spacing: -0.01em;
+}
+
+.offering-toggle-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.2s ease;
+}
+
+.offering-toggle-link:hover {
+  color: var(--green);
 }
 
 .offering-toggle {
