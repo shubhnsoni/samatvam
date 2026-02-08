@@ -635,6 +635,7 @@
 .founder-row__image {
   flex: 0 0 42%;
   position: relative;
+  z-index: 0;
 }
 
 .founder-row__img-wrap {
