@@ -1748,7 +1748,7 @@
 /* 13-14" MacBook / smaller laptops (1025–1280px) */
 @media (max-width: 1280px) and (min-width: 1025px) {
   .hero {
-    padding: 100px 0 60px;
+    padding: 80px 0 48px;
     height: auto;
     min-height: 0;
   }
@@ -1758,34 +1758,34 @@
   }
 
   .hero-headlines {
-    font-size: clamp(4.8rem, 8vw, 7.5rem);
-    margin-bottom: 28px;
+    font-size: clamp(3.8rem, 6.8vw, 6rem);
+    margin-bottom: 20px;
     line-height: 1.1;
   }
 
   .hero-squiggle {
-    height: 20px;
+    height: 16px;
   }
 
   .hero-body {
-    max-width: 520px;
+    max-width: 580px;
   }
 
   .hero-sub {
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
     line-height: 1.7;
   }
 
   .hero-desc {
-    font-size: 1rem;
-    margin-bottom: 36px;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
     line-height: 1.7;
   }
 
   .hero-cta {
-    padding: 16px 42px;
-    font-size: 0.75rem;
+    padding: 15px 40px;
+    font-size: 0.73rem;
   }
 
   /* Left side (5 bubbles, pulled inward) */
