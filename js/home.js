@@ -129,9 +129,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         baAfterImg.style.objectPosition = '';
         if (mediaEl) mediaEl.style.display = '';
         if (sliderEl) sliderEl.style.display = '';
-        // Reset slider to 50%
-        baAfter.style.clipPath = 'inset(0 0 0 50%)';
-        baHandle.style.left = '50%';
+        // Reset slider to 80% (show mostly 'after')
+        baAfter.style.clipPath = 'inset(0 0 0 80%)';
+        baHandle.style.left = '80%';
       } else if (hasSingle) {
         const singleImg = t.afterImg || t.beforeImg;
         // Show media area but hide slider, show single image
