@@ -65,49 +65,75 @@
   });
 
   // Transform each CTA
-  document.querySelectorAll('.checkout-cta').forEach(btn => {
-    // Determine which program this CTA belongs to
-    const card = btn.closest('.offering-card, .program-card, .program-detail, .program-cta-section, section');
-    if (!card) return;
+  function transformCTAs() {
+    document.querySelectorAll('.checkout-cta').forEach(btn => {
+      // Determine which program this CTA belongs to
+      const card = btn.closest('.offering-card, .program-card, .program-detail, .program-cta-section, section');
+      if (!card) return;
 
-    // Try to find program by title in the card
-    const titleEl = card.querySelector('.offering-title, h3, h1, h2');
-    const title = titleEl ? titleEl.textContent.trim() : '';
-    const program = programMap[title];
+      // Try to find program by title in the card
+      const titleEl = card.querySelector('.offering-title, h3, h1, h2');
+      const title = titleEl ? titleEl.textContent.trim() : '';
+      const program = programMap[title];
 
-    if (!program) return;
+      if (!program) return;
 
-    // Skip programs with no price (custom pricing, coming soon)
-    const priceUsd = program.priceUsd || 0;
-    const priceInr = program.priceInr || 0;
-    if (priceUsd === 0 && priceInr === 0) return;
+      // Skip programs with no price (custom pricing, coming soon)
+      const priceUsd = program.priceUsd || 0;
+      const priceInr = program.priceInr || 0;
+      if (priceUsd === 0 && priceInr === 0) return;
 
-    // Skip programs that are closed or waitlist with no price
-    const status = (program.status || '').toLowerCase();
-    if (status === 'closed') return;
+      // Skip programs that are closed or waitlist with no price
+      const status = (program.status || '').toLowerCase();
+      if (status === 'closed') return;
 
-    // Transform the button
-    btn.textContent = 'Enroll Now';
-    btn.href = '#';
-    btn.setAttribute('data-program-id', program.id);
-    btn.setAttribute('data-program-title', program.title);
-    btn.setAttribute('data-price-usd', priceUsd);
-    btn.setAttribute('data-price-inr', priceInr);
+      // Show geo-localized price on button
+      let priceLabel = '';
+      if (typeof GeoPricing !== 'undefined') {
+        priceLabel = GeoPricing.formatPrice(priceUsd, priceInr);
+      }
 
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      startCheckout(program);
+      // Transform the button
+      btn.textContent = priceLabel ? `Enroll Now — ${priceLabel}` : 'Enroll Now';
+      btn.href = '#';
+      btn.setAttribute('data-program-id', program.id);
+      btn.setAttribute('data-program-title', program.title);
+      btn.setAttribute('data-price-usd', priceUsd);
+      btn.setAttribute('data-price-inr', priceInr);
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        startCheckout(program);
+      });
     });
-  });
+  }
+
+  // Wait for GeoPricing to be ready, then transform CTAs
+  if (typeof GeoPricing !== 'undefined') {
+    GeoPricing.onReady(() => {
+      transformCTAs();
+      GeoPricing.updatePriceElements();
+    });
+  } else {
+    transformCTAs();
+  }
 
   // =============================================
   // CHECKOUT FLOWS
   // =============================================
 
   async function startCheckout(program) {
-    if (provider === 'stripe') {
+    // Auto-select provider based on geo-location if both are configured
+    let selectedProvider = provider;
+    if (typeof GeoPricing !== 'undefined' && GeoPricing.isIndia() && razorpayKey) {
+      selectedProvider = 'razorpay';
+    } else if (typeof GeoPricing !== 'undefined' && !GeoPricing.isIndia() && stripeKey) {
+      selectedProvider = 'stripe';
+    }
+
+    if (selectedProvider === 'stripe') {
       await startStripeCheckout(program);
-    } else if (provider === 'razorpay') {
+    } else if (selectedProvider === 'razorpay') {
       await startRazorpayCheckout(program);
     }
   }
