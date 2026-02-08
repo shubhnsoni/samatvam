@@ -474,7 +474,10 @@ section {
   }
 
   .navbar-right .nav-cta {
-    display: none;
+    padding: 8px 16px !important;
+    font-size: 0.62rem !important;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
   }
 
   .navbar-brand {
