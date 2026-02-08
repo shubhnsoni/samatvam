@@ -1653,6 +1653,8 @@
 
   .hero-squiggle {
     height: 12px;
+    width: 85%;
+    left: 7.5%;
   }
 
   .hero-sub {
@@ -1674,22 +1676,23 @@
     bottom: 20px;
   }
 
-  /* Push bubbles outward */
-  .hero-bubble--1 { left: 5%; }
-  .hero-bubble--7 { left: 10%; }
-  .hero-bubble--2 { left: 4%; }
-  .hero-bubble--4 { left: 8%; }
-  .hero-bubble--3 { left: 5%; }
-  .hero-bubble--11 { left: 9%; }
-  .hero-bubble--13 { left: 4%; }
+  /* Stagger bubbles — left side */
+  .hero-bubble--1 { top: 20%; left: 4%; }
+  .hero-bubble--7 { top: 30%; left: 12%; }
+  .hero-bubble--2 { top: 40%; left: 3%; }
+  .hero-bubble--4 { top: 52%; left: 10%; }
+  .hero-bubble--3 { top: 62%; left: 4%; }
+  .hero-bubble--11 { top: 72%; left: 11%; }
+  .hero-bubble--13 { top: 82%; left: 3%; }
 
-  .hero-bubble--5 { right: 5%; }
-  .hero-bubble--9 { right: 9%; }
-  .hero-bubble--6 { right: 4%; }
-  .hero-bubble--8 { right: 7%; }
-  .hero-bubble--10 { right: 5%; }
-  .hero-bubble--12 { right: 8%; }
-  .hero-bubble--14 { right: 4%; }
+  /* Stagger bubbles — right side */
+  .hero-bubble--5 { top: 18%; right: 4%; }
+  .hero-bubble--9 { top: 29%; right: 12%; }
+  .hero-bubble--6 { top: 42%; right: 3%; }
+  .hero-bubble--8 { top: 54%; right: 10%; }
+  .hero-bubble--10 { top: 64%; right: 4%; }
+  .hero-bubble--12 { top: 74%; right: 11%; }
+  .hero-bubble--14 { top: 84%; right: 3%; }
 
   .hero-bubble {
     font-size: 0.7rem;
@@ -1704,6 +1707,27 @@
   .founders { padding: 88px 0; }
   .testimonials { padding: 88px 0; }
   .final-cta { padding: 88px 24px; }
+
+  /* Founders: tighter layout */
+  .founder-row {
+    gap: 32px;
+  }
+
+  .founder-row__image {
+    flex: 0 0 38%;
+  }
+
+  .founder-row__img-wrap {
+    max-height: 380px;
+  }
+
+  .founder-row__name {
+    font-size: 1.4rem;
+  }
+
+  .founder-row__text p {
+    font-size: 0.9rem;
+  }
 }
 
 /* 13-14" MacBook / smaller laptops (1025–1280px) */
@@ -1726,6 +1750,8 @@
 
   .hero-squiggle {
     height: 8px;
+    width: 80%;
+    left: 10%;
   }
 
   .hero-sub {
@@ -1786,6 +1812,27 @@
 
   .testimonial-carousel__media {
     flex: 0 0 280px;
+  }
+
+  /* Founders: tighter layout */
+  .founder-row {
+    gap: 24px;
+  }
+
+  .founder-row__image {
+    flex: 0 0 35%;
+  }
+
+  .founder-row__img-wrap {
+    max-height: 350px;
+  }
+
+  .founder-row__name {
+    font-size: 1.3rem;
+  }
+
+  .founder-row__text p {
+    font-size: 0.88rem;
   }
 }
 
