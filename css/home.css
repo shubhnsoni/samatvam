@@ -119,23 +119,25 @@
   color: var(--accent);
 }
 
-/* Left side */
-.hero-bubble--1 { top: 22%; left: 12%; }
-.hero-bubble--7 { top: 32%; left: 19%; }
-.hero-bubble--2 { top: 42%; left: 11%; }
-.hero-bubble--4 { top: 54%; left: 17%; }
-.hero-bubble--3 { top: 64%; left: 13%; }
-.hero-bubble--11 { top: 74%; left: 18%; }
-.hero-bubble--13 { top: 84%; left: 11%; }
+/* Hide extra bubbles — keep 5 per side */
+.hero-bubble--10,
+.hero-bubble--11,
+.hero-bubble--13,
+.hero-bubble--14 { display: none !important; }
 
-/* Right side */
-.hero-bubble--5 { top: 20%; right: 13%; }
-.hero-bubble--9 { top: 31%; right: 18%; }
-.hero-bubble--6 { top: 44%; right: 12%; }
-.hero-bubble--8 { top: 56%; right: 16%; }
-.hero-bubble--10 { top: 66%; right: 14%; }
-.hero-bubble--12 { top: 76%; right: 17%; }
-.hero-bubble--14 { top: 86%; right: 12%; }
+/* Left side (5 bubbles) */
+.hero-bubble--1 { top: 18%; left: 10%; }
+.hero-bubble--7 { top: 32%; left: 16%; }
+.hero-bubble--2 { top: 46%; left: 10%; }
+.hero-bubble--4 { top: 60%; left: 16%; }
+.hero-bubble--3 { top: 74%; left: 10%; }
+
+/* Right side (5 bubbles) */
+.hero-bubble--5 { top: 18%; right: 10%; }
+.hero-bubble--9 { top: 32%; right: 16%; }
+.hero-bubble--6 { top: 46%; right: 10%; }
+.hero-bubble--8 { top: 60%; right: 16%; }
+.hero-bubble--12 { top: 74%; right: 10%; }
 
 @media (max-width: 1024px) {
   .hero-bubble { display: none; }
@@ -281,6 +283,7 @@
 }
 
 .hero-scroll-hint--desktop {
+  display: none;
   position: absolute;
   bottom: 24px;
   left: 50%;
@@ -1691,23 +1694,19 @@
     bottom: 20px;
   }
 
-  /* Stagger bubbles — left side */
+  /* Left side (5 bubbles) */
   .hero-bubble--1 { top: 20%; left: 4%; }
-  .hero-bubble--7 { top: 30%; left: 12%; }
-  .hero-bubble--2 { top: 40%; left: 3%; }
-  .hero-bubble--4 { top: 52%; left: 10%; }
-  .hero-bubble--3 { top: 62%; left: 4%; }
-  .hero-bubble--11 { top: 72%; left: 11%; }
-  .hero-bubble--13 { top: 82%; left: 3%; }
+  .hero-bubble--7 { top: 34%; left: 11%; }
+  .hero-bubble--2 { top: 48%; left: 3%; }
+  .hero-bubble--4 { top: 62%; left: 10%; }
+  .hero-bubble--3 { top: 76%; left: 4%; }
 
-  /* Stagger bubbles — right side */
-  .hero-bubble--5 { top: 18%; right: 4%; }
-  .hero-bubble--9 { top: 29%; right: 12%; }
-  .hero-bubble--6 { top: 42%; right: 3%; }
-  .hero-bubble--8 { top: 54%; right: 10%; }
-  .hero-bubble--10 { top: 64%; right: 4%; }
-  .hero-bubble--12 { top: 74%; right: 11%; }
-  .hero-bubble--14 { top: 84%; right: 3%; }
+  /* Right side (5 bubbles) */
+  .hero-bubble--5 { top: 20%; right: 4%; }
+  .hero-bubble--9 { top: 34%; right: 11%; }
+  .hero-bubble--6 { top: 48%; right: 3%; }
+  .hero-bubble--8 { top: 62%; right: 10%; }
+  .hero-bubble--12 { top: 76%; right: 4%; }
 
   .hero-bubble {
     font-size: 0.7rem;
@@ -1790,23 +1789,19 @@
     bottom: 8px;
   }
 
-  /* Stagger all bubbles — left side (pulled inward) */
-  .hero-bubble--1 { top: 16%; left: 6%; }
-  .hero-bubble--7 { top: 26%; left: 13%; }
-  .hero-bubble--2 { top: 36%; left: 5%; }
-  .hero-bubble--4 { top: 47%; left: 12%; }
-  .hero-bubble--3 { top: 57%; left: 6%; }
-  .hero-bubble--11 { top: 68%; left: 13%; }
-  .hero-bubble--13 { top: 79%; left: 5%; }
+  /* Left side (5 bubbles, pulled inward) */
+  .hero-bubble--1 { top: 18%; left: 5%; }
+  .hero-bubble--7 { top: 32%; left: 12%; }
+  .hero-bubble--2 { top: 46%; left: 4%; }
+  .hero-bubble--4 { top: 60%; left: 11%; }
+  .hero-bubble--3 { top: 74%; left: 5%; }
 
-  /* Stagger all bubbles — right side (pulled inward) */
-  .hero-bubble--5 { top: 14%; right: 6%; }
-  .hero-bubble--9 { top: 25%; right: 13%; }
-  .hero-bubble--6 { top: 37%; right: 5%; }
-  .hero-bubble--8 { top: 48%; right: 12%; }
-  .hero-bubble--10 { top: 58%; right: 6%; }
-  .hero-bubble--12 { top: 69%; right: 13%; }
-  .hero-bubble--14 { top: 80%; right: 5%; }
+  /* Right side (5 bubbles, pulled inward) */
+  .hero-bubble--5 { top: 18%; right: 5%; }
+  .hero-bubble--9 { top: 32%; right: 12%; }
+  .hero-bubble--6 { top: 46%; right: 4%; }
+  .hero-bubble--8 { top: 60%; right: 11%; }
+  .hero-bubble--12 { top: 74%; right: 5%; }
 
   .hero-bubble {
     font-size: 0.6rem;

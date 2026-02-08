@@ -337,64 +337,46 @@ document.addEventListener('DOMContentLoaded', async () => {
     .to('.hero-line[data-line="3"]', { opacity: 1, y: 0, duration: 0.9 }, '-=0.5')
     .to('.hero-sub', { opacity: 1, y: 0, duration: 0.7 }, '-=0.3')
     .to('.hero-desc', { opacity: 1, y: 0, duration: 0.7 }, '-=0.4')
-    .to('.hero-cta', { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(1.4)' }, '-=0.3')
-    .to('.hero-scroll-hint--desktop', { opacity: 1, duration: 0.6 }, '-=0.4');
+    .to('.hero-cta', { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(1.4)' }, '-=0.3');
 
-  // Problem bubbles
+  // Problem bubbles — appear after underline animation completes
   const bubbles = document.querySelectorAll('[data-bubble]');
-  const leftBubbles = [0, 1, 2, 3, 6, 10, 12];
+  const visibleBubbles = Array.from(bubbles).filter(b => getComputedStyle(b).display !== 'none');
 
-  if (bubbles.length && window.innerWidth > 1024) {
-    // Desktop: pin hero, reveal one by one on scroll
-    const bubbleTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: '+=' + (bubbles.length * 120 + 300),
-        pin: true,
-        scrub: 0.6,
-        pinSpacing: true
-      }
-    });
-
-    bubbles.forEach((bubble, i) => {
-      const isLeft = leftBubbles.includes(i);
-      bubbleTl.fromTo(bubble, {
+  if (visibleBubbles.length && window.innerWidth > 1024) {
+    // Desktop: pop in one by one after underlines finish (~2.5s)
+    visibleBubbles.forEach((bubble, i) => {
+      const isLeft = bubble.getBoundingClientRect().left < window.innerWidth / 2;
+      gsap.fromTo(bubble, {
         opacity: 0,
         scale: 0.4,
-        x: isLeft ? -60 : 60
+        x: isLeft ? -40 : 40
       }, {
         opacity: 1,
         scale: 1,
         x: 0,
-        duration: 1,
+        duration: 0.6,
+        delay: 2.5 + (i * 0.15),
         ease: 'back.out(1.5)'
       });
-      bubbleTl.to({}, { duration: 0.15 });
     });
 
-    bubbleTl.to({}, { duration: 1.5 });
-
-    ScrollTrigger.create({
-      trigger: '.hero',
-      start: 'top top',
-      end: '+=' + (bubbles.length * 120 + 500),
-      onLeave: () => {
-        bubbles.forEach((bubble, i) => {
-          gsap.to(bubble, {
-            y: i % 2 === 0 ? -5 : 5,
-            duration: 2 + (i * 0.2),
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut'
-          });
+    // Gentle float after all appear
+    setTimeout(() => {
+      visibleBubbles.forEach((bubble, i) => {
+        gsap.to(bubble, {
+          y: i % 2 === 0 ? -5 : 5,
+          duration: 2 + (i * 0.2),
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut'
         });
-      }
-    });
-  } else if (bubbles.length && window.innerWidth <= 768) {
-    // Mobile: 4 bubbles pop in after hero intro
-    const mobileBubbles = document.querySelectorAll('.hero-bubble--5, .hero-bubble--2, .hero-bubble--11, .hero-bubble--12');
-    mobileBubbles.forEach((bubble, i) => {
+      });
+    }, 2500 + visibleBubbles.length * 150 + 600);
+  } else if (visibleBubbles.length && window.innerWidth <= 768) {
+    // Mobile: pop in after hero intro
+    const mobileBubbles = document.querySelectorAll('.hero-bubble--5, .hero-bubble--2');
+    Array.from(mobileBubbles).forEach((bubble, i) => {
       gsap.fromTo(bubble, {
         opacity: 0,
         scale: 0.4
