@@ -147,7 +147,7 @@
   /* Show only 4 bubbles on mobile */
   .hero-bubble--5,
   .hero-bubble--2,
-  .hero-bubble--11,
+  .hero-bubble--3,
   .hero-bubble--12 { display: flex !important; }
 
   /* Top right — near "Eat clean" */
@@ -155,13 +155,13 @@
   /* Left — on top edge of "E" in Eat clean */
   .hero-bubble--2 { top: 18%; left: 2%; }
   /* Bottom left — below scroll arrow */
-  .hero-bubble--11 { top: auto !important; bottom: 12% !important; left: 5% !important; }
+  .hero-bubble--3 { top: auto !important; bottom: 12% !important; left: 5% !important; }
   /* Bottom right — below scroll arrow */
   .hero-bubble--12 { top: auto !important; bottom: 10% !important; right: 8% !important; left: auto !important; }
 
   .hero-bubble--5,
   .hero-bubble--2,
-  .hero-bubble--11,
+  .hero-bubble--3,
   .hero-bubble--12 {
     font-size: 0.65rem;
     padding: 7px 12px;
@@ -170,7 +170,7 @@
 
   .hero-bubble--5 svg,
   .hero-bubble--2 svg,
-  .hero-bubble--11 svg,
+  .hero-bubble--3 svg,
   .hero-bubble--12 svg {
     width: 11px;
     height: 11px;
