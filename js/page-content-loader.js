@@ -12,7 +12,8 @@
    ============================================ */
 
 (async function loadPageContent() {
-  if (typeof CMS === 'undefined') return;
+  // CMS overwrite disabled — HTML is now the source of truth
+  return;
 
   // Determine which page we're on
   const path = window.location.pathname;
