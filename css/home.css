@@ -660,13 +660,7 @@
 }
 
 .founder-row__img-border {
-  position: absolute;
-  bottom: -16px;
-  right: -16px;
-  width: 100%;
-  height: 100%;
-  border: 1px solid rgba(129, 178, 154, 0.25);
-  z-index: -1;
+  display: none;
 }
 
 .founder-row__img-border--left {
