@@ -96,6 +96,23 @@ const GeoPricing = (function () {
   // Initialize
   detect();
 
+  // Auto-update prices after DOM is ready and after CMS content loads
+  function autoUpdate() {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        onReady(() => updatePriceElements());
+      });
+    } else {
+      onReady(() => updatePriceElements());
+    }
+    // Re-run after CMS content loader finishes (delayed)
+    onReady(() => {
+      setTimeout(updatePriceElements, 500);
+      setTimeout(updatePriceElements, 1500);
+    });
+  }
+  autoUpdate();
+
   return {
     onReady,
     formatPrice,
