@@ -1356,6 +1356,8 @@
 }
 
 .program-detail-meta .meta-item {
+  display: flex;
+  flex-direction: column;
   text-align: left;
 }
 
@@ -1364,10 +1366,14 @@
   margin-bottom: 4px;
 }
 
-.program-detail-meta .meta-item p {
+.program-detail-meta .meta-item .meta-value {
   font-size: 1rem;
   color: var(--charcoal);
-  margin: 0;
+  display: block;
+}
+
+.program-detail-meta .meta-item .meta-value .program-badge {
+  margin-bottom: 0;
 }
 
 /* --- Responsive --- */
