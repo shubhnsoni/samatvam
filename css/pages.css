@@ -728,8 +728,8 @@
 
 .program-detail-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 56px;
+  grid-template-columns: 3fr 2fr;
+  gap: 48px;
 }
 
 .program-detail-content h2 {
@@ -1329,6 +1329,7 @@
 .program-detail-meta .meta-item p {
   font-size: 1rem;
   color: var(--charcoal);
+  max-width: none;
 }
 
 /* --- Responsive --- */
