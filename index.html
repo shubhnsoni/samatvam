@@ -640,6 +640,41 @@
     </div>
   </div>
 
+  <script>
+  (function() {
+    var modal = document.getElementById('discoveryModal');
+    var backdrop = document.getElementById('discoveryBackdrop');
+    var closeBtn = document.getElementById('discoveryClose');
+
+    function openModal() {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    var triggers = document.querySelectorAll('[data-discovery]');
+    for (var i = 0; i < triggers.length; i++) {
+      triggers[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal();
+      });
+    }
+
+    backdrop.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  })();
+  </script>
+
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="footer__botanical">
