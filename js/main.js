@@ -57,9 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    if (anchor.hasAttribute('data-discovery')) return;
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const href = this.getAttribute('href');
+      if (!href || href === '#') return;
       const target = document.querySelector(href);
       if (!target) return;
 
