@@ -12,6 +12,9 @@ desktop.ini
 # Node (if any)
 node_modules/
 
+# Archives
+*.zip
+
 # Environment
 .env
 .env.local
