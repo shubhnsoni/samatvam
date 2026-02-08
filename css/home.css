@@ -1637,8 +1637,8 @@
 
 /* --- RESPONSIVE --- */
 
-/* 14" MacBook / medium laptops (1025–1440px) */
-@media (max-width: 1440px) and (min-width: 1025px) {
+/* Larger laptops (1281–1440px) */
+@media (max-width: 1440px) and (min-width: 1281px) {
   .hero {
     padding: 40px 0 20px;
     height: auto;
@@ -1646,50 +1646,50 @@
   }
 
   .hero-headlines {
-    font-size: clamp(2.6rem, 4.5vw, 4.2rem);
-    margin-bottom: 20px;
+    font-size: clamp(2.8rem, 4.8vw, 4.5rem);
+    margin-bottom: 24px;
     line-height: 1.12;
   }
 
   .hero-squiggle {
-    height: 10px;
+    height: 12px;
   }
 
   .hero-sub {
-    font-size: 0.95rem;
-    margin-bottom: 8px;
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
 
   .hero-desc {
-    font-size: 0.95rem;
-    margin-bottom: 24px;
+    font-size: 1rem;
+    margin-bottom: 28px;
   }
 
   .hero-cta {
-    padding: 14px 36px;
+    padding: 15px 38px;
     font-size: 0.75rem;
   }
 
   .hero-scroll-hint--desktop {
-    bottom: 16px;
+    bottom: 20px;
   }
 
-  /* Push bubbles further out */
-  .hero-bubble--1 { left: 4%; }
-  .hero-bubble--7 { left: 8%; }
-  .hero-bubble--2 { left: 3%; }
-  .hero-bubble--4 { left: 6%; }
-  .hero-bubble--3 { left: 4%; }
-  .hero-bubble--11 { left: 7%; }
-  .hero-bubble--13 { left: 3%; }
+  /* Push bubbles outward */
+  .hero-bubble--1 { left: 5%; }
+  .hero-bubble--7 { left: 10%; }
+  .hero-bubble--2 { left: 4%; }
+  .hero-bubble--4 { left: 8%; }
+  .hero-bubble--3 { left: 5%; }
+  .hero-bubble--11 { left: 9%; }
+  .hero-bubble--13 { left: 4%; }
 
-  .hero-bubble--5 { right: 4%; }
-  .hero-bubble--9 { right: 7%; }
-  .hero-bubble--6 { right: 3%; }
-  .hero-bubble--8 { right: 5%; }
-  .hero-bubble--10 { right: 4%; }
-  .hero-bubble--12 { right: 6%; }
-  .hero-bubble--14 { right: 3%; }
+  .hero-bubble--5 { right: 5%; }
+  .hero-bubble--9 { right: 9%; }
+  .hero-bubble--6 { right: 4%; }
+  .hero-bubble--8 { right: 7%; }
+  .hero-bubble--10 { right: 5%; }
+  .hero-bubble--12 { right: 8%; }
+  .hero-bubble--14 { right: 4%; }
 
   .hero-bubble {
     font-size: 0.7rem;
@@ -1697,32 +1697,95 @@
   }
 
   /* Scale other homepage sections */
-  .framework {
-    padding: 80px 0;
+  .framework { padding: 88px 0; }
+  .framework-intro { margin-bottom: 56px; }
+  .framework-intro__title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); }
+  .offerings { padding: 88px 0; }
+  .founders { padding: 88px 0; }
+  .testimonials { padding: 88px 0; }
+  .final-cta { padding: 88px 24px; }
+}
+
+/* 13-14" MacBook / smaller laptops (1025–1280px) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .hero {
+    padding: 40px 0 20px;
+    height: auto;
+    min-height: calc(100svh - 52px);
   }
 
-  .framework-intro {
-    margin-bottom: 56px;
+  .hero-inner {
+    max-width: 680px;
   }
 
-  .framework-intro__title {
-    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  .hero-headlines {
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    margin-bottom: 18px;
+    line-height: 1.12;
   }
 
-  .offerings {
-    padding: 80px 0;
+  .hero-squiggle {
+    height: 8px;
   }
 
-  .founders {
-    padding: 80px 0;
+  .hero-sub {
+    font-size: 0.92rem;
+    margin-bottom: 6px;
   }
 
-  .testimonials {
-    padding: 80px 0;
+  .hero-desc {
+    font-size: 0.92rem;
+    margin-bottom: 20px;
   }
 
-  .final-cta {
-    padding: 80px 24px;
+  .hero-cta {
+    padding: 13px 32px;
+    font-size: 0.72rem;
+  }
+
+  .hero-scroll-hint--desktop {
+    bottom: 14px;
+  }
+
+  /* Hide excess bubbles, show only 6 */
+  .hero-bubble--7,
+  .hero-bubble--9,
+  .hero-bubble--4,
+  .hero-bubble--8,
+  .hero-bubble--13,
+  .hero-bubble--14,
+  .hero-bubble--10,
+  .hero-bubble--6 { display: none; }
+
+  /* Reposition remaining 6 bubbles */
+  .hero-bubble--1 { top: 18%; left: 2%; }
+  .hero-bubble--2 { top: 38%; left: 3%; }
+  .hero-bubble--3 { top: 58%; left: 2%; }
+  .hero-bubble--11 { top: 75%; left: 4%; }
+  .hero-bubble--5 { top: 18%; right: 2%; }
+  .hero-bubble--12 { top: 72%; right: 3%; }
+
+  .hero-bubble {
+    font-size: 0.65rem;
+    padding: 7px 12px;
+  }
+
+  .hero-bubble svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Scale other homepage sections */
+  .framework { padding: 72px 0; }
+  .framework-intro { margin-bottom: 48px; }
+  .framework-intro__title { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .offerings { padding: 72px 0; }
+  .founders { padding: 72px 0; }
+  .testimonials { padding: 72px 0; }
+  .final-cta { padding: 72px 24px; }
+
+  .testimonial-carousel__media {
+    flex: 0 0 280px;
   }
 }
 

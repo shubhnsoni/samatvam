@@ -1311,18 +1311,18 @@
 
 /* --- Responsive --- */
 
-/* 14" MacBook / medium laptops (1024–1440px) */
-@media (max-width: 1440px) and (min-width: 1025px) {
+/* Larger laptops (1281–1440px) */
+@media (max-width: 1440px) and (min-width: 1281px) {
   .page-hero {
-    padding: 120px 0 56px;
+    padding: 130px 0 60px;
   }
 
   .page-hero h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   }
 
   .page-hero p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .method-intro h2,
@@ -1337,6 +1337,39 @@
 
   .story-card {
     grid-template-columns: 240px 1fr;
+  }
+}
+
+/* 13-14" MacBook / smaller laptops (1025–1280px) */
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .page-hero {
+    padding: 110px 0 48px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  }
+
+  .page-hero p {
+    font-size: 0.95rem;
+  }
+
+  .method-intro h2,
+  .method-diff h2,
+  .philosophy-section h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+  }
+
+  .pillar-row {
+    gap: 32px;
+  }
+
+  .story-card {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .program-detail-meta {
+    gap: 24px;
   }
 }
 
