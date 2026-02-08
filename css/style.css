@@ -460,12 +460,12 @@ section {
 /* Smaller laptops (1025–1280px) */
 @media (max-width: 1280px) and (min-width: 1025px) {
   .navbar-nav {
-    gap: 20px;
+    gap: 18px;
   }
 
   .navbar-nav a {
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
   }
 
   .navbar-nav .nav-login {
@@ -473,14 +473,12 @@ section {
     font-size: 0.68rem;
   }
 
-  .nav-cta {
-    padding: 10px 20px !important;
-    font-size: 0.68rem !important;
-    letter-spacing: 0.08em;
+  .navbar-right .nav-cta {
+    display: none;
   }
 
   .navbar-brand {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 }
 

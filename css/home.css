@@ -183,7 +183,7 @@
 }
 
 .hero-line {
-  display: block;
+  display: inline-block;
   position: relative;
   opacity: 0;
   transform: translateY(30px);
@@ -1666,8 +1666,6 @@
 
   .hero-squiggle {
     height: 12px;
-    width: 85%;
-    left: 7.5%;
   }
 
   .hero-sub {
@@ -1763,9 +1761,7 @@
   }
 
   .hero-squiggle {
-    height: 8px;
-    width: 70%;
-    left: 15%;
+    height: 10px;
   }
 
   .hero-sub {
