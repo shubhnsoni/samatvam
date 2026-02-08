@@ -295,6 +295,39 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // =============================================
+  // DISCOVERY CALL MODAL (must be before GSAP check which may return early)
+  // =============================================
+  const discoveryModal = document.getElementById('discoveryModal');
+  const discoveryBackdrop = document.getElementById('discoveryBackdrop');
+  const discoveryClose = document.getElementById('discoveryClose');
+
+  function openDiscoveryModal() {
+    discoveryModal?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDiscoveryModal() {
+    discoveryModal?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-discovery]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openDiscoveryModal();
+    });
+  });
+
+  discoveryBackdrop?.addEventListener('click', closeDiscoveryModal);
+  discoveryClose?.addEventListener('click', closeDiscoveryModal);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && discoveryModal?.classList.contains('active')) {
+      closeDiscoveryModal();
+    }
+  });
+
+  // =============================================
   // GSAP ANIMATIONS
   // =============================================
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
@@ -513,36 +546,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // --- FOUNDERS: fluid appearing animations ---
   revealFrom('.founders-intro', '.founders-intro', { y: 30 });
-
-  // --- DISCOVERY CALL MODAL ---
-  const discoveryModal = document.getElementById('discoveryModal');
-  const discoveryBackdrop = document.getElementById('discoveryBackdrop');
-  const discoveryClose = document.getElementById('discoveryClose');
-
-  function openDiscoveryModal() {
-    discoveryModal?.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeDiscoveryModal() {
-    discoveryModal?.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('[data-discovery]').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      openDiscoveryModal();
-    });
-  });
-
-  discoveryBackdrop?.addEventListener('click', closeDiscoveryModal);
-  discoveryClose?.addEventListener('click', closeDiscoveryModal);
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && discoveryModal?.classList.contains('active')) {
-      closeDiscoveryModal();
-    }
-  });
 
 });
