@@ -48,10 +48,10 @@
   background-size: 100% 100%;
 }
 
-/* --- Page Hero — Dark gradient with botanical --- */
+/* --- Page Hero — Light gradient with botanical --- */
 .page-hero {
   padding: 140px 0 72px;
-  background: linear-gradient(160deg, #1F2937 0%, #253340 35%, #2a3f3a 65%, #1F2937 100%);
+  background: linear-gradient(160deg, #F1F8F2 0%, #E8F5E9 40%, #dff0e4 70%, #F1F8F2 100%);
   position: relative;
   overflow: hidden;
 }
@@ -63,7 +63,7 @@
   right: -5%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(ellipse at center, rgba(129,178,154,0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(129,178,154,0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -73,8 +73,9 @@
   right: 5%;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.06;
+  opacity: 0.08;
   pointer-events: none;
+  color: var(--green);
 }
 
 .page-hero .container,
@@ -85,13 +86,13 @@
 
 .page-hero .label {
   margin-bottom: 12px;
-  color: var(--green-light);
+  color: var(--green);
   font-size: 0.7rem;
 }
 
 .page-hero h1 {
   margin-bottom: 20px;
-  color: var(--cream);
+  color: var(--charcoal);
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   line-height: 1.1;
   max-width: 700px;
@@ -99,7 +100,7 @@
 
 .page-hero h1 em {
   font-style: italic;
-  color: var(--green-light);
+  color: var(--green);
   position: relative;
 }
 
@@ -117,7 +118,7 @@
 .page-hero p {
   font-size: 1.1rem;
   max-width: 540px;
-  color: rgba(250,248,245,0.65);
+  color: var(--charcoal-light);
   line-height: 1.7;
 }
 
@@ -142,7 +143,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--green) 0%, var(--green-light) 50%, var(--accent) 100%);
+  background: linear-gradient(90deg, var(--green) 0%, var(--green-light) 50%, var(--green) 100%);
 }
 
 /* Page hero with subtitle accent */
@@ -151,7 +152,7 @@
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.15rem;
-  color: var(--green-light);
+  color: var(--green);
   margin-top: 16px;
   opacity: 0.8;
 }
@@ -1313,7 +1314,7 @@
   opacity: 1;
 }
 
-/* --- Program Detail Hero — inherits page-hero dark style --- */
+/* --- Program Detail Hero — inherits page-hero light style --- */
 .program-detail-meta {
   display: flex;
   gap: 48px;
@@ -1322,13 +1323,13 @@
 }
 
 .program-detail-meta .meta-item .label {
-  color: var(--green-light);
+  color: var(--green);
   margin-bottom: 4px;
 }
 
 .program-detail-meta .meta-item p {
   font-size: 1rem;
-  color: var(--cream);
+  color: var(--charcoal);
 }
 
 /* --- Responsive --- */
