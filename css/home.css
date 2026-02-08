@@ -400,7 +400,16 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+}
+
+.framework-intro__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--charcoal);
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .framework-intro__line {
@@ -411,11 +420,14 @@
 }
 
 .framework-intro__text {
-  font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  color: var(--charcoal);
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  color: var(--secondary);
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .framework-intro__text em {
@@ -1893,8 +1905,12 @@
     font-size: 9px;
   }
 
+  .framework-intro__title {
+    font-size: 1.5rem;
+  }
+
   .framework-intro__text {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
   }
 
   .pillar-card {
