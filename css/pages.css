@@ -334,7 +334,7 @@
 
 .method-order {
   padding: 80px 0;
-  background: linear-gradient(160deg, #1F2937 0%, #253340 35%, #2a3f3a 65%, #1F2937 100%);
+  background: linear-gradient(160deg, #F1F8F2 0%, #E8F5E9 40%, #dff0e4 70%, #F1F8F2 100%);
   position: relative;
   overflow: hidden;
 }
@@ -346,7 +346,7 @@
   left: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(ellipse at center, rgba(129,178,154,0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(129,178,154,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -356,20 +356,20 @@
 }
 
 .method-order__header .label {
-  color: var(--green-light);
+  color: var(--green);
   margin-bottom: 12px;
 }
 
 .method-order h2 {
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: var(--cream);
+  color: var(--charcoal);
   margin-bottom: 20px;
   line-height: 1.15;
 }
 
 .method-order h2 em {
   font-style: italic;
-  color: var(--green-light);
+  color: var(--green);
 }
 
 .method-order__sub {
@@ -377,7 +377,7 @@
   max-width: 500px;
   margin: 0 auto;
   line-height: 1.7;
-  color: rgba(250,248,245,0.55);
+  color: var(--charcoal-light);
 }
 
 .order-flow {
@@ -396,8 +396,8 @@
   align-items: center;
   text-align: center;
   gap: 12px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 32px 24px;
   transition: all var(--transition-base);
@@ -405,9 +405,8 @@
 }
 
 .order-step-card:hover {
-  background: rgba(255,255,255,0.1);
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 32px rgba(31,41,55,0.08);
 }
 
 .order-step-num {
@@ -415,29 +414,29 @@
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: rgba(250,248,245,0.35);
+  color: var(--text-muted);
 }
 
 .order-step-icon {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(129,178,154,0.15);
+  background: rgba(129,178,154,0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--green-light);
+  color: var(--green);
 }
 
 .order-step {
   font-family: var(--font-serif);
   font-size: 1.4rem;
-  color: var(--cream);
+  color: var(--charcoal);
 }
 
 .order-step-desc {
   font-size: 0.85rem;
-  color: rgba(250,248,245,0.5);
+  color: var(--charcoal-light);
   line-height: 1.5;
   max-width: 200px;
 }
@@ -448,8 +447,8 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--green-light);
-  background: rgba(129,178,154,0.12);
+  color: var(--green);
+  background: rgba(129,178,154,0.1);
   padding: 4px 12px;
   border-radius: 100px;
   margin-top: 4px;
