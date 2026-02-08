@@ -643,8 +643,7 @@
   <script>
   (function() {
     var modal = document.getElementById('discoveryModal');
-    var backdrop = document.getElementById('discoveryBackdrop');
-    var closeBtn = document.getElementById('discoveryClose');
+    if (!modal) return;
 
     function openModal() {
       modal.classList.add('active');
@@ -656,16 +655,18 @@
       document.body.style.overflow = '';
     }
 
-    var triggers = document.querySelectorAll('[data-discovery]');
-    for (var i = 0; i < triggers.length; i++) {
-      triggers[i].addEventListener('click', function(e) {
+    document.addEventListener('click', function(e) {
+      var trigger = e.target.closest('[data-discovery]');
+      if (trigger) {
         e.preventDefault();
+        e.stopPropagation();
         openModal();
-      });
-    }
-
-    backdrop.addEventListener('click', closeModal);
-    closeBtn.addEventListener('click', closeModal);
+        return;
+      }
+      if (e.target.id === 'discoveryBackdrop' || e.target.closest('.discovery-modal__close')) {
+        closeModal();
+      }
+    });
 
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && modal.classList.contains('active')) {
