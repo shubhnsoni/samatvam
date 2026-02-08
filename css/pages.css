@@ -975,16 +975,16 @@
 
 /* Featured card */
 .story-card--featured {
-  background: linear-gradient(160deg, #1F2937 0%, #253340 35%, #2a3f3a 65%, #1F2937 100%);
-  border-color: transparent;
+  background: linear-gradient(160deg, #F1F8F2 0%, #E8F5E9 40%, #dff0e4 70%, #F1F8F2 100%);
+  border-color: var(--green-light);
 }
 
 .story-card--featured .ba-slider__before {
-  background-color: #555;
+  background-color: #ccc;
 }
 
 .story-card--featured .ba-slider__after {
-  background-color: #374151;
+  background-color: #E8F5E9;
 }
 
 /* Header: badge + result */
@@ -1086,50 +1086,50 @@
 
 /* --- Featured card overrides --- */
 .story-card--featured .story-badge {
-  background: rgba(129,178,154,0.15);
-  color: var(--green-light);
+  background: rgba(129,178,154,0.12);
+  color: var(--green);
 }
 
 .story-card--featured .story-result {
-  color: var(--green-light);
+  color: var(--green);
 }
 
 .story-card--featured .story-quote {
-  color: rgba(250,248,245,0.8);
+  color: var(--charcoal);
 }
 
 .story-card--featured .story-hl {
-  color: rgba(250,248,245,0.6);
+  color: var(--charcoal-light);
 }
 
 .story-card--featured .story-hl--before::before {
-  color: rgba(250,248,245,0.35);
+  color: var(--text-muted);
 }
 
 .story-card--featured .story-hl--after::before {
-  color: var(--green-light);
+  color: var(--green);
 }
 
 .story-card--featured .story-video-thumb {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.1);
+  background: rgba(129,178,154,0.06);
+  border-color: var(--border);
 }
 
 .story-card--featured .story-video-thumb:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.2);
+  background: rgba(129,178,154,0.1);
+  border-color: var(--green-light);
 }
 
 .story-card--featured .story-video-thumb span {
-  color: rgba(250,248,245,0.8);
+  color: var(--charcoal);
 }
 
 .story-card--featured .story-author {
-  color: var(--cream);
+  color: var(--charcoal);
 }
 
 .story-card--featured .story-role {
-  color: rgba(250,248,245,0.45);
+  color: var(--text-muted);
 }
 
 /* --- Contact Page --- */
