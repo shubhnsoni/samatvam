@@ -238,7 +238,7 @@
       name: 'Samatvam Living',
       description: program.title,
       prefill: {},
-      theme: { color: '#4A5D4E' },
+      theme: { color: '#81B29A' },
       handler: async function(response) {
         // Payment successful
         try {
