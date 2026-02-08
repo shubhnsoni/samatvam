@@ -337,7 +337,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     .to('.hero-line[data-line="3"]', { opacity: 1, y: 0, duration: 0.9 }, '-=0.5')
     .to('.hero-sub', { opacity: 1, y: 0, duration: 0.7 }, '-=0.3')
     .to('.hero-desc', { opacity: 1, y: 0, duration: 0.7 }, '-=0.4')
-    .to('.hero-cta', { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(1.4)' }, '-=0.3');
+    .to('.hero-cta', { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(1.4)' }, '-=0.3')
+    .to('.hero-scroll-hint--desktop', { opacity: 1, duration: 0.6 }, '-=0.3');
 
   // Problem bubbles — appear after underline animation completes
   const bubbles = document.querySelectorAll('[data-bubble]');

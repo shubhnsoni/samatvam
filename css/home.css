@@ -283,7 +283,6 @@
 }
 
 .hero-scroll-hint--desktop {
-  display: none;
   position: absolute;
   bottom: 24px;
   left: 50%;
