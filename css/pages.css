@@ -1404,7 +1404,8 @@
   }
 
   .ba-slider {
-    min-height: 360px;
+    min-height: 240px;
+    aspect-ratio: 4/5;
   }
 
   .story-card__content {
