@@ -113,6 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.addEventListener('touchstart', (e) => { isDragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
     window.addEventListener('touchmove', (e) => { if (isDragging) { setPosition(e.touches[0].clientX); } }, { passive: true });
     window.addEventListener('touchend', () => { isDragging = false; });
+
+    // Set default position to 80% (show mostly "after")
+    before.style.width = '80%';
+    handle.style.left = '80%';
   });
 
   // --- Active nav link highlight ---
