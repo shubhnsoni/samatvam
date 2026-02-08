@@ -2262,6 +2262,18 @@
   }
 }
 
+/* --- Waitlist Button Variant --- */
+.btn-waitlist {
+  background: var(--charcoal) !important;
+  border-color: var(--charcoal) !important;
+  color: #fff !important;
+}
+
+.btn-waitlist:hover {
+  background: var(--charcoal-light) !important;
+  border-color: var(--charcoal-light) !important;
+}
+
 /* --- WHATSAPP COMMUNITY SECTION --- */
 .whatsapp-community {
   padding: 0 0 48px;
