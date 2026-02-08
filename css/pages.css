@@ -1310,6 +1310,36 @@
 }
 
 /* --- Responsive --- */
+
+/* 14" MacBook / medium laptops (1024–1440px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .page-hero {
+    padding: 120px 0 56px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .method-intro h2,
+  .method-diff h2,
+  .philosophy-section h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  }
+
+  .pillar-row {
+    gap: 40px;
+  }
+
+  .story-card {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
 @media (max-width: 1024px) {
   .programs-grid {
     grid-template-columns: repeat(2, 1fr);
