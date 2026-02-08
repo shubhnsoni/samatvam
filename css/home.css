@@ -811,7 +811,7 @@
 .offerings-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3px;
+  gap: 6px;
 }
 
 .offering-card {
