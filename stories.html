@@ -274,6 +274,10 @@
           slider.addEventListener('touchstart', (e) => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
           window.addEventListener('touchmove', (e) => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
           window.addEventListener('touchend', () => { dragging = false; });
+
+          // Default position at 80% (show mostly "after")
+          before.style.width = '80%';
+          handle.style.left = '80%';
         });
       } catch (e) {
         console.warn('Stories load error:', e.message);
