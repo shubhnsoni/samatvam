@@ -1757,62 +1757,62 @@
   }
 
   .hero-headlines {
-    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-size: clamp(2.6rem, 4.5vw, 4rem);
     margin-bottom: 18px;
     line-height: 1.12;
   }
 
   .hero-squiggle {
-    height: 8px;
-    width: 80%;
-    left: 10%;
+    height: 10px;
+    width: 85%;
+    left: 7.5%;
   }
 
   .hero-sub {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     margin-bottom: 6px;
   }
 
   .hero-desc {
-    font-size: 0.92rem;
-    margin-bottom: 20px;
+    font-size: 0.95rem;
+    margin-bottom: 22px;
   }
 
   .hero-cta {
-    padding: 13px 32px;
-    font-size: 0.72rem;
+    padding: 14px 34px;
+    font-size: 0.73rem;
   }
 
   .hero-scroll-hint--desktop {
     bottom: 14px;
   }
 
-  /* Hide excess bubbles, show only 6 */
-  .hero-bubble--7,
-  .hero-bubble--9,
-  .hero-bubble--4,
-  .hero-bubble--8,
-  .hero-bubble--13,
-  .hero-bubble--14,
-  .hero-bubble--10,
-  .hero-bubble--6 { display: none; }
+  /* Stagger all bubbles — left side */
+  .hero-bubble--1 { top: 16%; left: 2%; }
+  .hero-bubble--7 { top: 26%; left: 8%; }
+  .hero-bubble--2 { top: 36%; left: 1%; }
+  .hero-bubble--4 { top: 47%; left: 7%; }
+  .hero-bubble--3 { top: 57%; left: 2%; }
+  .hero-bubble--11 { top: 68%; left: 8%; }
+  .hero-bubble--13 { top: 79%; left: 1%; }
 
-  /* Reposition remaining 6 bubbles */
-  .hero-bubble--1 { top: 18%; left: 2%; }
-  .hero-bubble--2 { top: 38%; left: 3%; }
-  .hero-bubble--3 { top: 58%; left: 2%; }
-  .hero-bubble--11 { top: 75%; left: 4%; }
-  .hero-bubble--5 { top: 18%; right: 2%; }
-  .hero-bubble--12 { top: 72%; right: 3%; }
+  /* Stagger all bubbles — right side */
+  .hero-bubble--5 { top: 14%; right: 2%; }
+  .hero-bubble--9 { top: 25%; right: 8%; }
+  .hero-bubble--6 { top: 37%; right: 1%; }
+  .hero-bubble--8 { top: 48%; right: 7%; }
+  .hero-bubble--10 { top: 58%; right: 2%; }
+  .hero-bubble--12 { top: 69%; right: 8%; }
+  .hero-bubble--14 { top: 80%; right: 1%; }
 
   .hero-bubble {
-    font-size: 0.65rem;
-    padding: 7px 12px;
+    font-size: 0.62rem;
+    padding: 6px 11px;
   }
 
   .hero-bubble svg {
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
   }
 
   /* Scale other homepage sections */
