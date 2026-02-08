@@ -1822,3 +1822,185 @@
   display: none;
 }
 .form-group--error .form-error-msg { display: block; }
+
+/* --- DISCOVERY CALL MODAL --- */
+.discovery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.discovery-modal.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.discovery-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 35, 50, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.discovery-modal__card {
+  position: relative;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px 36px 36px;
+  max-width: 440px;
+  width: calc(100% - 40px);
+  box-shadow: 0 24px 64px rgba(26, 35, 50, 0.15);
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.discovery-modal.active .discovery-modal__card {
+  transform: translateY(0) scale(1);
+}
+
+.discovery-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.discovery-modal__close:hover {
+  background: var(--sage-light);
+  color: var(--charcoal);
+}
+
+.discovery-modal__label {
+  color: var(--green);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.discovery-modal__title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.discovery-modal__title em {
+  font-style: italic;
+  color: var(--green);
+}
+
+.discovery-modal__desc {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.discovery-modal__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.discovery-modal__option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.discovery-modal__option:hover {
+  border-color: var(--green);
+  background: var(--sage-light);
+  box-shadow: 0 4px 16px rgba(107, 159, 133, 0.1);
+  transform: translateY(-1px);
+}
+
+.discovery-modal__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sage) 0%, var(--green-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--green-hover);
+  flex-shrink: 0;
+}
+
+.discovery-modal__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.discovery-modal__name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 2px;
+}
+
+.discovery-modal__role {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--secondary);
+  letter-spacing: 0.01em;
+}
+
+.discovery-modal__arrow {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.discovery-modal__option:hover .discovery-modal__arrow {
+  color: var(--green);
+  transform: translateX(3px);
+}
+
+@media (max-width: 480px) {
+  .discovery-modal__card {
+    padding: 32px 24px 28px;
+  }
+
+  .discovery-modal__title {
+    font-size: 1.35rem;
+  }
+
+  .discovery-modal__option {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .discovery-modal__avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+}
