@@ -115,7 +115,8 @@
   background-size: 100% 100%;
 }
 
-.page-hero p {
+.page-hero > .container > p,
+.page-hero > .container-narrow > p {
   font-size: 1.1rem;
   max-width: 540px;
   color: var(--charcoal-light);
@@ -131,7 +132,8 @@
   margin-right: auto;
 }
 
-.page-hero--center p {
+.page-hero--center > .container > p,
+.page-hero--center > .container-narrow > p {
   margin: 0 auto;
 }
 
@@ -1365,12 +1367,7 @@
 .program-detail-meta .meta-item p {
   font-size: 1rem;
   color: var(--charcoal);
-  max-width: none;
   margin: 0;
-}
-
-.program-detail-meta .meta-item .program-badge {
-  margin-bottom: 0;
 }
 
 /* --- Responsive --- */
@@ -1385,7 +1382,8 @@
     font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   }
 
-  .page-hero p {
+  .page-hero > .container > p,
+  .page-hero > .container-narrow > p {
     font-size: 1.05rem;
   }
 
@@ -1414,7 +1412,8 @@
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   }
 
-  .page-hero p {
+  .page-hero > .container > p,
+  .page-hero > .container-narrow > p {
     font-size: 0.95rem;
   }
 
