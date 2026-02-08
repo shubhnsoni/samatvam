@@ -215,7 +215,7 @@
 }
 
 .hero-squiggle--accent { color: var(--accent); }
-.hero-squiggle--sage { color: var(--sage); }
+.hero-squiggle--sage { color: var(--green-light); }
 .hero-squiggle--green { color: var(--green); }
 
 .hero-body {
