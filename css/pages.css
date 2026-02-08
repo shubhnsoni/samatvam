@@ -1510,11 +1510,18 @@
   }
 
   .order-connector {
-    padding: 8px 0;
+    padding: 12px 0;
     transform: rotate(90deg);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    z-index: 1;
   }
 
   .order-step-card {
+    position: relative;
+    z-index: 2;
     padding: 28px 20px;
   }
 

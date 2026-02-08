@@ -339,6 +339,7 @@
 .category-bar__track {
   display: flex;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .category-bar__list {
@@ -347,6 +348,12 @@
   gap: 24px;
   animation: marquee 30s linear infinite;
   padding-right: 24px;
+  will-change: transform;
+}
+
+.category-bar__item,
+.category-bar__sep {
+  flex-shrink: 0;
 }
 
 .category-bar__track:hover .category-bar__list {
@@ -526,18 +533,21 @@
   position: relative;
   width: 40px;
   height: 40px;
+  overflow: hidden;
 }
 
-.pillar-move-icon {
-  position: absolute;
+.pillar-move-anim > .pillar-move-icon {
+  position: absolute !important;
   top: 0;
   left: 0;
+  width: 40px;
+  height: 40px;
   opacity: 0;
   transition: opacity 0.5s ease;
   font-size: 40px;
 }
 
-.pillar-move-icon.active {
+.pillar-move-anim > .pillar-move-icon.active {
   opacity: 1;
 }
 
@@ -1215,7 +1225,7 @@
 }
 
 .ba-slider__after {
-  clip-path: inset(0 0 0 50%);
+  clip-path: inset(0 0 0 80%);
 }
 
 .ba-slider__label {
@@ -1240,7 +1250,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 80%;
   width: 3px;
   transform: translateX(-50%);
   display: flex;
@@ -2176,6 +2186,10 @@
     padding: 20px;
   }
 
+  .offering-toggle-link {
+    margin-bottom: 20px;
+  }
+
   .testimonials {
     padding: 56px 0;
   }
@@ -2370,6 +2384,14 @@
     text-align: center;
     padding: 32px 24px;
     gap: 20px;
+    background: linear-gradient(135deg, #E2F7E9 0%, #DCF2E2 50%, #EFF5F0 100%);
+    border: 1px solid rgba(107, 159, 133, 0.15);
+  }
+
+  .whatsapp-community__icon {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
   }
 
   .whatsapp-community__content {
@@ -2382,6 +2404,9 @@
 
   .whatsapp-community__btn {
     align-self: center;
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.2);
   }
 }
 
