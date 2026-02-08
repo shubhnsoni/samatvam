@@ -1452,7 +1452,12 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadFooterEditor() {
       const raw = await CMS.getAll(CMS.KEYS.settings);
       const s = Array.isArray(raw) ? (raw[0] || {}) : (raw || {});
-      footerSocials = s.footerSocials || [];
+      footerSocials = s.footerSocials || [
+        { platform: 'instagram', url: 'https://www.instagram.com/samatvam.living?igsh=MWJzNms4anoyYThvYQ==', enabled: true },
+        { platform: 'linkedin', url: 'https://www.linkedin.com/company/samatvam1/', enabled: true },
+        { platform: 'email', url: 'contact@samatvam.living', enabled: true },
+        { platform: 'whatsapp', url: 'https://chat.whatsapp.com/FN0CyVJSDCxDWwJ8gKian3', enabled: true }
+      ];
       footerMenu = s.footerMenu || [];
       footerLegal = s.footerLegal || [];
       footerCopyright = s.footerCopyright || '';
