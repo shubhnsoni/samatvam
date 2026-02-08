@@ -280,7 +280,7 @@
           <p style="font-size:0.95rem;color:var(--charcoal-light);margin-bottom:16px;line-height:1.6;">${p.description || ''}</p>
           ${p.duration ? `<p class="program-meta"><span class="label">Duration</span>${p.duration}</p>` : ''}
           ${p.idealFor ? `<p class="program-meta"><span class="label">Ideal For</span>${p.idealFor}</p>` : ''}
-          <a href="${link}" class="program-card-link">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1v10" stroke="currentColor" stroke-width="1.2"/></svg></a>
+          <a href="${link}" class="program-card-link">${statusLower === 'waitlist' ? 'Join Waitlist' : 'Learn More'} <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1v10" stroke="currentColor" stroke-width="1.2"/></svg></a>
         </div>`;
       });
       if (html.trim()) {

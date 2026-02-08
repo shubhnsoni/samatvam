@@ -157,25 +157,56 @@
   opacity: 0.8;
 }
 
-/* --- Page CTA — Sage-light section --- */
+/* --- Page CTA — Enhanced section --- */
 .page-cta {
-  padding: 72px 0;
-  background: var(--sage-light);
+  padding: 80px 0;
+  background: linear-gradient(160deg, #EFF5F0 0%, #E2EFE5 40%, #DAE9DE 70%, #EFF5F0 100%);
   text-align: center;
   position: relative;
+  overflow: hidden;
+}
+
+.page-cta::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(107,159,133,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-cta .container-narrow {
+  position: relative;
+  z-index: 1;
 }
 
 .page-cta h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 400;
   color: var(--charcoal);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+
+.page-cta h2 em {
+  font-style: italic;
+  color: var(--green);
 }
 
 .page-cta p {
-  color: var(--charcoal-light);
+  color: var(--secondary);
   max-width: 480px;
-  margin: 0 auto 32px;
-  font-size: 1.05rem;
+  margin: 0 auto 28px;
+  font-size: 1rem;
   line-height: 1.7;
+}
+
+.page-cta .btn {
+  padding: 14px 32px;
+  font-size: 0.85rem;
 }
 
 /* --- Stats Bar --- */
@@ -711,14 +742,14 @@
 
 .programs-cta {
   text-align: center;
-  padding: 40px 0 0;
+  padding: 48px 0 0;
 }
 
 .programs-cta p {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
   color: var(--charcoal);
+  margin-bottom: 20px;
 }
 
 /* --- Program Detail Page --- */
@@ -1316,8 +1347,13 @@
 /* --- Program Detail Hero — inherits page-hero light style --- */
 .program-detail-meta {
   display: flex;
+  align-items: flex-start;
   gap: 48px;
   margin-top: 32px;
+  text-align: left;
+}
+
+.program-detail-meta .meta-item {
   text-align: left;
 }
 
@@ -1330,6 +1366,11 @@
   font-size: 1rem;
   color: var(--charcoal);
   max-width: none;
+  margin: 0;
+}
+
+.program-detail-meta .meta-item .program-badge {
+  margin-bottom: 0;
 }
 
 /* --- Responsive --- */
