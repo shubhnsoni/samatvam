@@ -30,6 +30,23 @@
         <div><h1>Settings</h1><p>Platform configuration and role management</p></div>
       </div>
 
+      <!-- Site Mode: Coming Soon / Live -->
+      <div class="admin-card" style="border-left: 4px solid var(--green);">
+        <h3>Site Mode</h3>
+        <p class="text-small text-muted" style="margin-bottom:20px;">Control whether the public site shows the full website or a "Coming Soon" landing page.</p>
+        <div class="toggle-wrapper" style="border-bottom:none;">
+          <div class="toggle-label">
+            <h4>Coming Soon Mode</h4>
+            <p>When enabled, all public pages redirect to the Coming Soon page. Admin panel stays accessible.</p>
+          </div>
+          <label class="toggle-switch"><input type="checkbox" id="toggle-comingSoon"><span class="toggle-slider"></span></label>
+        </div>
+        <div id="siteModeBadge" style="margin-top:12px;display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:6px;font-size:0.8rem;font-weight:600;letter-spacing:0.04em;">
+          <span id="siteModeIndicator" style="width:8px;height:8px;border-radius:50%;display:inline-block;"></span>
+          <span id="siteModeText"></span>
+        </div>
+      </div>
+
       <!-- Program Availability -->
       <div class="admin-card">
         <h3>Program Availability</h3>

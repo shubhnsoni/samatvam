@@ -1017,6 +1017,41 @@ document.addEventListener('DOMContentLoaded', () => {
     bindToggle('toggle-corporate', 'programAvailability.corporate');
     bindToggle('toggle-masterclass', 'programAvailability.masterclass');
 
+    // --- Coming Soon Mode ---
+    const comingSoonToggle = document.getElementById('toggle-comingSoon');
+    const siteModeBadge = document.getElementById('siteModeBadge');
+    const siteModeIndicator = document.getElementById('siteModeIndicator');
+    const siteModeText = document.getElementById('siteModeText');
+
+    function updateSiteModeBadge(isComingSoon) {
+      if (!siteModeBadge) return;
+      if (isComingSoon) {
+        siteModeBadge.style.background = 'rgba(234, 179, 8, 0.12)';
+        siteModeBadge.style.color = '#B45309';
+        siteModeIndicator.style.background = '#EAB308';
+        siteModeText.textContent = 'Coming Soon — Site is hidden from public';
+      } else {
+        siteModeBadge.style.background = 'rgba(107, 159, 133, 0.12)';
+        siteModeBadge.style.color = 'var(--green)';
+        siteModeIndicator.style.background = 'var(--green)';
+        siteModeText.textContent = 'Live — Site is publicly accessible';
+      }
+    }
+
+    if (comingSoonToggle) {
+      const isComingSoon = !!(s.features && s.features.comingSoon);
+      comingSoonToggle.checked = isComingSoon;
+      updateSiteModeBadge(isComingSoon);
+
+      comingSoonToggle.addEventListener('change', async () => {
+        if (!s.features) s.features = {};
+        s.features.comingSoon = comingSoonToggle.checked;
+        await CMS.update(CMS.KEYS.settings, s.id || 'settings', { features: s.features });
+        updateSiteModeBadge(comingSoonToggle.checked);
+        showToast(comingSoonToggle.checked ? 'Coming Soon mode enabled' : 'Site is now Live');
+      });
+    }
+
     // --- Payment Settings ---
     const paymentCard = document.getElementById('paymentSettingsCard');
     if (paymentCard) {
