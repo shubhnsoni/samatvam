@@ -1306,6 +1306,7 @@
   left: 0;
   opacity: 0;
   transition: opacity 0.5s ease;
+  font-size: 28px;
 }
 
 .pillar-move-icon.active {
