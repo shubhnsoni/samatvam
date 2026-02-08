@@ -283,10 +283,7 @@
 }
 
 .hero-scroll-hint--desktop {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 20px;
 }
 
 .hero-scroll-hint--mobile {
