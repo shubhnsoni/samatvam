@@ -496,13 +496,8 @@ section {
   }
 }
 
-@media (max-width: 768px) {
-  :root {
-    --section-padding: 60px 0;
-    --container-padding: 0 20px;
-  }
-
-  /* Mobile Nav */
+/* Tablet/small laptop — switch to hamburger nav */
+@media (max-width: 1024px) {
   .navbar__container {
     display: flex !important;
     grid-template-columns: none;
@@ -598,6 +593,14 @@ section {
     text-align: center;
     border-radius: 8px;
     padding: 12px 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px 0;
+    --container-padding: 0 20px;
   }
 
   .footer-grid {
