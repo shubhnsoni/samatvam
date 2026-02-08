@@ -1750,7 +1750,7 @@
   .hero {
     padding: 80px 0 48px;
     height: auto;
-    min-height: 0;
+    min-height: calc(100svh - 92px);
   }
 
   .hero-inner {
