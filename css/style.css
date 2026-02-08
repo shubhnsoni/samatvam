@@ -196,6 +196,7 @@ section {
 .btn-primary:hover {
   background-color: var(--green-hover);
   border-color: var(--green-hover);
+  box-shadow: 0 4px 16px rgba(129, 178, 154, 0.3);
 }
 
 .btn-secondary {
@@ -206,6 +207,7 @@ section {
 
 .btn-secondary:hover {
   border-color: var(--charcoal);
+  box-shadow: 0 2px 8px rgba(31, 41, 55, 0.08);
 }
 
 .btn-ghost {
