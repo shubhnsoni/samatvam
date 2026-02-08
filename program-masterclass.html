@@ -104,9 +104,26 @@
         <div class="program-sidebar fade-in fade-in-delay-2">
           <div class="sidebar-card">
             <h4>Join the Waitlist</h4>
-            <p>You'll be the first to know when doors open, and waitlist members get early access pricing.</p>
-            <p class="text-small text-muted">Launching Q2 2026</p>
-            <a href="contact.html" class="btn btn-primary">Join Waitlist</a>
+            <p>Be the first to know when doors open. Waitlist members get early access pricing.</p>
+            <form id="waitlistForm">
+              <div class="form-group">
+                <label for="wlName">Full Name</label>
+                <input type="text" id="wlName" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="wlEmail">Email</label>
+                <input type="email" id="wlEmail" name="email" placeholder="you@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="wlPhone">Phone (Optional)</label>
+                <input type="tel" id="wlPhone" name="phone" placeholder="+91 ...">
+              </div>
+              <div class="form-group">
+                <label for="wlMessage">Anything you'd like us to know?</label>
+                <textarea id="wlMessage" name="message" placeholder="Tell us briefly what you're hoping to get from this masterclass..." rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Join Waitlist</button>
+            </form>
           </div>
         </div>
       </div>
@@ -172,5 +189,57 @@
   <script src="js/email.js"></script>
   <script src="js/geo-pricing.js"></script>
   <script src="js/checkout.js"></script>
+  <script>
+    document.getElementById('waitlistForm')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      if (typeof gValidate === 'function') {
+        const valid = gValidate(this, {
+          name: { required: true, message: 'Please enter your name' },
+          email: { required: true, email: true }
+        });
+        if (!valid) return;
+      }
+
+      const btn = this.querySelector('button[type="submit"]');
+      const origText = btn.textContent;
+      btn.textContent = 'Joining...';
+      btn.disabled = true;
+
+      const formData = {
+        name: document.getElementById('wlName').value,
+        email: document.getElementById('wlEmail').value,
+        phone: document.getElementById('wlPhone').value,
+        interest: 'masterclass-waitlist',
+        message: document.getElementById('wlMessage').value || 'Joined 14-Day Masterclass waitlist'
+      };
+
+      const result = await CMS.submitContactForm(formData);
+
+      if (typeof SamatvamEmail !== 'undefined') {
+        await SamatvamEmail.init();
+        SamatvamEmail.sendAdminNotification({
+          subject: 'New Waitlist Signup: ' + (formData.name || 'Website'),
+          type: 'waitlist',
+          fromName: formData.name,
+          fromEmail: formData.email,
+          details: 'Program: 14-Day Habit Masterclass (Waitlist)\nPhone: ' + (formData.phone || 'N/A') + '\n\n' + (formData.message || '')
+        });
+        SamatvamEmail.subscribeToMailchimp({ email: formData.email, name: formData.name });
+      }
+
+      if (result.success) {
+        btn.textContent = 'You\'re on the list!';
+        btn.style.background = 'var(--green)';
+        this.reset();
+        if (typeof gToast === 'function') gToast('You\'re on the waitlist! We\'ll notify you when doors open.', 'success');
+        setTimeout(() => { btn.textContent = origText; btn.disabled = false; btn.style.background = ''; }, 4000);
+      } else {
+        btn.textContent = origText;
+        btn.disabled = false;
+        if (typeof gToast === 'function') gToast('Something went wrong. Please try again or email us directly.', 'error');
+      }
+    });
+  </script>
 </body>
 </html>

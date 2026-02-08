@@ -2024,9 +2024,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const newCount = allContacts.filter(c => c.status === 'new').length;
       const responded = allContacts.filter(c => c.status === 'responded').length;
       const archived = allContacts.filter(c => c.status === 'archived').length;
+      const waitlist = allContacts.filter(c => (c.interest || '').includes('waitlist')).length;
       statsEl.innerHTML = `
         <div class="stat-card"><p class="label">Total</p><p class="stat-value">${total}</p></div>
         <div class="stat-card"><p class="label">New</p><p class="stat-value" style="color:var(--green);">${newCount}</p></div>
+        <div class="stat-card"><p class="label">Waitlist</p><p class="stat-value" style="color:#e67e22;">${waitlist}</p></div>
         <div class="stat-card"><p class="label">Responded</p><p class="stat-value">${responded}</p></div>
         <div class="stat-card"><p class="label">Archived</p><p class="stat-value">${archived}</p></div>
       `;
@@ -2049,6 +2051,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <strong>${c.name || 'Unknown'}</strong>
             <span style="background:${statusColor};color:#fff;padding:2px 8px;border-radius:4px;font-size:0.7rem;margin-left:8px;text-transform:uppercase;">${c.status || 'new'}</span>
             <div style="font-size:0.8rem;color:#999;margin-top:4px;">${c.email || ''} · ${c.interest || ''} · ${date}</div>
+            ${(c.interest || '').includes('waitlist') ? '<span style="background:#e67e22;color:#fff;padding:2px 8px;border-radius:4px;font-size:0.65rem;text-transform:uppercase;margin-top:4px;display:inline-block;">Waitlist</span>' : ''}
             ${c.message ? `<div style="font-size:0.82rem;color:var(--charcoal);margin-top:6px;max-width:600px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">"${c.message}"</div>` : ''}
           </div>
           <span style="font-size:0.8rem;color:var(--green);font-weight:500;">View →</span>
