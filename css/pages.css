@@ -1294,6 +1294,24 @@
   line-height: 1.6;
 }
 
+/* Move icon animation — cycles through activity icons */
+.pillar-move-anim {
+  position: relative;
+  display: inline-block;
+}
+
+.pillar-move-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.pillar-move-icon.active {
+  opacity: 1;
+}
+
 /* --- Program Detail Hero — inherits page-hero dark style --- */
 .program-detail-meta {
   display: flex;

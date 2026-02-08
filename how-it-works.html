@@ -214,7 +214,12 @@
         <div class="order-step-card">
           <span class="order-step-num">03</span>
           <div class="order-step-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M7 21l3-7 2.5 2.5L17 11"/><path d="M10 14l-2.5 3"/><path d="M17 11l3 3"/></svg>
+            <div class="pillar-move-anim" style="width:28px;height:28px;">
+              <svg class="pillar-move-icon active" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5a3.5 3.5 0 1 0 7 0 3.5 3.5 0 1 0-7 0"/><path d="M14 12h2l3 9"/><path d="M5.5 12H8l-3 9"/><path d="M8 12l2 4h4l2-4"/></svg>
+              <svg class="pillar-move-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="12" r="2.5"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="9" y1="12" x2="15" y2="12"/><circle cx="17.5" cy="12" r="2.5"/><line x1="20" y1="12" x2="23" y2="12"/></svg>
+              <svg class="pillar-move-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18.5" cy="18.5" r="3.5"/><circle cx="5.5" cy="18.5" r="3.5"/><path d="M15 18.5H9"/><path d="M18.5 15V6l-7 4v5"/><path d="M11.5 10l-6 5"/></svg>
+              <svg class="pillar-move-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v4"/><path d="M8 20l4-8 4 8"/><path d="M6 14l6-2 6 2"/></svg>
+            </div>
           </div>
           <h4 class="order-step">Move</h4>
           <p class="order-step-desc">Build functional strength that carries you into your 60s, 70s, and beyond.</p>
@@ -330,5 +335,17 @@
   <script src="js/cms-data.js"></script>
   <script src="js/main.js"></script>
   <script src="js/page-content-loader.js?v=2"></script>
+  <script>
+    // Move pillar icon cycling animation
+    var moveIcons = document.querySelectorAll('.pillar-move-icon');
+    if (moveIcons.length > 1) {
+      var idx = 0;
+      setInterval(function() {
+        moveIcons[idx].classList.remove('active');
+        idx = (idx + 1) % moveIcons.length;
+        moveIcons[idx].classList.add('active');
+      }, 2000);
+    }
+  </script>
 </body>
 </html>
