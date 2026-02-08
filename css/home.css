@@ -1763,9 +1763,9 @@
   }
 
   .hero-squiggle {
-    height: 10px;
-    width: 85%;
-    left: 7.5%;
+    height: 8px;
+    width: 70%;
+    left: 15%;
   }
 
   .hero-sub {
@@ -1787,32 +1787,32 @@
     bottom: 14px;
   }
 
-  /* Stagger all bubbles — left side */
-  .hero-bubble--1 { top: 16%; left: 2%; }
-  .hero-bubble--7 { top: 26%; left: 8%; }
-  .hero-bubble--2 { top: 36%; left: 1%; }
-  .hero-bubble--4 { top: 47%; left: 7%; }
-  .hero-bubble--3 { top: 57%; left: 2%; }
-  .hero-bubble--11 { top: 68%; left: 8%; }
-  .hero-bubble--13 { top: 79%; left: 1%; }
+  /* Stagger all bubbles — left side (pulled inward) */
+  .hero-bubble--1 { top: 16%; left: 6%; }
+  .hero-bubble--7 { top: 26%; left: 13%; }
+  .hero-bubble--2 { top: 36%; left: 5%; }
+  .hero-bubble--4 { top: 47%; left: 12%; }
+  .hero-bubble--3 { top: 57%; left: 6%; }
+  .hero-bubble--11 { top: 68%; left: 13%; }
+  .hero-bubble--13 { top: 79%; left: 5%; }
 
-  /* Stagger all bubbles — right side */
-  .hero-bubble--5 { top: 14%; right: 2%; }
-  .hero-bubble--9 { top: 25%; right: 8%; }
-  .hero-bubble--6 { top: 37%; right: 1%; }
-  .hero-bubble--8 { top: 48%; right: 7%; }
-  .hero-bubble--10 { top: 58%; right: 2%; }
-  .hero-bubble--12 { top: 69%; right: 8%; }
-  .hero-bubble--14 { top: 80%; right: 1%; }
+  /* Stagger all bubbles — right side (pulled inward) */
+  .hero-bubble--5 { top: 14%; right: 6%; }
+  .hero-bubble--9 { top: 25%; right: 13%; }
+  .hero-bubble--6 { top: 37%; right: 5%; }
+  .hero-bubble--8 { top: 48%; right: 12%; }
+  .hero-bubble--10 { top: 58%; right: 6%; }
+  .hero-bubble--12 { top: 69%; right: 13%; }
+  .hero-bubble--14 { top: 80%; right: 5%; }
 
   .hero-bubble {
-    font-size: 0.62rem;
-    padding: 6px 11px;
+    font-size: 0.6rem;
+    padding: 5px 10px;
   }
 
   .hero-bubble svg {
-    width: 11px;
-    height: 11px;
+    width: 10px;
+    height: 10px;
   }
 
   /* Scale other homepage sections */
