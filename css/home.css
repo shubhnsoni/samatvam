@@ -520,6 +520,25 @@
   50% { transform: scale(1.1); opacity: 0.6; }
 }
 
+/* Move icon animation — cycles through 4 activity icons */
+.pillar-move-anim {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.pillar-move-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.pillar-move-icon.active {
+  opacity: 1;
+}
+
 .pillar-card__title {
   font-family: var(--font-serif);
   font-size: 1.8rem;

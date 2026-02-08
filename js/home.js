@@ -500,6 +500,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  // --- MOVE PILLAR: cycle through 4 activity icons ---
+  const moveIcons = document.querySelectorAll('.pillar-move-icon');
+  if (moveIcons.length > 1) {
+    let moveIdx = 0;
+    setInterval(() => {
+      moveIcons[moveIdx].classList.remove('active');
+      moveIdx = (moveIdx + 1) % moveIcons.length;
+      moveIcons[moveIdx].classList.add('active');
+    }, 2000);
+  }
+
   // --- FOUNDERS: fluid appearing animations ---
   revealFrom('.founders-intro', '.founders-intro', { y: 30 });
 
