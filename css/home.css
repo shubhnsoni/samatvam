@@ -400,16 +400,29 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
-.framework-intro__title {
+.framework-intro__label .label {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   color: var(--charcoal);
   line-height: 1.2;
   font-weight: 400;
-  margin-bottom: 24px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.framework-intro__title {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  color: var(--secondary);
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 16px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .framework-intro__line {
@@ -1702,7 +1715,8 @@
   /* Scale other homepage sections */
   .framework { padding: 88px 0; }
   .framework-intro { margin-bottom: 56px; }
-  .framework-intro__title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); }
+  .framework-intro__label .label { font-size: clamp(1.8rem, 3.2vw, 2.6rem); }
+  .framework-intro__title { font-size: 1.05rem; }
   .offerings { padding: 88px 0; }
   .founders { padding: 88px 0; }
   .testimonials { padding: 88px 0; }
@@ -1804,7 +1818,8 @@
   /* Scale other homepage sections */
   .framework { padding: 72px 0; }
   .framework-intro { margin-bottom: 48px; }
-  .framework-intro__title { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .framework-intro__label .label { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .framework-intro__title { font-size: 1rem; }
   .offerings { padding: 72px 0; }
   .founders { padding: 72px 0; }
   .testimonials { padding: 72px 0; }
@@ -2054,12 +2069,16 @@
     font-size: 9px;
   }
 
-  .framework-intro__title {
+  .framework-intro__label .label {
     font-size: 1.5rem;
   }
 
-  .framework-intro__text {
+  .framework-intro__title {
     font-size: 0.95rem;
+  }
+
+  .framework-intro__text {
+    font-size: 0.9rem;
   }
 
   .pillar-card {
