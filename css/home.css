@@ -1746,7 +1746,7 @@
 /* 13-14" MacBook / smaller laptops (1025–1280px) */
 @media (max-width: 1280px) and (min-width: 1025px) {
   .hero {
-    padding: 20px 0 60px;
+    padding: 20px 0 40px;
     height: auto;
     min-height: calc(100svh - 52px);
   }
@@ -1757,8 +1757,8 @@
 
   .hero-headlines {
     font-size: clamp(2.6rem, 4.5vw, 4rem);
-    margin-bottom: 12px;
-    line-height: 1.1;
+    margin-bottom: 10px;
+    line-height: 1.08;
   }
 
   .hero-squiggle {
@@ -1766,26 +1766,25 @@
   }
 
   .hero-sub {
-    font-size: 0.88rem;
-    margin-bottom: 4px;
-    line-height: 1.6;
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+    line-height: 1.5;
   }
 
   .hero-desc {
-    font-size: 0.88rem;
-    margin-bottom: 16px;
-    line-height: 1.6;
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+    line-height: 1.5;
   }
 
   .hero-cta {
-    padding: 12px 30px;
-    font-size: 0.7rem;
-    margin-bottom: 12px;
+    padding: 11px 28px;
+    font-size: 0.68rem;
+    margin-bottom: 8px;
   }
 
   .hero-scroll-hint--desktop {
-    bottom: 10px;
-    position: relative;
+    bottom: 8px;
   }
 
   /* Stagger all bubbles — left side (pulled inward) */
@@ -1849,6 +1848,61 @@
 
   .founder-row__text p {
     font-size: 0.88rem;
+  }
+}
+
+/* Short viewport height on desktop (e.g. 1080x600) */
+@media (max-height: 700px) and (min-width: 1025px) {
+  .hero {
+    padding: 10px 0 20px;
+    min-height: calc(100svh - 52px);
+  }
+
+  .hero-headlines {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    margin-bottom: 8px;
+    line-height: 1.05;
+  }
+
+  .hero-squiggle {
+    height: 8px;
+  }
+
+  .hero-sub {
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+    line-height: 1.4;
+  }
+
+  .hero-desc {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .hero-cta {
+    padding: 10px 24px;
+    font-size: 0.65rem;
+  }
+
+  .hero-scroll-hint--desktop {
+    bottom: 6px;
+    font-size: 0.55rem;
+  }
+
+  .hero-scroll-hint--desktop svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hero-bubble {
+    font-size: 0.55rem;
+    padding: 4px 8px;
+  }
+
+  .hero-bubble svg {
+    width: 9px;
+    height: 9px;
   }
 }
 
