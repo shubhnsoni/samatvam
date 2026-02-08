@@ -200,12 +200,12 @@
 }
 
 .cl-badge--active {
-  background-color: rgba(129, 178, 154, 0.12);
+  background-color: rgba(107, 159, 133, 0.12);
   color: var(--green);
 }
 
 .cl-badge--complete {
-  background-color: rgba(129, 178, 154, 0.08);
+  background-color: rgba(107, 159, 133, 0.08);
   color: var(--green);
 }
 
@@ -936,7 +936,7 @@
 
 .login-card .form-group input:focus {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(129, 178, 154, 0.12);
+  box-shadow: 0 0 0 3px rgba(107, 159, 133, 0.12);
 }
 
 .login-card .form-group input::placeholder {
@@ -1176,7 +1176,7 @@
 
 .cl-lesson-check--in-progress {
   border-color: var(--accent);
-  background: rgba(129, 178, 154, 0.1);
+  background: rgba(107, 159, 133, 0.1);
 }
 
 .cl-lesson-info {
