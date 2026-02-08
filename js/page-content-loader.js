@@ -9,6 +9,7 @@
      data-cms-img="id"  → replaces img src
      data-cms-bg="id"   → replaces background-image url
      data-cms-video="id"→ stores video URL as data attr
+     data-cms-link="id" → replaces href on anchor tags
    ============================================ */
 
 (async function loadPageContent() {
