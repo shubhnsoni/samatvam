@@ -1023,6 +1023,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const siteModeIndicator = document.getElementById('siteModeIndicator');
     const siteModeText = document.getElementById('siteModeText');
 
+    const previewLinkBox = document.getElementById('previewLinkBox');
+    const previewLinkInput = document.getElementById('previewLinkInput');
+    const copyPreviewLink = document.getElementById('copyPreviewLink');
+
+    function generateToken() {
+      var arr = new Uint8Array(16);
+      crypto.getRandomValues(arr);
+      return Array.from(arr, function(b) { return b.toString(16).padStart(2, '0'); }).join('');
+    }
+
+    function updatePreviewLink(isComingSoon, token) {
+      if (!previewLinkBox) return;
+      if (isComingSoon && token) {
+        var origin = window.location.origin.replace('/admin', '').replace(/\/$/, '');
+        var siteBase = origin.includes('samatvam.living') ? origin : origin;
+        previewLinkInput.value = siteBase + '/?preview=' + token;
+        previewLinkBox.style.display = 'block';
+      } else {
+        previewLinkBox.style.display = 'none';
+      }
+    }
+
     function updateSiteModeBadge(isComingSoon) {
       if (!siteModeBadge) return;
       if (isComingSoon) {
@@ -1042,13 +1064,31 @@ document.addEventListener('DOMContentLoaded', () => {
       const isComingSoon = !!(s.features && s.features.comingSoon);
       comingSoonToggle.checked = isComingSoon;
       updateSiteModeBadge(isComingSoon);
+      updatePreviewLink(isComingSoon, s.features && s.features.previewToken);
 
       comingSoonToggle.addEventListener('change', async () => {
         if (!s.features) s.features = {};
         s.features.comingSoon = comingSoonToggle.checked;
+        if (comingSoonToggle.checked && !s.features.previewToken) {
+          s.features.previewToken = generateToken();
+        }
+        if (!comingSoonToggle.checked) {
+          delete s.features.previewToken;
+        }
         await CMS.update(CMS.KEYS.settings, s.id || 'settings', { features: s.features });
         updateSiteModeBadge(comingSoonToggle.checked);
+        updatePreviewLink(comingSoonToggle.checked, s.features.previewToken);
         showToast(comingSoonToggle.checked ? 'Coming Soon mode enabled' : 'Site is now Live');
+      });
+    }
+
+    if (copyPreviewLink) {
+      copyPreviewLink.addEventListener('click', function() {
+        previewLinkInput.select();
+        navigator.clipboard.writeText(previewLinkInput.value).then(function() {
+          copyPreviewLink.textContent = 'Copied!';
+          setTimeout(function() { copyPreviewLink.textContent = 'Copy Link'; }, 2000);
+        });
       });
     }
 
