@@ -13,9 +13,6 @@
    ============================================ */
 
 (async function loadPageContent() {
-  // CMS overwrite disabled — HTML is now the source of truth
-  return;
-
   // Determine which page we're on
   const path = window.location.pathname;
   let page = 'homepage';
@@ -43,7 +40,7 @@
         } else if (el.tagName === 'A' && id.includes('cta_url')) {
           el.href = contentMap[id];
         } else {
-          el.textContent = contentMap[id];
+          el.innerHTML = contentMap[id];
         }
       }
     });
@@ -69,6 +66,14 @@
       const id = el.getAttribute('data-cms-video');
       if (contentMap[id] && contentMap[id] !== '') {
         el.setAttribute('data-video-url', contentMap[id]);
+      }
+    });
+
+    // 5. Replace href on anchor tags (data-cms-link)
+    document.querySelectorAll('[data-cms-link]').forEach(el => {
+      const id = el.getAttribute('data-cms-link');
+      if (contentMap[id] && contentMap[id] !== '') {
+        el.href = contentMap[id];
       }
     });
 
